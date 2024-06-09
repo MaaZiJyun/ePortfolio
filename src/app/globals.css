@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 235, 235, 235;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -30,4 +31,32 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: 'Asriel';
+  src: url('/fonts/Asriel-Regular.woff2') format('woff2'), 
+       url('/fonts/Asriel-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Asriel';
+  src: url('/fonts/Asriel-Bold.woff2') format('woff2'), 
+       url('/fonts/Asriel-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Custom class for evenly distributing text spacing */
+.distribute-text {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Custom class for smaller font size */
+.text-xxs {
+  font-size: 0.625rem; /* 10px */
 }
