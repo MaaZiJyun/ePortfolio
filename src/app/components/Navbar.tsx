@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 // import { useState } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import TextLogo from "./TextLogo";
@@ -17,13 +17,13 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
     const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
 
     setPrevScrollPos(currentScrollPos);
     setVisible(visible);
-  };
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
