@@ -4,7 +4,7 @@ const TextLogo = () => {
   return (
     <div className="flex p-6">
       <div className="flex flex-col items-end w-full">
-        <span className="text-2xl font-bold tracking-wide">
+        <span className="text-xl lg:text-2xl font-bold tracking-wide">
           童夢綺のウェブサイト
         </span>
         <div className="text-xxs font-normal text-justify distribute-text mt-1">

@@ -8,23 +8,30 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+header{
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+footer {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
 }
 
 @layer utilities {
@@ -35,16 +42,16 @@ body {
 
 @font-face {
   font-family: 'Asriel';
-  src: url('/fonts/Asriel-Regular.woff2') format('woff2'), 
-       url('/fonts/Asriel-Regular.woff') format('woff');
+  src: url('/fonts/Asriel-Regular.woff2') format('woff2'),
+    url('/fonts/Asriel-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Asriel';
-  src: url('/fonts/Asriel-Bold.woff2') format('woff2'), 
-       url('/fonts/Asriel-Bold.woff') format('woff');
+  src: url('/fonts/Asriel-Bold.woff2') format('woff2'),
+    url('/fonts/Asriel-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -58,5 +65,21 @@ body {
 
 /* Custom class for smaller font size */
 .text-xxs {
-  font-size: 0.625rem; /* 10px */
+  font-size: 0.625rem;
+  /* 10px */
+}
+
+.px {
+  height: 1px;
+}
+
+.bg-domukiphoto001 {
+  background-image: url('/domukiphoto001.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.gradient-bg-white-transparent {
+  background: linear-gradient(to bottom, white, transparent);
 }
