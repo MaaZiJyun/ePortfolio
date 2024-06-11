@@ -12,7 +12,7 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
-export const geneateStaticParams = async () => {
+export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
     slug: post.slug,
@@ -21,7 +21,7 @@ export const geneateStaticParams = async () => {
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
-  const post = getPostContent(slug);
+  const post = getPostContent( slug);
   return (
     <main className="flex flex-col items-center justify-between">
       <div className="flex flex-col w-full px-6 lg:px-12">

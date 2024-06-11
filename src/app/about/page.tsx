@@ -11,10 +11,10 @@ const page = () => {
         />
         <div className="pt-10">
           <p>
-            Hi, I'm Dōmuki (Nickname). I am a 24-year-old male with a passion
+            Hi, I&apos;m Dōmuki (Nickname). I am a 24-year-old male with a passion
             for music and writing. I am fluent in English and native in Chinese.
-            I graduated from UPM with a Bachelor’s degree in Software
-            Engineering and am currently pursuing a Master’s degree at PolyU.
+            I graduated from UPM with a Bachelor&apos;s degree in Software
+            Engineering and am currently pursuing a Master&apos;s degree at PolyU.
           </p>
           <div className="mt-2">
             <p>
@@ -390,7 +390,7 @@ const page = () => {
             <div className="flex w-full">
               <span>
                 • Contributed as a speaker to give a speech titled
-                "International Learning Online Sharing Experiences" at Minggu
+                &quot;International Learning Online Sharing Experiences&quot; at Minggu
                 Perkasa Putra (MPP).
               </span>
             </div>
