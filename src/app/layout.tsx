@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <head>
-        <link rel="icon" href="/domuki.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <div>
