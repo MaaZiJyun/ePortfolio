@@ -1,6 +1,7 @@
-import Section from "../components/Section";
-import getPostMetadata from "../components/getPostMetadata";
-import ArticlePreviewer from "../components/ArticlePreviewer";
+import Section from "../_components/Section";
+import getPostMetadata from "../_components/getPostMetadata";
+import ArticlePreviewer from "../_components/ArticlePreviewer";
+import Container from "../_components/Container";
 
 const page = () => {
   const postMetadata = getPostMetadata();
@@ -9,13 +10,15 @@ const page = () => {
   ));
   return (
     <main className="flex flex-col items-center justify-between">
-      <div className="flex flex-col w-full px-6 lg:px-12">
-        <Section
-          title={"Articles"}
-          description={"There will be some notes about my study work"}
-        />
-        <div className="flex flex-col w-full">{postPreviews}</div>
-      </div>
+      <Container>
+        <div className="flex flex-col w-full px-6 lg:px-12">
+          <Section
+            title={"Articles"}
+            description={"There will be some notes about my study work"}
+          />
+          <div className="flex flex-col w-full">{postPreviews}</div>
+        </div>
+      </Container>
     </main>
   );
 };

@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import TextLogo from "./TextLogo";
+import Container from "./Container";
 
 const basicNav = [
   { name: "About", CNname: "關於", href: "/about" },
@@ -51,7 +52,7 @@ const Navbar = () => {
             {basicNav.map((item) => (
               <div
                 key={item.name}
-                className="hover:border-b-2 hover:border-black"
+                className="hover:border-b-4 hover:border-black"
               >
                 <a
                   href={item.href}
@@ -64,7 +65,7 @@ const Navbar = () => {
 
                     <div className="distribute-text">
                       {item.CNname.split("").map((char, index) => (
-                        <span className="text-xxs font-normal" key={index}>
+                        <span className="text-xs font-normal" key={index}>
                           {char}
                         </span>
                       ))}
@@ -93,7 +94,7 @@ const Navbar = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <TextLogo />
@@ -108,22 +109,24 @@ const Navbar = () => {
             </button>
           </div>
           <div className="mt-6 flow-root p-6">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2">
-                {basicNav.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    <div className="flex justify-between">
-                      <span>{item.name}</span>
-                      <span>{item.CNname}</span>
-                    </div>
-                  </a>
-                ))}
+            <Container>
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2">
+                  {basicNav.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      <div className="flex justify-between">
+                        <span>{item.name}</span>
+                        <span>{item.CNname}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Container>
           </div>
         </DialogPanel>
       </Dialog>

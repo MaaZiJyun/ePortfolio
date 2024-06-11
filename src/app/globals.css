@@ -16,7 +16,21 @@
   }
 } */
 
-header{
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+header {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-end-rgb));
 }
@@ -78,6 +92,14 @@ footer {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.bg-sketch {
+  background-image: url('/sketch.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
 }
 
 .gradient-bg-white-transparent {

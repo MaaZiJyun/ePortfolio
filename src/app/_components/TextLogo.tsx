@@ -5,10 +5,10 @@ const TextLogo = () => {
     <div className="flex p-6">
       <div className="flex flex-col items-end w-full">
         <span className="text-xl lg:text-2xl font-bold tracking-wide">
-          童夢綺のウェブサイト
+          童夢綺のキャンバス
         </span>
-        <div className="text-xxs font-normal text-justify distribute-text mt-1">
-          {"DOMUKI NO WEBUSAITO".split("").map((char, index) => (
+        <div className="text-xs font-normal text-justify distribute-text mt-1">
+          {"DOMUKI'S CANVAS".split("").map((char, index) => (
             <span key={index}>{char}</span>
           ))}
         </div>

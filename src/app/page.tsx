@@ -1,8 +1,14 @@
+"use client";
+import { useEffect } from "react";
+import Container from "./_components/Container";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
-      <div className="flex w-full h-screen bg-domukiphoto001 items-end justify-center">
-      </div>
+      <Container>
+        <div className="flex w-full h-screen bg-sketch items-end justify-center">
+        </div>
+      </Container>
     </main>
   );
 }

@@ -1,8 +1,9 @@
-import ArticleHeader from "@/app/components/ArticleHeader";
+import ArticleHeader from "@/app/_components/ArticleHeader";
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
-import getPostMetadata from "@/app/components/getPostMetadata";
+import getPostMetadata from "@/app/_components/getPostMetadata";
+import Container from "@/app/_components/Container";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -21,15 +22,17 @@ export const generateStaticParams = async () => {
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
-  const post = getPostContent( slug);
+  const post = getPostContent(slug);
   return (
     <main className="flex flex-col items-center justify-between">
-      <div className="flex flex-col w-full px-6 lg:px-12">
-        <ArticleHeader title={post.data.title} description={"description"} />
-        <article className="prose max-w-none">
-          <Markdown>{post.content}</Markdown>
-        </article>
-      </div>
+      <Container>
+        <div className="flex flex-col w-full px-6 lg:px-12">
+          <ArticleHeader title={post.data.title} description={"description"} />
+          <article className="prose max-w-none">
+            <Markdown>{post.content}</Markdown>
+          </article>
+        </div>
+      </Container>
     </main>
   );
 };
