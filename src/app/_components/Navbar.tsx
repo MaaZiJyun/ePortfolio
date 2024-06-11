@@ -8,10 +8,10 @@ import TextLogo from "./TextLogo";
 import Container from "./Container";
 
 const basicNav = [
-  { name: "About", CNname: "關於", href: "/about" },
-  // { name: "Categories", CNname: "分類", href: "/categories" },
+  { name: "Resume", CNname: "履歴", href: "/resume" },
+  { name: "Academic", CNname: "学術", href: "/academic" },
   { name: "Articles", CNname: "文章", href: "/articles" },
-  { name: "Music", CNname: "音樂", href: "/music" },
+  { name: "Composition", CNname: "作曲", href: "/composition" },
 ];
 
 const Navbar = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
             {basicNav.map((item) => (
               <div
                 key={item.name}
-                className="hover:border-b-4 hover:border-black"
+                className="hover:border-b-2 hover:border-black"
               >
                 <a
                   href={item.href}

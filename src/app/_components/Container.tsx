@@ -5,7 +5,7 @@ interface ContainerProps {
 }
 
 const Container = ({ children }: ContainerProps) => {
-  return <div className="w-full fade-in">{children}</div>;
+  return <div className="w-full h-full fade-in">{children}</div>;
 };
 
 export default Container;
