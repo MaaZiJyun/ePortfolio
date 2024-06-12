@@ -2,7 +2,7 @@ import { LinkIcon } from "@heroicons/react/24/outline";
 const Footer = () => {
   return (
     <footer>
-      <div className="lg:flex w-full p-6 lg:px-10 mt-24">
+      <div className="lg:flex w-full p-6 lg:px-10">
         <div className="flex lg:flex-1 items-center justify-center py-5">
           <span className="text-sm text-center">
             © 2020 Your Company, Inc. All rights reserved.
