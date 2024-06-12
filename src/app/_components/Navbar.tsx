@@ -38,7 +38,7 @@ const Navbar = () => {
       ${visible ? "translate-y-0" : "-translate-y-full"} 
       ${prevScrollPos < 10 ? "gradient-bg-white-transparent" : "bg-white"}`}
     >
-      <nav className="flex lg:px-6">
+      <nav className="flex lg:px-6 ">
         <div className="w-full flex items-center justify-between">
           {/* left */}
           <div className="flex lg:flex-1">
@@ -58,12 +58,12 @@ const Navbar = () => {
                   href={item.href}
                   className="w-full h-full flex items-center justify-between px-8 text-lg font-semibold leading-6 text-black"
                 >
-                  <div className="flex flex-col items-end">
-                    <span className="text-xl font-semibold tracking-wide">
+                  <div className="flex flex-col items-center">
+                    <span className="text-lg font-semibold tracking-wide">
                       {item.name}
                     </span>
 
-                    <div className="distribute-text">
+                    <div className="space-x-2">
                       {item.CNname.split("").map((char, index) => (
                         <span className="text-xs font-normal" key={index}>
                           {char}

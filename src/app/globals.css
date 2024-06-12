@@ -20,14 +20,38 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
 .fade-in {
   opacity: 0;
   animation: fadeIn 2s forwards;
+}
+
+.fade-in-opacity {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-visible {
+  animation: fadeIn 2s forwards;
+}
+
+.fade-out-visible {
+  animation: fadeOut 2s forwards;
 }
 
 header {
@@ -70,14 +94,23 @@ footer {
   font-style: normal;
 }
 
-/* Custom class for evenly distributing text spacing */
+/* Custom class */
 .distribute-text {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-/* Custom class for smaller font size */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
 .text-xxs {
   font-size: 0.625rem;
   /* 10px */
@@ -94,7 +127,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-.bg-domuki-logo{
+.bg-domuki-logo {
   background-image: url('/domukilogo.png');
   background-size: cover;
   background-position: center;
@@ -117,7 +150,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5; /* 50% translucent */
+  opacity: 0.3;
   z-index: -1;
 }
 

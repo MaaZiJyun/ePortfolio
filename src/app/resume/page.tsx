@@ -11,25 +11,27 @@ const page = () => {
             title={"About"}
             description={"This is just a brief introduction about myself"}
           />
-          <div className="lg:flex lg:space-x-20 items-center justify-center">
-            <div className="hidden lg:flex lg:flex-1">
-              <div className="m-6 w-32 h-32 bg-domuki-logo"></div>
-            </div>
-            <div className="flex mt-6">
-              <div>
-                <p className="text-justify">
-                  Hi, I&apos;m Dōmuki (Nickname). I am a 24-year-old male with a
-                  passion for music and writing. I am fluent in English and
-                  native in Chinese. I graduated from UPM with a Bachelor&apos;s
-                  degree in Software Engineering and am currently pursuing a
-                  Master&apos;s degree at PolyU.
-                </p>
-                <div className="mt-2">
-                  <p>
-                    My email is{" "}
-                    <span className="underline">domukino@gmail.com</span>, and
-                    feel free to contact with me.
+          <div className="lg:flex lg:space-x-20 items-center justify-center mt-10">
+            <div className="lg:flex lg:w-3/4 py-10">
+              <div className="hidden lg:flex lg:flex-1 mr-10">
+                <div className="w-32 h-32 bg-domuki-logo"></div>
+              </div>
+              <div className="flex">
+                <div className="flex flex-col items-start justify-center">
+                  <p className="text-justify">
+                    Hi, I&apos;m Dōmuki (Nickname). I am a 24-year-old male with
+                    a passion for music and writing. I am fluent in English and
+                    native in Chinese. I graduated from UPM with a
+                    Bachelor&apos;s degree in Software Engineering and am
+                    currently pursuing a Master&apos;s degree at PolyU.
                   </p>
+                  <div className="mt-2">
+                    <p>
+                      My email is{" "}
+                      <span className="underline">domukino@gmail.com</span>, and
+                      feel free to contact with me.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
