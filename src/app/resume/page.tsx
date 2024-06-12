@@ -4,12 +4,12 @@ import Container from "../_components/Container";
 
 const page = () => {
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between my-24">
       <Container>
         <div className="flex flex-col w-full px-6 lg:px-12">
           <Section
-            title={"About"}
-            description={"This is just a brief introduction about myself"}
+            title={"Resume"}
+            description={"This is just a brief introduction about myself and my resume."}
           />
           <div className="lg:flex lg:space-x-20 items-center justify-center mt-10">
             <div className="lg:flex lg:w-3/4 py-10">

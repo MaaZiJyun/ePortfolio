@@ -8,7 +8,7 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({ title, description }) => {
   return (
     <div>
-      <div className="pt-44 pb-16">
+      <div className="py-16">
         <div>
           <span className="text-5xl font-bold">{title}</span>
         </div>

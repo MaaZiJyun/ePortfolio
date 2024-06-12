@@ -9,7 +9,7 @@ const page = () => {
     <ArticlePreviewer key={post.slug} {...post} />
   ));
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between my-24">
       <Container>
         <div className="flex flex-col w-full px-6 lg:px-12">
           <Section

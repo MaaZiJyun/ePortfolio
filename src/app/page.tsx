@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
         <FadeInContainer>
-          <div className="lg:flex w-full items-start justify-around px-6 lg:px-12 mt-32">
+          <div className="lg:flex w-full items-start justify-around px-6 lg:px-12 my-32">
             <div className="flex lg:w-1/4 p-6 items-center justify-center">
               <div className="flex flex-col space-y-5">
                 <span className="font-bold text-xl text-center">
@@ -81,7 +81,6 @@ export default function Home() {
             </div>
           </div>
         </FadeInContainer>
-
         {/* divider */}
         <div className="lg:flex px-6 lg:px-12 my-32">
           <div className="w-full h-px bg-black"></div>
@@ -99,17 +98,20 @@ export default function Home() {
             </div>
           </div>
         </FadeInContainer>
-        {/* divider */}
-        <div className="lg:flex px-6 lg:px-12 my-32">
-          <div className="w-full h-px bg-black"></div>
-        </div>
         <FadeInContainer>
-          <div className="lg:flex items-center justify-center mt-32">
-            <div className="flex lg:w-1/2 h-1/2">
-              <YouTubePreviewer videoId="haqHcJHe0w0" />
-            </div>
+          <div className="lg:mt-32">
+            <QuotaBoard
+              quota={
+                "You are too concerned about what was and what will be. There is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present."
+              }
+              author={"Kung Fu Panda (2008) - Randall Duk Kim as Oogway"}
+            />
+          </div>
+        </FadeInContainer>
+        <FadeInContainer>
+          <div className="lg:flex items-center justify-center lg:my-32">
             <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
-              <span className="text-6xl">Latest Work</span>
+              <span className="text-center text-6xl">Latest Work</span>
               <div className="text-center space-x-5 mt-2">
                 <span>最</span>
                 <span>新</span>
@@ -117,16 +119,9 @@ export default function Home() {
                 <span>品</span>
               </div>
             </div>
-          </div>
-        </FadeInContainer>
-        <FadeInContainer>
-          <div className="mt-32">
-            <QuotaBoard
-              quota={
-                "You are too concerned about what was and what will be. There is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present."
-              }
-              author={"Kung Fu Panda (2008) - Randall Duk Kim as Oogway"}
-            />
+            <div className="flex lg:w-1/2 h-1/2">
+              <YouTubePreviewer videoId="haqHcJHe0w0" />
+            </div>
           </div>
         </FadeInContainer>
       </Container>
