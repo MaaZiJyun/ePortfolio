@@ -116,15 +116,13 @@ footer {
   /* 10px */
 }
 
-.px {
-  height: 1px;
+.text-xxl {
+  font-size: 10rem;
+  /* 10px */
 }
 
-.bg-domukiphoto001 {
-  background-image: url('/domukiphoto001.png');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+.px {
+  height: 1px;
 }
 
 .bg-domuki-logo {
@@ -171,6 +169,46 @@ footer {
   background-position: center;
   background-repeat:inherit;
   opacity: 0.2;
+  z-index: -1;
+}
+
+.bg-domukiphoto {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-domukiphoto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/domukiphoto001.png');
+  background-size:cover;
+  background-position: top;
+  background-repeat:no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.bg-latest-album {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-latest-album::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/latest_album.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  opacity: 0.3;
   z-index: -1;
 }
 

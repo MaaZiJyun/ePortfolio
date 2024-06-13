@@ -7,16 +7,34 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import TextLogo from "./TextLogo";
 import Container from "./Container";
 
+const articleNav = [
+  {
+    name: "Artificial Intelligence",
+    CNname: "人工知能",
+    href: "/artificial_intelligence",
+  },
+  {
+    name: "Blockchain Technology",
+    CNname: "ブロックチェーン技術",
+    href: "/blockchain_technology",
+  },
+  { name: "IELTS", CNname: "IELTS", href: "/ielts" },
+  { name: "Mathematics", CNname: "数学", href: "/mathematics" },
+];
+
 const basicNav = [
   { name: "Resume", CNname: "履歴", href: "/resume" },
-  { name: "Academic", CNname: "学術", href: "/academic" },
-  { name: "Articles", CNname: "文章", href: "/articles" },
-  { name: "Composition", CNname: "作曲", href: "/composition" },
+  { name: "Posts", CNname: "記事", href: "/posts" },
+  { name: "Articles", CNname: "文章", href: "/articles", subNav: articleNav },
+  { name: "Music", CNname: "音楽", href: "/music" },
 ];
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+
+  // show sub nav of article
+  const [showSubNav, setShowSubNav] = useState(false);
 
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.pageYOffset;
@@ -41,18 +59,20 @@ const Navbar = () => {
       <nav className="flex lg:px-6 ">
         <div className="w-full flex items-center justify-between">
           {/* left */}
-          <div className="flex lg:flex-1">
+          <div className="flex lg:w-1/2">
             <a href="/" className="-m-1.5 p-1.5 ">
               <TextLogo />
             </a>
           </div>
 
           {/* right */}
-          <div className="hidden lg:flex lg:h-full space-x-1">
+          <div className="hidden lg:flex lg:w-1/2 lg:h-full space-x-1 justify-end">
             {basicNav.map((item) => (
               <div
                 key={item.name}
-                className="hover:border-b-2 hover:border-black"
+                className="relatice hover:border-b-2 hover:border-black"
+                onMouseEnter={() => item.subNav && setShowSubNav(true)}
+                onMouseLeave={() => item.subNav && setShowSubNav(false)}
               >
                 <a
                   href={item.href}
@@ -72,6 +92,20 @@ const Navbar = () => {
                     </div>
                   </div>
                 </a>
+                {item.subNav && showSubNav && (
+                  <div className="absolute bg-white bg-opacity-40 shadow-lg rounded-md">
+                    {item.subNav.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="flex items-center justify-between text-black px-4 py-3 hover:bg-gray-100 hover:bg-opacity-60"
+                      >
+                        <span className="text-sm px-2 text-left">{subItem.name} </span>
+                        <span className="text-xxs px-2 text-right">{subItem.CNname}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -111,18 +145,38 @@ const Navbar = () => {
           <div className="mt-6 flow-root p-6">
             <Container>
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   {basicNav.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      <div className="flex justify-between">
-                        <span>{item.name}</span>
-                        <span>{item.CNname}</span>
-                      </div>
-                    </a>
+                    <div>
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        <div className="flex justify-between">
+                          <span>{item.name}</span>
+                          <span>{item.CNname}</span>
+                        </div>
+                      </a>
+                      {item.subNav && (
+                        <div className="flex flex-col">
+                          {item.subNav.map((subItem) => (
+                            <a
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="flex justify-between py-2 hover:bg-gray-100"
+                            >
+                              <span className="text-sm">
+                                {subItem.name}{" "}
+                              </span>
+                              <span className="text-xxs">
+                                {subItem.CNname}
+                              </span>
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>

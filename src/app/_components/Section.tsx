@@ -10,7 +10,7 @@ const Section: React.FC<SectionProps> = ({ title, description }) => {
     <div>
       <div className="py-16">
         <div>
-          <span className="text-5xl font-bold">{title}</span>
+          <span className="text-6xl font-bold">{title}</span>
         </div>
         <div className="mt-4">
           <span>{description}</span>

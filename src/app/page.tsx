@@ -2,9 +2,8 @@ import ArticlePreviewer from "./_components/ArticlePreviewer";
 import Container from "./_components/Container";
 import FadeInContainer from "./_components/FadeInContainer";
 import QuotaBoard from "./_components/QuotaBoard";
-import Section from "./_components/Section";
 import YouTubePreviewer from "./_components/YouTubePreviewer";
-import getPostMetadata from "./_components/getPostMetadata";
+import getPostMetadata from "./_controllers/getPostMetadata";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -87,11 +86,12 @@ export default function Home() {
         </div>
         <FadeInContainer>
           <div className="lg:flex px-6 lg:px-12 mt-20">
-            <div className="flex flex-col lg:flex-1 items-center justify-center m-10">
+            <div className="flex flex-col lg:flex-1 items-center justify-center m-20">
               <span className="text-6xl">Posts</span>
-              <span className="text-center mt-2 italic">
-                There will be some notes about my ideas.
-              </span>
+              <div className="mt-2 space-x-5">
+                <span className="text-center">記</span>
+                <span className="text-center">事</span>
+              </div>
             </div>
             <div className="flex lg:flex-1">
               <div className="flex flex-col w-full">{postPreviews}</div>
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </FadeInContainer>
         <FadeInContainer>
-          <div className="lg:mt-32">
+          <div className="mt-32">
             <QuotaBoard
               quota={
                 "You are too concerned about what was and what will be. There is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present."
