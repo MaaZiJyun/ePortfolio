@@ -148,13 +148,13 @@ const Navbar = () => {
           </div>
           <div className="mt-6 flow-root p-6">
             <Container>
-              <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="divide-y divide-gray-500/10">
                 <div className="space-y-4">
                   {basicNav.map((item) => (
                     <div key={item.name}>
                       <a
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
                         <div className="flex justify-between">
                           <span>{item.name}</span>
@@ -167,7 +167,7 @@ const Navbar = () => {
                             <a
                               key={subItem.name}
                               href={subItem.href}
-                              className="flex justify-between py-2 hover:bg-gray-100"
+                              className="flex justify-between px-3 py-2 hover:bg-gray-50"
                             >
                               <span className="text-sm">{subItem.name} </span>
                               <span className="text-xxs">{subItem.CNname}</span>

@@ -31,7 +31,7 @@ const PostPage = (props: any) => {
     <main className="flex flex-col items-center justify-between my-32">
       <Container>
         <Link href={"/posts"}>
-          <div className="flex justify-between py-6 lg:px-32">
+          <div className="flex justify-between p-6 lg:px-32">
             <div className="flex">
               <ChevronLeftIcon className="h-6 w-6 text-black" />
               <span>Back</span>
