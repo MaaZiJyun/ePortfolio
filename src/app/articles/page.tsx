@@ -11,7 +11,7 @@ const page = () => {
           </div>
           <div className="flex flex-col lg:w-1/3 info text-center mt-12">
             <span className="text-xl">童夢綺</span>
-            <span className="text-sm mt-5">童夢綺自習スタジオ</span>
+            <span className="text-sm mt-5">自習スタジオ</span>
             <span className="text-sm mt-2">
               ファンタジータウン ミラクル通り 5丁目 7番地 〒987-6543
             </span>
