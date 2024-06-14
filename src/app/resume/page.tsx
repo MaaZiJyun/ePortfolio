@@ -2,37 +2,29 @@ import Image from "next/image";
 import Section from "../_components/Section";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
+import DirectoryBar from "../_components/DirectoryBar";
 
 const page = () => {
   return (
     <main className="flex flex-col items-center justify-between my-24">
       <Container>
-        <div className="flex flex-col w-full px-6 lg:px-12">
+        <div className="flex w-full p-6 lg:px-32">
+          <DirectoryBar />
+        </div>
+        <div className="flex flex-col w-full px-6 lg:px-32">
           <Section
-            title={"Resume"}
+            title={"履歴"}
             description={
-              "This is just a brief introduction about myself and my resume."
+              "This is a brief introduction about myself and my resume."
             }
           />
           <FadeInContainer>
             <div className="lg:flex lg:space-x-20 items-center justify-center mt-10">
               <div className="lg:flex py-10 lg:mx-20">
-                <div className="hidden lg:flex lg:w-1/3 items-center justify-center">
+                <div className="hidden lg:flex lg:w-1/4 items-center justify-center">
                   <div className="w-40 h-40 bg-domuki-logo"></div>
                 </div>
-                <div className="flex flex-col lg:w-2/3 space-y-10">
-                  <div className="flex flex-col items-start justify-center">
-                    <p className="text-justify">
-                      こんにちは、私は童夢綺(ニックネーム)です。24歳の男性で、音楽と執筆が大好きです。英語が堪能で、中国語が母語です。UPMを卒業し、ソフトウェア工学の学士号を取得し、現在はPolyUで修士号を取得しています。
-                    </p>
-                    <div className="mt-2">
-                      <p>
-                        私のメールアドレスは{" "}
-                        <span className="underline">Domukino@gmail.com</span>{" "}
-                        です。お気軽にご連絡ください。
-                      </p>
-                    </div>
-                  </div>
+                <div className="flex flex-col lg:w-3/4 items-center justify-center">
                   <div className="flex flex-col items-start justify-center">
                     <p className="text-justify">
                       Hi, I&apos;m Dōmuki (Nickname). I am a 24-year-old male

@@ -9,8 +9,8 @@ const page = () => {
     <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="flex flex-col h-screen items-center justify-center p-12 lg:p-32 bg-latest-album">
-          <span className="text-4xl text-center">
-            私の音楽作品をお楽しみください
+          <span className="text-3xl lg:text-6xl text-center">
+            私の音楽作品
           </span>
           <span className="mt-4">Welcome to listen to my music works.</span>
         </div>

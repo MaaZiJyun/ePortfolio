@@ -8,24 +8,24 @@ import TextLogo from "./TextLogo";
 import Container from "./Container";
 
 const articleNav = [
-  {
-    name: "Artificial Intelligence",
-    CNname: "人工知能",
-    href: "/articles/artificial_intelligence",
-  },
-  {
-    name: "Blockchain Technology",
-    CNname: "ブロックチェーン技術",
-    href: "/articles/blockchain_technology",
-  },
-  { name: "IELTS", CNname: "IELTS", href: "/articles/ielts" },
-  { name: "Mathematics", CNname: "数学", href: "/articles/mathematics" },
+  // {
+  //   name: "Artificial Intelligence",
+  //   CNname: "人工知能",
+  //   href: "/study/artificial_intelligence",
+  // },
+  // {
+  //   name: "Blockchain Technology",
+  //   CNname: "ブロックチェーン技術",
+  //   href: "/study/blockchain_technology",
+  // },
+  { name: "IELTS", CNname: "IELTS", href: "/study/ielts" },
+  // { name: "Mathematics", CNname: "数学", href: "/study/mathematics" },
 ];
 
 const basicNav = [
   { name: "Resume", CNname: "履歴", href: "/resume" },
   { name: "Posts", CNname: "記事", href: "/posts" },
-  { name: "Articles", CNname: "文章", href: "/articles", subNav: articleNav },
+  { name: "Study", CNname: "学習", href: "/study", subNav: articleNav },
   { name: "Music", CNname: "音楽", href: "/music" },
 ];
 

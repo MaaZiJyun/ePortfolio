@@ -2,6 +2,8 @@ import getPostMetadata from "../_controllers/getPostMetadata";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
 import PostPreviewer from "../_components/PostPreviewer";
+import Section from "../_components/Section";
+import DirectoryBar from "../_components/DirectoryBar";
 
 const page = () => {
   const postMetadata = getPostMetadata();
@@ -11,26 +13,21 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="flex flex-col h-screen items-center justify-center p-12 lg:p-32 bg-domukiphoto">
-          <span className="text-4xl text-center">
-            私の記事を読んでください。
-          </span>
-          <span className="mt-4">Welcome to read to my posts.</span>
-        </div>
-        <FadeInContainer>
-          <div className="lg:flex px-6 lg:px-12 h-screen items-center justify-center">
-            <div className="flex flex-col lg:w-1/2 items-center justify-center my-20">
-              <span className="text-6xl">Posts</span>
-              <div className="mt-2 space-x-5">
-                <span className="text-center">記</span>
-                <span className="text-center">事</span>
-              </div>
-            </div>
-            <div className="flex lg:w-1/2">
-              <div className="flex flex-col w-full">{postPreviews}</div>
-            </div>
+        <div className="flex flex-col items-center justify-between my-24">
+          <div className="flex w-full p-6 lg:px-32">
+            <DirectoryBar />
           </div>
-        </FadeInContainer>
+
+          <div className="flex flex-col w-full px-6 lg:px-32">
+            <Section
+              title={"記事"}
+              description={
+                "I will share some of my personal thoughts or insights here."
+              }
+            />
+            <div className="flex flex-col w-full">{postPreviews}</div>
+          </div>
+        </div>
       </Container>
     </main>
   );
