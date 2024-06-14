@@ -1,4 +1,4 @@
-"use client"; // Ensure this runs on the client side
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";

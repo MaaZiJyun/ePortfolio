@@ -1,20 +1,8 @@
-"use client";
-import React, { useState } from "react";
 import Container from "@/app/_components/Container";
-import Link from "next/link";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import FadeInContainer from "@/app/_components/FadeInContainer";
 import DirectoryBar from "@/app/_components/DirectoryBar";
-
-type Page = "Purpose" | "Structure" | "Content" | "Project";
+import SubPageContent from "@/app/_components/SubPageContent";
 
 const page = () => {
-  const [activePage, setActivePage] = useState<Page>("Purpose");
-
-  const handleNavClick = (page: Page) => {
-    setActivePage(page);
-  };
-
   return (
     <main className="flex flex-col items-center justify-between mt-32">
       <Container>
@@ -31,34 +19,19 @@ const page = () => {
               <div className="text-base">私の人工知能学習ノート</div>
             </div>
           </div>
-        </div>
-        <div className="px-6 lg:px-20 my-20">
-          <div className="flex items-center justify-between border-b-2 border-black">
-            {["Purpose", "Structure", "Content", "Project"].map((page) => (
-              <div
-                key={page}
-                className={`flex w-1/4 items-center justify-center cursor-pointer py-3 hover:bg-black hover:text-white ${
-                  activePage === page ? "bg-black text-white" : ""
-                }`}
-                onClick={() => handleNavClick(page as Page)}
-              >
-                <span className="text-lg">{page}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6">
-            {activePage === "Purpose" && <IntroductionContent />}
-            {activePage === "Structure" && <StructureContent />}
-            {activePage === "Content" && <ContentContent />}
-            {activePage === "Project" && <ProjectContent />}
-          </div>
+          <SubPageContent
+            Introduction={IntroductionContent}
+            Structure={StructureContent}
+            Content={ContentContent}
+            Project={ProjectContent}
+          />
         </div>
       </Container>
     </main>
   );
 };
 
-const IntroductionContent: React.FC = () => (
+const IntroductionContent =  (
   <div className="text-justify space-y-5">
     <p>
       During my undergraduate studies in Software Engineering, UPM did not yet
@@ -87,7 +60,7 @@ const IntroductionContent: React.FC = () => (
     </p>
   </div>
 );
-const StructureContent: React.FC = () => (
+const StructureContent= (
   <div>
     <p>
       The specific course names and contents may vary from university to
@@ -168,7 +141,7 @@ const StructureContent: React.FC = () => (
     </ol>
   </div>
 );
-const ContentContent: React.FC = () => <div>None</div>;
-const ProjectContent: React.FC = () => <div>None</div>;
+const ContentContent =  <div>None</div>;
+const ProjectContent = <div>None</div>;
 
 export default page;
