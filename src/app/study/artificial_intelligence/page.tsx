@@ -6,7 +6,7 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between mt-32">
       <Container>
-        <div className="border-l-8 border-gray-500 px-6 lg:px-20">
+        <div className="border-l-8 border-gray-500 p-6 lg:px-24">
           <div className="flex w-full py-6">
             <DirectoryBar />
           </div>

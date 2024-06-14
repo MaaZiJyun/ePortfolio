@@ -32,7 +32,7 @@ const page: React.FC = () => {
 };
 
 const IntroductionContent = (
-  <div className="text-justify space-y-5">
+  <div className="text-justify space-y-5 fade-in">
     <p>
       As an international student, English serves as a crucial tool for
       communication and acquiring knowledge. Recognizing its importance, I
@@ -60,7 +60,7 @@ const IntroductionContent = (
   </div>
 );
 const StructureContent = (
-  <div>
+  <div className="fade-in">
     <h1 className="text-lg font-bold my-5">Foundational Section</h1>
     <ol className="list-decimal list-inside">
       <li>English Phonetic Symbols</li>
@@ -125,7 +125,7 @@ const StructureContent = (
     </ol>
   </div>
 );
-const ContentContent = <div>None</div>;
-const ProjectContent = <div>None</div>;
+const ContentContent = <div className="fade-in">None</div>;
+const ProjectContent = <div className="fade-in">None</div>;
 
 export default page;

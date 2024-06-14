@@ -23,9 +23,9 @@ const articleNav = [
 ];
 
 const basicNav = [
-  { name: "Resume", CNname: "履歴", href: "/resume" },
-  { name: "Posts", CNname: "記事", href: "/posts" },
   { name: "Study", CNname: "学習", href: "/study", subNav: articleNav },
+  { name: "Posts", CNname: "記事", href: "/posts" },
+  { name: "Resume", CNname: "履歴", href: "/resume" },
   { name: "Music", CNname: "音楽", href: "/music" },
 ];
 

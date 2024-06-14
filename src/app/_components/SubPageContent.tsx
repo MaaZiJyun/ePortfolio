@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
+import Container from "./Container";
 
 type SubPage = "Purpose" | "Structure" | "Content" | "Project";
 
 interface SubPageContentProps {
-    Introduction: React.ReactNode; // Accepts any valid React node
-    Structure: React.ReactNode;
-    Content: React.ReactNode;
-    Project: React.ReactNode;
+  Introduction: React.ReactNode; // Accepts any valid React node
+  Structure: React.ReactNode;
+  Content: React.ReactNode;
+  Project: React.ReactNode;
 }
 
 const SubPageContent: React.FC<SubPageContentProps> = ({
@@ -36,12 +37,12 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
           </div>
         ))}
       </div>
-      <div className="mt-6">
-        {activePage === "Purpose" && Introduction}
-        {activePage === "Structure" && Structure}
-        {activePage === "Content" && Content}
-        {activePage === "Project" && Project}
-      </div>
+        <div className="mt-6">
+          {activePage === "Purpose" && Introduction}
+          {activePage === "Structure" && Structure}
+          {activePage === "Content" && Content}
+          {activePage === "Project" && Project}
+        </div>
     </div>
   );
 };

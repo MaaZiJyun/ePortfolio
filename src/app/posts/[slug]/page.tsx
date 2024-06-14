@@ -7,6 +7,7 @@ import MarkdownRenderer from "@/app/_components/MarkdownRender";
 import { TypeOfArticle } from "@/app/_controllers/TypeOfArticle";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import DirectoryBar from "@/app/_components/DirectoryBar";
 
 const getPostContent = (slug: string) => {
   const folder = `posts/`;
@@ -30,17 +31,12 @@ const PostPage = (props: any) => {
   return (
     <main className="flex flex-col items-center justify-between my-32">
       <Container>
-        <Link href={"/posts"}>
-          <div className="flex justify-between p-6 lg:px-32">
-            <div className="flex">
-              <ChevronLeftIcon className="h-6 w-6 text-black" />
-              <span>Back</span>
-            </div>
-            <div>{post.data.date}</div>
-          </div>
-        </Link>
+        <div className="lg:flex justify-between p-6 lg:px-60 mb-10">
+          <DirectoryBar />
+          <span>{post.data.date}</span>
+        </div>
 
-        <div className="flex flex-col p-6 lg:px-32 text-justify ">
+        <div className="flex flex-col p-6 lg:px-60 text-justify ">
           <div className="flex items-center justify-center title text-2xl lg:text-4xl">
             <span className="text-center font-bold">{post.data.title}</span>
           </div>

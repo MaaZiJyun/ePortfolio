@@ -7,7 +7,7 @@ interface YouTubePreviewerProps {
 
 const YouTubePreviewer: React.FC<YouTubePreviewerProps> = ({ videoId }) => {
   return (
-    <div className="youtube-previewer w-full h-full rounded-lg">
+    <div className="youtube-previewer w-full h-full">
       <iframe
         src={`https://www.youtube-nocookie.com/embed/${videoId}`}
         title="YouTube video player"
