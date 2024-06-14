@@ -11,15 +11,15 @@ const articleNav = [
   {
     name: "Artificial Intelligence",
     CNname: "人工知能",
-    href: "/artificial_intelligence",
+    href: "/articles/artificial_intelligence",
   },
   {
     name: "Blockchain Technology",
     CNname: "ブロックチェーン技術",
-    href: "/blockchain_technology",
+    href: "/articles/blockchain_technology",
   },
-  { name: "IELTS", CNname: "IELTS", href: "/ielts" },
-  { name: "Mathematics", CNname: "数学", href: "/mathematics" },
+  { name: "IELTS", CNname: "IELTS", href: "/articles/ielts" },
+  { name: "Mathematics", CNname: "数学", href: "/articles/mathematics" },
 ];
 
 const basicNav = [
@@ -93,15 +93,19 @@ const Navbar = () => {
                   </div>
                 </a>
                 {item.subNav && showSubNav && (
-                  <div className="absolute bg-white bg-opacity-40 shadow-lg rounded-md">
+                  <div className="absolute bg-white bg-opacity-60 shadow-lg rounded-md">
                     {item.subNav.map((subItem) => (
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="flex items-center justify-between text-black px-4 py-3 hover:bg-gray-100 hover:bg-opacity-60"
+                        className="flex items-center justify-between text-black px-4 py-3 hover:bg-gray-100 hover:bg-opacity-80"
                       >
-                        <span className="text-sm px-2 text-left">{subItem.name} </span>
-                        <span className="text-xxs px-2 text-right">{subItem.CNname}</span>
+                        <span className="text-sm px-2 text-left">
+                          {subItem.name}{" "}
+                        </span>
+                        <span className="text-xxs px-2 text-right">
+                          {subItem.CNname}
+                        </span>
                       </a>
                     ))}
                   </div>
@@ -147,9 +151,8 @@ const Navbar = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-4">
                   {basicNav.map((item) => (
-                    <div>
+                    <div key={item.name}>
                       <a
-                        key={item.name}
                         href={item.href}
                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
@@ -166,12 +169,8 @@ const Navbar = () => {
                               href={subItem.href}
                               className="flex justify-between py-2 hover:bg-gray-100"
                             >
-                              <span className="text-sm">
-                                {subItem.name}{" "}
-                              </span>
-                              <span className="text-xxs">
-                                {subItem.CNname}
-                              </span>
+                              <span className="text-sm">{subItem.name} </span>
+                              <span className="text-xxs">{subItem.CNname}</span>
                             </a>
                           ))}
                         </div>

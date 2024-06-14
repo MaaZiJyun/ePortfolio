@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { ArticleMetadata } from "../_controllers/ArticleMetadata";
+import { PostMetadata } from "../_controllers/PostMetadata";
 
-const ArticlePreviewer = (props: ArticleMetadata) => {
+const PostPreviewer = (props: PostMetadata) => {
   return (
     <div className="py-6">
-      <Link href={`/articles/${props.type}/${props.slug}`}>
+      <Link href={`/posts/${props.slug}`}>
         <div>
           <h2 className="text-xl font-bold">{props.title}</h2>
         </div>
@@ -18,4 +18,4 @@ const ArticlePreviewer = (props: ArticleMetadata) => {
   );
 };
 
-export default ArticlePreviewer;
+export default PostPreviewer;

@@ -1,6 +1,7 @@
 import ArticlePreviewer from "./_components/ArticlePreviewer";
 import Container from "./_components/Container";
 import FadeInContainer from "./_components/FadeInContainer";
+import PostPreviewer from "./_components/PostPreviewer";
 import QuotaBoard from "./_components/QuotaBoard";
 import YouTubePreviewer from "./_components/YouTubePreviewer";
 import getPostMetadata from "./_controllers/getPostMetadata";
@@ -8,7 +9,7 @@ import getPostMetadata from "./_controllers/getPostMetadata";
 export default function Home() {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
-    <ArticlePreviewer key={post.slug} {...post} />
+    <PostPreviewer key={post.slug} {...post} />
   ));
   return (
     <main className="flex flex-col items-center justify-between">

@@ -1,13 +1,12 @@
-import Section from "../_components/Section";
 import getPostMetadata from "../_controllers/getPostMetadata";
-import ArticlePreviewer from "../_components/ArticlePreviewer";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
+import PostPreviewer from "../_components/PostPreviewer";
 
 const page = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
-    <ArticlePreviewer key={post.slug} {...post} />
+    <PostPreviewer key={post.slug} {...post} />
   ));
   return (
     <main className="flex flex-col items-center justify-between">
