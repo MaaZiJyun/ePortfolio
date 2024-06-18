@@ -1,12 +1,19 @@
+import ArticlePreviewer from "@/app/_components/ArticlePreviewer";
 import Container from "@/app/_components/Container";
 import DirectoryBar from "@/app/_components/DirectoryBar";
 import SubPageContent from "@/app/_components/SubPageContent";
+import { TypeOfArticle } from "@/app/_controllers/TypeOfArticle";
+import getArticleMetadata from "@/app/_controllers/getArticleMetadata";
 
 const page: React.FC = () => {
+  const articlesMetadata = getArticleMetadata(TypeOfArticle.IELTS);
+  const articlesPreviews = articlesMetadata.map((article) => (
+    <ArticlePreviewer key={article.slug} {...article} />
+  ));
   return (
     <main className="flex flex-col items-center justify-between mt-32">
       <Container>
-        <div className="border-l-8 border-gray-500 px-6 lg:px-20">
+        <div className="border-l-8 border-black px-6 lg:px-20">
           <div className="flex w-full py-6">
             <DirectoryBar />
           </div>
@@ -23,7 +30,19 @@ const page: React.FC = () => {
         <SubPageContent
           Introduction={IntroductionContent}
           Structure={StructureContent}
-          Content={ContentContent}
+          Content={
+            <div className="flex flex-col w-full fade-in">
+              <div className="mb-6">
+                <h2 className="text-xl lg:text-3xl font-bold text-red-700">
+                  Content of Learning
+                </h2>
+                <span className="text-gray-500 text-lg">
+                  (The following is a note about IELTS and English learning.)
+                </span>
+              </div>
+              <div>{articlesPreviews}</div>
+            </div>
+          }
           Project={ProjectContent}
         />
       </Container>
@@ -33,6 +52,15 @@ const page: React.FC = () => {
 
 const IntroductionContent = (
   <div className="text-justify space-y-5 fade-in">
+    <div className="mb-6">
+      <h2 className="text-xl lg:text-3xl font-bold text-red-700">
+        Purpose of Learning
+      </h2>
+      <span className="text-gray-500 text-lg">
+        (The bried introduction about why should I learn this subject, what I
+        should learn and what I can obtain after my study.)
+      </span>
+    </div>
     <p>
       As an international student, English serves as a crucial tool for
       communication and acquiring knowledge. Recognizing its importance, I
@@ -59,8 +87,9 @@ const IntroductionContent = (
     </p>
   </div>
 );
+
 const StructureContent = (
-  <div className="fade-in">
+  <div className="fade-in text-gray-300">
     <h1 className="text-lg font-bold my-5">Foundational Section</h1>
     <ol className="list-decimal list-inside">
       <li>English Phonetic Symbols</li>
@@ -125,7 +154,13 @@ const StructureContent = (
     </ol>
   </div>
 );
-const ContentContent = <div className="fade-in">None</div>;
-const ProjectContent = <div className="fade-in">None</div>;
+const ProjectContent = (
+  <div className="fade-in h-40">
+    <span className="italic">
+      IELTS is an English proficiency test, so there is no need to create a
+      project.
+    </span>
+  </div>
+);
 
 export default page;

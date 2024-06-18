@@ -1,91 +1,88 @@
 ---
-title: "バーチャル大学の実現可能性の検討"
-abstract: "最近話題になっている「山河大学」についての投稿は印象的であり、これは間接的に質の高い高等教育資源の深刻な不足を露呈しています。実際、高等教育は必ずしもオフラインだけに存在する必要はありません。メタバースからインスピレーションを受け、バーチャル大学の概念が徐々に明確になってきました。この記事では、バーチャル大学の概念と定義の理解を紹介し、バーチャル大学がどのようにして伝統的な教育の限界、工業化の影響、学問の独占、雇用と伝統的大学間の衝突を緩和するのに役立つかを探り、バーチャル大学の実現可能性を論証します"
+title: "Exploring the Feasibility of Virtual Universities"
+abstract: "The recent posts about the Shanhe University have been impressive, indirectly revealing the severe shortage of high-quality higher education resources. In fact, higher education does not necessarily need to exist only offline. Inspired by the metaverse, the concept of virtual universities is gradually becoming clear. This article introduces the understanding of the concept and definition of virtual universities and explores how virtual universities can help alleviate the limitations of traditional education, the impact of industrialization, academic monopolies, and the conflicts between employment and traditional universities, thus demonstrating the feasibility of virtual universities."
 date: "2020-03-16"
 address: "自習スタジオ"
 author:
-  name: 童夢綺 Domuki
-keywords: ["asas", "asas"]
+  name: 童夢綺
+keywords: ["Web3", "Online University", "Virtual Reality", "Virtual Universities", "Future Education"]
 ---
 
-# 紹介
-## 背景
+# Introduction
+## Background
 
-2年前、グローバルなウイルスのパンデミックが世界各国を混乱させ、各国政府はウイルスの拡散を抑制するために家庭隔離を含む厳しい措置を講じました。その結果、多くの学術機関が採用していた伝統的な対面教育モデルはこの期間に実用的ではなくなりました。この前例のない状況下で、多くの機関や関連企業が厳しい挑戦に直面しました。この危機に対応するため、ビデオ会議やオンライン教育などのさまざまなネットワークアプリケーションが急速に普及し、バーチャル教育モデルが広く採用され、パンデミックによる中断の中でも学術活動が続行できるようになりました。
+Two years ago, a global pandemic caused chaos worldwide, prompting governments to take strict measures, including home isolation, to curb the spread of the virus. As a result, the traditional face-to-face education model adopted by many academic institutions became impractical during this period. In this unprecedented situation, many institutions and related enterprises faced severe challenges. In response to this crisis, various network applications, such as video conferencing and online education, rapidly gained popularity, and the virtual education model was widely adopted, allowing academic activities to continue despite the disruptions caused by the pandemic.
 
-現在、パンデミック時代の衰退とともに、多くの教育機関は再び伝統的な対面教育モデルに戻っています。興味深いことに、この期間にオンラインクラスを体験した学生たちは、それが彼らの学歴や卒業の見通しに不利な影響を与えなかったと述べています。オンライン教育に基づく学歴がすでに政府によって認められているためです。オンラインクラスの時代は正式に終了したかもしれませんが、このパンデミック時期に生まれた教育モデルの深遠な影響は教育実践に引き続き影響を与えています。
+Now, with the decline of the pandemic era, many educational institutions are returning to traditional face-to-face education models. Interestingly, students who experienced online classes during this period reported that it did not negatively impact their academic qualifications or graduation prospects, as online education credentials are already recognized by the government. While the era of online classes may have formally ended, the profound impact of this education model born out of the pandemic continues to influence educational practices.
 
-補足として、多くの学校はパンデミック後にオンライン授業を廃止せず、教師や学生が正常に出席できない場合の予備オプションとして利用しています。
+As a supplement, many schools have not abolished online classes post-pandemic and use them as a contingency option when teachers or students cannot attend in person.
 
-## バーチャル大学
+## Virtual Universities
 
-メディアアプリケーションがオンラインクラスの時代に大量に使用されたため、多くの学生は自分たちがZoom大学やGoogle大学から卒業したと冗談を言いました。なぜなら、彼らは本物の大学キャンパスに入るのではなく、これらのアプリケーションに常に接触していたからです。しかし、この冗談はインターネットベースの大学のビジョンと一致しています。
+Due to the extensive use of media applications during the era of online classes, many students jokingly claimed they graduated from "Zoom University" or "Google University" because they were constantly interacting with these applications instead of being on a physical campus. However, this joke aligns with the vision of an internet-based university.
 
-バーチャル大学（VUs）、またはオンラインまたはネットワーク大学は、主にデジタルプラットフォームとインターネットを通じて学術プログラムやコースを提供する教育機関です。
+Virtual universities (VUs), or online or network universities, are educational institutions that primarily offer academic programs and courses through digital platforms and the internet. Unlike traditional physical universities, virtual universities deliver educational content electronically, fostering interaction and collaboration between students and faculty through learning management systems (LMS), video conferencing, webinars, discussion forums, and virtual classrooms. These platforms enable students to interact with peers, submit assignments remotely, and receive feedback from professors. Additionally, virtual universities offer flexible learning options, catering to individuals with work or family commitments, international students, and those living in remote areas.
 
-伝統的な実体大学とは異なり、バーチャル大学は電子的に教育内容を提供します。例えば、学習管理システム（LMS）、ビデオ会議、ウェビナー、ディスカッションフォーラム、バーチャル教室などを通じて学生と教員の間の交流と協力を促進します。これらのプラットフォームは、学生が同僚と交流し、リモートで課題を提出し、教授からのフィードバックを受け取ることも可能にします。さらに、バーチャル大学は柔軟な学習オプションを提供し、仕事や家庭の負担を抱える個人、国際学生、遠隔地に住む人々など、多様な受講者に対応します。
+# Overview
+## Inflation and the Decline in the Value of Degrees
 
-# 概要
+In economic terms, "inflation" refers to the continuous rise in the general price level, which reduces people's purchasing power. Historically, currency depreciation has been a form of inflation, typically caused by the issuance of paper money in excess of actual demand, leading to devaluation and price increases.
 
-## インフレーションと学位の価値の低下
+Interestingly, the modern education degree system is similar to the currency system, where the value of a degree is officially recognized and awarded by governments and society, ultimately becoming a crucial indicator for employment opportunities. This can be metaphorically compared to the "currency" of education. However, people are complex, and a degree alone cannot fully define a person, just as price alone cannot fully reflect the true value of an item. Thus, the degree system has limitations in measuring an individual's worth. However, many people ignore this fact due to the excessively high expectations placed on academic qualifications by authoritative institutions.
 
-経済学の用語で「インフレーション」は、総合的な物価水準の継続的な上昇を指し、人々の購買力が低下します。歴史的に、通貨の価値の低下はインフレーションの一形態であり、これは通常、流通中の実際の需要を超える紙幣の発行量が原因で引き起こされる紙幣の価値低下と物価上昇現象を指します。
+With the increase in global population and the proliferation of higher education (bachelor's degrees and above), many highly educated individuals are entering the workforce. However, when the number of available jobs in society and businesses cannot keep pace with the rapid increase in qualified candidates, so-called "degree inflation" occurs. People are left to wonder, "Is it meaningful for students to pursue degrees when they are being mass-produced?"
 
-興味深いことに、現代の教育における学位制度は通貨制度と似ており、学位の価値は政府と社会によって公式に認められ授与され、最終的には雇用機会の交換に重要な指標となります。これは教育の「通貨」とも比喩できます。しかし、人は複雑であり、学位だけでは人を完全に定義することはできません。同様に、価格だけでは物の真の価値を完全に反映することはできません。したがって、学位制度には人の価値を測る際の限界があります。しかし、権威ある機関が学歴に対して過度に高い期待を抱いているため、多くの人はこの事実を無視しています。
+"Why save money when they are printing money?"
+Robert Kiyosaki (2021)
 
-世界人口の増加と高等教育（学士以上）の普及に伴い、多くの高等教育を受けた人々が労働力に流入しています。しかし、社会と企業における利用可能な仕事の数が、資格を持つ候補者の急増速度に追いつかない場合、いわゆる学歴の「インフレーション」が発生します。人々は、「彼らが学位を乱発しているときに、学生が学位を追求することに意味があるのか」と考えざるを得ません。
+Affected by the decline in the value of degrees, society and businesses have expanded their evaluation criteria in the hiring process, seeking candidates with specific skills and qualities rather than solely emphasizing academic qualifications. Additionally, businesses have adjusted their educational requirements for applicants, raising the minimum education level from vocational schools to bachelor's degrees or from bachelor's to master's degrees.
 
-「彼らが金を刷るとき、なぜ私が貯金するのか？」
-ロバート・キヨサキ（2021）
+Some companies have established their own evaluation systems, offering certificates different from the traditional ones issued by universities and governments. If the establishment of schools and degree systems by the government is considered "centralization," the changing or raising of standards by companies represents "decentralization" in the hiring process. Objectively, the decentralization of criteria for measuring a person's worth is progressing.
 
-学位の価値の低下の影響を受けて、社会と企業は採用プロセスで評価基準を拡大し、学歴だけを強調するのではなく、特定のスキルと素質を持つ候補者を求めるようになりました。さらに、企業は応募者の学歴要件を調整し、最低学歴を専門学校から学士に、または学士から修士に引き上げました。
+## Academic Centralization and Monopoly
 
-一部の企業は独自の評価システムを構築し、大学や政府が発行する伝統的な証明書とは異なる証明書を提供しています。政府が学校と学位制度を確立することが「中央集権」と見なされる場合、企業が基準を変更または引き上げることは採用プロセスにおける「非中央集権」を代表しています。つまり、客観的に見て、人の価値を測る基準の非中央集権化が進行しています。
+Due to regional development disparities, universities differ in educational resources, equipment, facilities, and funding, leading to varied student learning experiences even within the same discipline. Governments tend to invest in top-tier universities rather than supporting ordinary ones, further extending this imbalance. Additionally, the high social recognition of prestigious universities attracts the interest of companies and social organizations, increasing cooperation opportunities. This tendency creates a cycle where strong schools become stronger, and weaker schools struggle to maintain competitiveness.
 
-## 学術の中央集権化と独占
+Most undergraduate education typically lasts 4-5 years, occupying a significant part of one's life. This period is sufficient to become an expert in a specific field. Naturally, this period widens the gap between students from prestigious universities and those from ordinary universities. Students from prestigious universities benefit from abundant educational resources, excelling and becoming more powerful in academic pursuits. In contrast, students from mediocre universities may find it difficult to access such opportunities, limiting their potential development.
 
-地域の発展の違いにより、大学間で教育資源、設備、施設、資金に差があり、同じ科目を提供する学校でも学生の学習体験は異なります。政府は普通の大学を支援するよりも上位の大学に投資する傾向があり、この不均衡をさらに延長します。さらに、有名大学の高い社会的認知度は企業や社会団体の関心を引き付け、協力の機会を増やします。この傾向は強い学校がさらに強くなり、弱い学校が競争力を維持するのが難しくなるという循環を形成します。
+However, more regrettable than the inequality among universities is the situation of students who cannot attend university. Many universities' admission policies are based on standardized national exams. For instance, in China, high school students must take the College Entrance Examination (CEE) and be selected based on their scores. However, while the university metrics change slowly, the increase in high school examinees exacerbates this issue, with more people entering the battlefield and sharing the same cake.
 
-大多数の学部教育は通常4～5年間続き、人生のかなりの部分を占めます。この期間は特定の分野の専門家になるのに十分な時間です。当然、この期間が有名大学の学生と普通の大学の学生との間の格差を拡大させます。有名大学の学生は豊富な教育資源の恩恵を受け、学問的な追求においてより卓越し強力になります。一方、平凡な大学に通う学生はこのような機会を得るのが難しく、その発展の可能性が制限されるかもしれません。
+## The Futility of University Education
 
-しかし、大学間の不平等よりも残念なのは大学に進学できない学生の状況です。多くの大学の入学政策は全国統一試験を基準にしています。例えば、中国では、高校生は大学入試（CEE）を受け、そのスコアに基づいて選抜されなければなりません。しかし、大学の指標がゆっくりと変わる一方で、高校入試の受験者数の増加がこれに拍車をかけ、より多くの人が戦場に流れ込み、同じケーキを分け合うことになります。
+In reality, the slow progress of university reforms contrasts with businesses' rapid self-adjustment. Many students complain that they cannot find jobs after graduation because most skills demanded by society are not learned in university.
 
-## 大学教育の無用論
+A survey conducted by Gallup and the Strada Education Network in 2018 found that considering debt and the benefits obtained, about half of American college graduates felt that their education was not worth it. Additionally, various surveys and studies emphasize how employers perceive university education and job preparedness. Notably, a joint study by the American Association of Colleges and Universities (AAC&U) and Hart Research Associates reported that the majority of employers believed new college graduates were inadequately prepared for the workforce. In other words, both businesses and students believe that the modern university education system is not very useful for individuals.
 
-実際、企業の迅速な自己調整に対して、多くの大学の改革は進展が遅いです。多くの学生が卒業後に仕事を見つけられないと不満を述べるのは、社会が求めるスキルの大部分が大学で学ばれていないからです。
+The disparity between university education and the specific needs of businesses may be due to many universities being uniformly managed by government education departments, lacking diverse management. Furthermore, with a limited number of universities compared to businesses, it is impossible for universities to educate diverse students based on business demands. This inherent contradiction between "unification" and "diversification" makes it a significant challenge to align university curricula with the diverse needs of businesses.
 
-ギャラップとストラダ教育ネットワークが2018年に実施した調査では、負債と得られる利益を考慮して、アメリカの大学卒業生の約半数が教育の価値を感じていないと述べています。また、さまざまな調査や研究では、雇用者が大学教育と就業準備に対してどのように考えているかを強調しています。注目すべき研究の一つは、アメリカ大学協会（AAC&U）とハート・リサーチ・アソシエイツが共同で実施したもので、報告によれば、過半数の雇用者が新卒の大学卒業生が就業準備が不十分であると考えています。つまり、企業も学生も現代の大学教育制度が個人にとってあまり役立たないと考えています。
+In recent years, the role of universities has been a topic of intense debate. Many are concerned that universities are losing their effectiveness, and investors in higher education believe that trust in higher education is declining. This stems from universities transforming from institutions dedicated to education and personal development into entities that commodify degrees. The decline in the value of modern degrees, the encouragement of knowledge sharing, and the academic commercialization model, which requires significant investment of funds and time, may persist but are also likely to be challenged by new education markets.
 
-大学教育と企業の具体的なニーズの違いは、多くの大学が政府の教育部門によって統一的に管理されているため、多様な管理が行われていないことに起因するかもしれません。また、企業に比べて大学の数が限られているため、大学が企業の要求を基に多様な学生を教育することは不可能です。この「統一」と「分散」の内在的な矛盾により、大学のカリキュラムを企業の異なるニーズに一致させることが大きな課題となっています。
+Surprisingly, the impact of the global pandemic in 2020 offered the possibility of another form of university. This possibility is referred to as "virtual universities" or "network universities," providing more cost-effective and economical options.
 
-近年、大学の役割は激しい議論の的となっています。多くの人が大学が効力を失っていることを懸念し、高等教育投資家の信頼が低下していると考えています。これは、大学が教育と個人の育成に専念する機関から、学位を商品化する実体に変わったことに起因しています。現代の学位価値の低下、知識共有の奨励、膨大な資金と時間の投資が必要な学術商業化のモデルは持続する可能性がありますが、新しい教育市場に挑戦される可能性も高いです。
+# Discussion
 
-驚くべきことに、2020年の世界的なパンデミックの影響は、別の形式の大学の可能性を提供しました。この可能性は「バーチャル大学」または「ネットワーク大学」と呼ばれ、よりコスト効果が高く、経済的な選択肢を提供します。
+Virtual universities can effectively avoid some inherent drawbacks of traditional university education models. Firstly, they do not require centralized management, reducing administrative complexities. Secondly, online education alleviates issues of classroom and dormitory overcrowding, enabling a more personalized learning experience. Thirdly, geographical and time constraints are significantly reduced, allowing students to access educational resources from nearly anywhere. Lastly, the cost of online courses is usually lower, making higher education accessible to more people.
 
-# 議論
+## Advantages of Virtual Universities
 
-バーチャル大学は伝統的な大学教育モデルに固有のいくつかの欠点を効果的に回避できます。まず、集中管理が不要であり、行政管理の複雑さが軽減されます。次に、オンライン教育は教室や宿舎の過密化の問題を軽減し、より個別化された学習体験を実現します。第三に、地理的および時間的な制約が大幅に減少し、学生はほぼどこからでも教育資源にアクセスできます。最後に、オンラインコースの教育コストは通常低く、より多くの人々が高等教育を受けることができます。
+Virtual universities offer many advantages, particularly in terms of flexibility and convenience. Learners can adjust their study schedules freely, balancing education, work, family responsibilities, and other commitments. Accessibility is also a significant benefit, with online learning breaking geographical barriers and enabling students from diverse backgrounds to receive high-quality education.
 
-## バーチャル大学の利点
+Individualized learning is a prominent feature of online courses, using adaptive learning technology and customized content to cater to individual learning preferences and needs. Cost-efficiency is another attractive aspect, as tuition fees for online courses are generally lower, and expenses related to commuting, accommodation, and on-campus facilities are eliminated. These digital institutions offer a wide range of courses, including specialized courses not available at traditional educational institutions.
 
-バーチャル大学には多くの利点があり、特に柔軟性と便利さに優れています。学習者は学習時間を自由に調整でき、教育、仕事、家庭の責任、その他の約束の間でバランスを取ることができます。アクセス性も大きな利点であり、オンライン学習は地理的な障壁を打破し、異なる背景を持つ学生が高品質の教育を受けることができます。
+Virtual classrooms promote interactive learning through real-time discussions, chats, and video conferencing, enhancing student engagement. For professionals aiming for career development, online learning enables them to pursue higher education without quitting their jobs, improving their career prospects. Additionally, online platforms provide a continuous learning environment, with access to course materials, resources, and recorded lectures, fostering self-directed learning.
 
-個別学習もオンラインコースの大きな特徴であり、適応学習技術とカスタマイズされたコンテンツを使用して、個々の学習の好みとニーズに応じます。コスト効率も魅力的な側面であり、オンラインコースの授業料は通常低く、通勤、宿泊、キャンパス内施設に関連する費用を省くことができます。これらのデジタル機関は、多様なコースを提供しており、伝統的な教育機関では提供されない専門コースも含まれています。
+Global network education is a natural byproduct of online education, facilitating exchanges between students from different countries and cultures, promoting diverse perspectives and international cooperation. Furthermore, virtual universities encourage lifelong learning, allowing individuals to continuously improve their skills throughout their careers. The digital environment hones students' technical abilities, enabling them to utilize various online tools and platforms proficiently. Moreover, online education reduces the carbon footprint of physical campuses, contributing to a greener future.
 
-バーチャル教室はリアルタイムのディスカッション、チャット、ビデオ会議を通じてインタラクティブな学習を促進し、学生の参加を高めます。職業開発を目指す専門家にとって、オンライン学習は仕事を辞めることなく高等教育を受けることを可能にし、キャリアの見通しを改善します。また、オンラインプラットフォームは継続的な学習環境を提供し、コースマテリアル、リソース、録画講義などが利用できるため、自主学習を促進します。
+## Concerns about Virtual Universities
 
-グローバルなネットワーク教育はオンライン教育の自然な副産物であり、異なる国や文化からの学生間の交流を促進し、多様な視点と国際協力を促進します。さらに、バーチャル大学は生涯学習を推進し、個人がキャリアの中でスキルを継続的に向上させることを奨励します。デジタル環境は学生の技術能力を磨き、さまざまなオンラインツールやプラットフォームを駆使できるようになります。また、オンライン教育は実体キャンパスのカーボンフットプリントを減らし、環境への影響を減らし、より緑のある未来に貢献します。
+As virtual universities develop, there are concerns that the importance of traditional university models may be undermined, leading to potential unemployment issues for academic and administrative staff, including professors, lecturers, and administrators. However, the operation of virtual universities still requires the continuous involvement of faculty and administrative professionals, with their uniqueness lying in the transition to a vocational platform. Outstanding scholars from different academic institutions can contribute to shared digital education platforms, breaking the hegemony of prestigious universities and renowned professors, ultimately achieving educational equality.
 
-## バーチャル大学への懸念
+There are also concerns that the use of clubs, libraries, and laboratories, which are essential parts of university life, may reduce learning opportunities for virtual university students. In reality, virtual universities symbolize a treasure trove of knowledge and are not limited to online presence; they closely collaborate with various offline organizations and institutions. The absence of a physical campus does not prevent students from participating in club activities or using library and laboratory facilities. Instead, students are offered diverse choices beyond the constraints of traditional campuses. Furthermore, due to the dispersed demand of students, related industries such as libraries and laboratories are expected to emerge in large numbers and be established in various locations, promoting the birth of new businesses and opening up further career paths.
 
-バーチャル大学の発展に伴い、伝統的な大学モデルの重要性が軽視されることへの懸念があります。これにより、教授、講師、管理者を含む学術および管理職の失業問題が懸念されます。しかし、バーチャル大学の運営には依然として教員や管理の専門家の継続的な関与が必要であり、その独自性は職業プラットフォームの移行にあります。異なる学術機関からの優れた学者が共有デジタル教育プラットフォームに貢献することで、有名大学や有名教授の覇権が打破され、最終的に教育の平等が実現する可能性があります。
+By merging the dynamics of academia and society in this manner, the cooperative relationship between universities and societal progress is strengthened. Simultaneously, this phenomenon of dispersion helps widely disseminate educational resources, achieve educational fairness, and weaken the educational monopoly of prestigious academic institutions. The emergence of innovative education models encourages the expansion of related sectors, leading to the proliferation of economic opportunities and the formation of a vibrant professional environment. Clearly, the interaction between virtual and physical education models expands the dissemination of education, stimulates economic growth, and promotes a close connection between academia and the broader society.
 
-大学生活の重要な一部であるクラブ、図書館、実験室の利用がバーチャル大学の学生の学習機会を減少させるのではないかという懸念もあります。実際、バーチャル大学は知識の宝庫の象徴であり、その存在形式はオンラインだけに限らず、オフラインのさまざまな組織や機関と緊密に連携しています。実体の大学キャンパスがないことが、学生がクラブ活動に参加したり、図書館や実験室の施設を利用したりすることを妨げるわけではありません。むしろ、学生には伝統的なキャンパスの制約を超えた多様な選択肢が提供されます。また、学生の需要が分散しているため、図書館や実験室などの関連産業も大量に出現し、さまざまな場所に設立されることで新興ビジネスの誕生を促進し、さらなるキャリアの道が開かれます。
+Supplement: Currently, many students extend their learning environments to places like libraries and cafes, and many businesses have established study rooms, promoting diversity.
 
-学術界と社会の動態がこのように融合することで、大学と社会の進歩との協調関係が強化されます。同時に、この分散現象は教育資源の広範な普及を助け、教育の公平性を実現し、有名学術機関の教育独占を弱めることに寄与します。革新的な教育モデルの出現は関連部門の拡大を促し、経済機会の普及と活気ある専門環境の形成をもたらします。明らかに、バーチャルと実体教育モデルの相互作用は教育の普及を拡大し、経済成長を刺激し、学術界と広範な社会との緊密な結びつきを促進します。
+# Conclusion
 
-補足：現在、多くの学生が図書館やカフェなどで学習場所を広げており、多くのビジネスが設立した学習室も普及しており、多様化しています。
-
-# 結論
-
-バーチャル大学の利点は深遠です。柔軟性と便利さにより、学生は教育資源を調整でき、地理的な制約を取り除くことでグローバルな協力とネットワーキングが促進されます。AI技術を用いた「プライベートカスタマイズ」学習によりコストが削減され、教育の適応性と費用対効果が向上します。インタラクティブなバーチャル教室は学生の参加を促し、多様なコース設定が学生の専門的な興味を満たします。また、伝統的な学術界と就職問題への潜在的な影響も微妙です。バーチャル大学は、優れた教育者や施設の利用機会を増やし、異なる学校間の平等を促進します。バーチャル大学とオフライン機関の協調は、教育資源の分散を促し、学術界と社会との関係を強化し、より包括的、公平で活気に満ちた教育エコシステムを育む可能性があります。この進化は、関連産業の発展を触発し、新しい機会を創出し、最終的に教育と社会全体の進歩を促進するでしょう。
+The advantages of virtual universities are profound. Their flexibility and convenience allow students to adjust educational resources and remove geographical constraints, promoting global cooperation and networking. Learning through "private customization" using AI technology reduces costs, enhancing educational adaptability and cost-effectiveness. Interactive virtual classrooms encourage student participation, and a diverse range of courses caters to students' professional interests. Moreover, the potential impact on traditional academia and employment issues is nuanced. Virtual universities increase opportunities to access excellent educators and facilities, promoting equality among different schools. The collaboration between virtual universities and offline institutions facilitates the dispersion of educational resources, strengthens the relationship between academia and society, and fosters a more comprehensive, equitable, and vibrant educational ecosystem. This evolution stimulates the development of related industries, creates new opportunities, and ultimately promotes the progress of education and society as a whole.

@@ -27,16 +27,17 @@ const page = () => {
                 <div className="flex flex-col lg:w-3/4 items-center justify-center">
                   <div className="flex flex-col items-start justify-center">
                     <p className="text-justify">
-                      Hi, I&apos;m Dōmuki (Nickname). I am a 24-year-old male
-                      with a passion for music and writing. I am fluent in
-                      English and native in Chinese. I graduated from UPM with a
-                      Bachelor&apos;s degree in Software Engineering and am
-                      currently pursuing a Master&apos;s degree at PolyU.
+                      Hi, I&apos;m <span className="">Dōmuki</span> (Nickname).
+                      I am a 24-year-old male with a passion for music and
+                      writing. I am fluent in English and native in Chinese. I
+                      graduated from UPM with a Bachelor&apos;s degree in
+                      Software Engineering and am currently pursuing a
+                      Master&apos;s degree at PolyU.
                     </p>
                     <div className="mt-2">
                       <p>
                         My email is{" "}
-                        <span className="underline">Domukino@gmail.com</span>,
+                        <span className="italic">Domukino@gmail.com</span>,
                         and feel free to contact with me.
                       </p>
                     </div>
@@ -54,7 +55,11 @@ const page = () => {
               <div className="py-2">
                 <div className="flex w-full font-bold">
                   <div className="flex lg:flex-1">
-                    <span>University Putra Malaysia (UPM)</span>
+                    <a href="https://www.upm.edu.my/">
+                      <span className="hover:underline">
+                        University Putra Malaysia (UPM)
+                      </span>
+                    </a>
                   </div>
                   <div className="flex lg:flex-1 text-right justify-end">
                     <span>09/2019 – 09/2023</span>
@@ -91,7 +96,9 @@ const page = () => {
               <div className="py-2">
                 <div className="flex w-full font-bold">
                   <div className="flex lg:flex-1">
-                    <span>Hong Kong Polytechnic University (PolyU)</span>
+                    <a href="https://www.polyu.edu.hk/">
+                      <span className="hover:underline">Hong Kong Polytechnic University (PolyU)</span>
+                    </a>
                   </div>
                   <div className="flex lg:flex-1 text-right justify-end">
                     <span>09/2024 – Present</span>

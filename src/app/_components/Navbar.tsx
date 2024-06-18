@@ -8,11 +8,11 @@ import TextLogo from "./TextLogo";
 import Container from "./Container";
 
 const articleNav = [
-  // {
-  //   name: "Artificial Intelligence",
-  //   CNname: "人工知能",
-  //   href: "/study/artificial_intelligence",
-  // },
+  {
+    name: "Artificial Intelligence",
+    CNname: "人工知能",
+    href: "/study/artificial_intelligence",
+  },
   // {
   //   name: "Blockchain Technology",
   //   CNname: "ブロックチェーン技術",

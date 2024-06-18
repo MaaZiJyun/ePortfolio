@@ -41,7 +41,7 @@ const StudyNavBoard: React.FC = () => {
   ];
   return (
     <div className="lg:flex w-full items-start justify-center mt-10 lg:space-x-6">
-      <div className="flex flex-col lg:w-1/2 mt-5">
+      <div className="hidden lg:flex h-72 lg:w-1/2 mt-5">
         <p>
           {currentDiv === 0 && intro1}
           {currentDiv === 1 && intro2}
@@ -50,7 +50,7 @@ const StudyNavBoard: React.FC = () => {
           {currentDiv === null && defaultDesc}
         </p>
       </div>
-      <div className="flex flex-col lg:w-1/2 mt-5">
+      <div className="lg:w-1/2 mt-5">
         <div className="mb-3">
           <span className="text-lg font-bold">Subjects (Links):</span>
         </div>

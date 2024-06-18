@@ -41,11 +41,9 @@ const page = () => {
         <FadeInContainer>
           <QuotaBoard
             quota={
-              "Here's Domuki, a novice composer of orchestral music with a passion for creating emotional orchestral music. (There may also be pieces that are not orchestral)"
+              "Here's Domuki, a novice composer of orchestral music with a passion for creating emotional orchestral music. "
             }
-            author={
-              "Sincerely thank you for all your support and encouragement, it will help me greatly in learning and growing on my musical journey."
-            }
+            author={""}
           />
         </FadeInContainer>
         <FadeInContainer>

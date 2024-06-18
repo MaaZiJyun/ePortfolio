@@ -12,7 +12,7 @@ const page = () => {
           </div>
           <div className="flex flex-col items-center justify-center p-6 lg:p-32 text-justify">
             <div className="flex title text-5xl">
-              <span className="text-center">個人勉強ノート掲示板</span>
+              <span className="text-center">個人自習ノート掲示板</span>
             </div>
             <div className="flex flex-col lg:w-1/3 info text-center mt-12">
               <span className="text-xl">童夢綺</span>
