@@ -12,6 +12,10 @@ const page = () => {
   const articlesPreviews = articlesMetadata.map((article) => (
     <ArticlePreviewer key={article.slug} {...article} />
   ));
+
+  const pageTitle = "Learning Notes of Artificial Intelligence";
+  const pageDesc = "私の人工知能学習ノート";
+
   return (
     <main className="flex flex-col items-center justify-between mt-32">
       <Container>
@@ -20,12 +24,12 @@ const page = () => {
             <DirectoryBar />
           </div>
           <div className="w-full h-px bg-black"></div>
-          <div className="flex flex-col w-full pt-10 pb-20">
+          <div className="flex flex-col w-full pt-10 pb-16">
             <div className="space-y-4">
               <div className="text-3xl lg:text-6xl font-bold lg:w-2/3">
-                My Learning Notes of Artificial Intelligence
+                {pageTitle}
               </div>
-              <div className="text-base">私の人工知能学習ノート</div>
+              <div className="text-base">{pageDesc}</div>
             </div>
           </div>
         </div>
@@ -383,8 +387,8 @@ const StructureContent = (
         </tbody>
       </table>
       <p>
-        From the above two tables, the following conclusions can be drawn: 1. The
-        general education courses in both universities and colleges are 100%
+        From the above two tables, the following conclusions can be drawn: 1.
+        The general education courses in both universities and colleges are 100%
         identical; 2. The similarity of the core specialized courses is an
         impressive 78%. In the SPECIALIZATION ELECTIVE courses, only 35% are
         directly related to AI. Even if students choose all AI courses within
@@ -392,8 +396,7 @@ const StructureContent = (
         credits required for the SPECIALIZATION ELECTIVE.
       </p>
       <p>
-        The courses that are directly about
-        AI specialization are:{" "}
+        The courses that are directly about AI specialization are:{" "}
         <span className="font-bold">
           Natural Language Processing, Deep Learning, Evolutionary Computation,
           Computer Vision and Pattern Recognition{" "}

@@ -23,7 +23,7 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
     setActivePage(subPage);
   };
   return (
-    <div className="px-6 lg:px-24 my-32">
+    <div className="px-6 lg:px-24 my-24">
       <div className="flex items-center justify-between border-b-2 border-black">
         {["Purpose", "Structure", "Content", "Project"].map((page) => (
           <div
