@@ -23,7 +23,7 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
     setActivePage(subPage);
   };
   return (
-    <div className="px-6 lg:px-20 my-20">
+    <div className="px-6 lg:px-24 my-32">
       <div className="flex items-center justify-between border-b-2 border-black">
         {["Purpose", "Structure", "Content", "Project"].map((page) => (
           <div
@@ -33,16 +33,16 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
             }`}
             onClick={() => handleNavClick(page as SubPage)}
           >
-            <span className="text-lg">{page}</span>
+            <span className="text-lg font-bold">{page}</span>
           </div>
         ))}
       </div>
-        <div className="mt-6">
-          {activePage === "Purpose" && Introduction}
-          {activePage === "Structure" && Structure}
-          {activePage === "Content" && Content}
-          {activePage === "Project" && Project}
-        </div>
+      <div className="mt-14">
+        {activePage === "Purpose" && Introduction}
+        {activePage === "Structure" && Structure}
+        {activePage === "Content" && Content}
+        {activePage === "Project" && Project}
+      </div>
     </div>
   );
 };
