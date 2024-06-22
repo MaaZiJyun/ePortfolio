@@ -1,0 +1,15 @@
+.katex {
+    color: #000; /* Tomato color for example */
+    font-size: 1.5em; /* Increase the size of the formula */
+  }
+  
+  .katex .mord {
+    color: inherit;
+    font-size: 1em; /* Ensure the inherited color is applied */
+  }
+  
+  .katex .mspace {
+    color: inherit;
+    font-size: 1.2em; /* Ensure the inherited color is applied */
+  }
+  

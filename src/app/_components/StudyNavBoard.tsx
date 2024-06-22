@@ -29,7 +29,7 @@ const StudyNavBoard: React.FC = () => {
     {
       name: "Artificial Intelligence",
       CNname: "人工知能",
-      href: "/study",
+      href: "/study/artificial_intelligence",
     },
     {
       name: "Blockchain Technology",

@@ -1,12 +1,22 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
-import MarkdownComponents from './MarkdownComponent';
+import MarkdownComponent from './MarkdownComponent';
 
-const MarkdownRenderer = ({ content }: { content: string }) => {
+interface MarkdownRendererProps {
+  content: string;
+}
+
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
   return (
     <Markdown
       options={{
-        overrides: MarkdownComponents,
+        overrides: {
+          ...MarkdownComponent,
+          Latex: {
+            component: MarkdownComponent.Latex,
+            props: { chart: true }, // Ensure that it uses the custom Latex component
+          },
+        },
       }}
     >
       {content}

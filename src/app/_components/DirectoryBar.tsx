@@ -12,7 +12,7 @@ const DirectoryBar = () => {
   };
 
   return (
-    <div className="flex uppercase">
+    <div className="lg:flex uppercase text-sm lg:text-base my-2">
       <Link href="/">
         <span className="italic hover:underline">Home</span>
       </Link>

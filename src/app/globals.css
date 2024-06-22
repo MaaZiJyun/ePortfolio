@@ -130,7 +130,7 @@ footer {
 }
 
 .bg-domuki-logo {
-  background-image: url('/domukilogo.png');
+  background-image: url('/images/domukilogo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -148,7 +148,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/sketch.jpeg');
+  background-image: url('/images/sketch.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -168,7 +168,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/domukilogo.png');
+  background-image: url('/images/domukilogo.png');
   background-size:contain;
   background-position: center;
   background-repeat:inherit;
@@ -188,7 +188,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/domukiphoto001.png');
+  background-image: url('/images/domukiphoto001.png');
   background-size:cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -208,7 +208,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/latest_album.png');
+  background-image: url('/images/latest_album.png');
   background-size:cover;
   background-position: center;
   background-repeat:no-repeat;

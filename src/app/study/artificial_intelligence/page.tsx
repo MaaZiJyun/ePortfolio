@@ -1,8 +1,17 @@
+import ArticlePreviewer from "@/app/_components/ArticlePreviewer";
 import Container from "@/app/_components/Container";
 import DirectoryBar from "@/app/_components/DirectoryBar";
 import SubPageContent from "@/app/_components/SubPageContent";
+import { TypeOfArticle } from "@/app/_controllers/TypeOfArticle";
+import getArticleMetadata from "@/app/_controllers/getArticleMetadata";
 
 const page = () => {
+  const articlesMetadata = getArticleMetadata(
+    TypeOfArticle.ArtificialIntelligence
+  );
+  const articlesPreviews = articlesMetadata.map((article) => (
+    <ArticlePreviewer key={article.slug} {...article} />
+  ));
   return (
     <main className="flex flex-col items-center justify-between mt-32">
       <Container>
@@ -23,7 +32,19 @@ const page = () => {
         <SubPageContent
           Introduction={IntroductionContent}
           Structure={StructureContent}
-          Content={ContentContent}
+          Content={
+            <div className="flex flex-col w-full fade-in">
+              <div className="mb-6">
+                <h2 className="text-xl lg:text-3xl font-bold text-red-700">
+                  Content of Learning
+                </h2>
+                <span className="text-gray-500 text-lg">
+                  (The following is a note about IELTS and English learning.)
+                </span>
+              </div>
+              <div>{articlesPreviews}</div>
+            </div>
+          }
           Project={ProjectContent}
         />
       </Container>
@@ -41,41 +62,44 @@ const IntroductionContent = (
       should learn and what I can obtain after my study.)
     </span>
     <p>
-      During my undergraduate studies in Software Engineering, UPM did not yet
-      offer a program in Artificial Intelligence, causing me to miss the optimal
-      opportunity to study this rapidly evolving field. However, I believe that
-      this is not a valid reason to abandon my aspirations. Motivated by a
-      strong desire to stay at the forefront of technological advancements, I
-      have decided to leverage online resources to independently study computer
-      science and acquire the necessary knowledge in Artificial Intelligence.
+      During my undergraduate study in Software Engineering, There is no
+      Artificial Intelligence major provided in UPM, and at that time, I did not
+      have a clear idea about studying abroad. Therefore, I missed the best
+      opportunity to study artificial intelligence 4 years ago.{" "}
+      <span className="font-bold">
+        However, this should not be an excuse to give up my aspirations.
+      </span>{" "}
+      Motivated by a strong awareness to follow the trend of technological
+      revolution, I have decided to utilize online resources to independently
+      study the necessary knowledge in Artificial Intelligence field.
     </p>
     <p>
-      The primary purpose of this self-directed learning is to bridge the gap
-      left by my formal education and to gain a comprehensive understanding of
-      Artificial Intelligence. By doing so, I aim to equip myself with the
-      skills and expertise needed in this domain and to stay competitive in an
-      ever-evolving job market.
+      The primary purpose of this self-directed learning is to narrow the gap
+      caused by my previous education and acquire a comprehensive understanding
+      of Artificial Intelligence. By doing so, I aim to equip myself with the
+      skills and expertise needed in this domain and to stay competitive in
+      today's job market.
     </p>
     <p>
       The outcomes of this initiative are multifaceted. Firstly, I intend to
-      develop a solid foundation in AI principles and techniques, which will
-      enable me to apply this knowledge to real-world problems. Secondly, I aim
-      to enhance my problem-solving abilities and computational thinking skills
-      through practical projects and hands-on experience. Lastly, I hope to
-      create a detailed learning log that can serve as a resource for my
-      reference.
+      learn basic knowledge in general AI techniques, which will enable me to
+      apply them to solve real-world problems. Secondly, I aim to enhance my
+      problem-solving abilities, strategies and thinking skills through
+      practical projects and hands-on experience. Lastly, I will write some
+      detailed learning logs that can serve as records for my study.
     </p>
   </div>
 );
 const StructureContent = (
   <div className="space-y-5 text-justify">
     <div className="space-y-5 text-justify">
-      <h2 className="text-xl lg:text-3xl font-bold text-red-700">Target of Learning</h2>
+      <h2 className="text-xl lg:text-3xl font-bold text-red-700">
+        Target of Learning
+      </h2>
       <p>
-        To supplement the lack of knowledge in artificial intelligence during my
-        undergraduate studies and to eliminate similar or identical public and
-        professional courses, the focus of my studies will be on the following
-        areas:
+        The conclusion is that: to supplement the lack of knowledge in
+        artificial intelligence since my undergraduate, the focus of my study
+        will be on the following areas:
       </p>
       <ol className="list-decimal list-inside">
         <li>Machine Learning</li>
@@ -88,77 +112,32 @@ const StructureContent = (
         <li>Practical Artificial Intelligence</li>
       </ol>
       <p>
-        The specific course names and contents may vary from university to
-        university. My bachelor study was completed from UPM in Malaysia.
+        The specific course names and contents may vary from different
+        universities. My bachelor study was completed from UPM in Malaysia.
         Therefore, to specified the case, the bachelor of artificial
-        intelligence in UM will be taken as reference for analysis. In fact, the
+        intelligence in University of Malaya's (UM), the best university in
+        Malaysia, will be taken as reference for analysis. In fact, the
         undergraduate program in Artificial Intelligence is not significantly
-        different from other types of computer science programs. Most of the
-        required courses and general education courses are essentially the same.
+        different from other types of computer science programs.
       </p>
       <p>
-        By referring to the University of Malaya's (UM), the best university in
-        Malaysia, undergraduate curriculum for Artificial Intelligence, most of
-        the general and core courses are identical, such as Basic Malay
-        Language, Computer Systems and Organization, Database and Data
-        Structures.
+        Most of the required courses and general education courses are
+        essentially the same. By referring to UM undergraduate curriculum for
+        Artificial Intelligence,
+        <span className="font-bold">
+          {" "}
+          the university public and faculty general courses are almost the same,
+          such as Basic Malay Language, Computer Systems and Organization,
+          Database and Data Structures
+        </span>
+        . (There are mainly 4 categories about university courses: university
+        core, faculty core, programme core and specialization elective)
       </p>
       <p>
         The courses with <span className="bg-gray-200">gray-200</span>{" "}
         background are similar to the courses in B.S.E in UPM
       </p>
-      <table className="min-w-full border text-sm lg:text-base">
-        <thead>
-          <tr className="bg-gray-300">
-            <th className="p-1 lg:py-2 lg:px-4 border-b">COURSE CODE</th>
-            <th className="p-1 lg:py-2 lg:px-4 border-b">
-              FACULTY CORE COURSES
-            </th>
-            <th className="p-1 lg:py-2 lg:px-4 border-b">CREDITS</th>
-            <th className="p-1 lg:py-2 lg:px-4 border-b">TERM</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="bg-gray-200">
-            <td className="p-1 lg:py-2 lg:px-4 border-b">WIX1001</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">
-              Computing Mathematics I
-            </td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">3</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">1</td>
-          </tr>
-          <tr className="bg-gray-200">
-            <td className="p-1 lg:py-2 lg:px-4 border-b">WIX1002</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">
-              Fundamentals of Programming
-            </td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">5</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">1</td>
-          </tr>
-          <tr className="bg-gray-200">
-            <td className="p-1 lg:py-2 lg:px-4 border-b">WIX1003</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">
-              Computer Systems and Organization
-            </td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">3</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">1</td>
-          </tr>
-          <tr className="bg-gray-200">
-            <td className="p-1 lg:py-2 lg:px-4 border-b">WIX2001</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">
-              Thinking and Communication Skills
-            </td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">3</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">1</td>
-          </tr>
-          <tr className="bg-gray-200">
-            <td className="p-1 lg:py-2 lg:px-4 border-b">WIX2002</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">Project Management</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">3</td>
-            <td className="p-1 lg:py-2 lg:px-4 border-b">1</td>
-          </tr>
-        </tbody>
-      </table>
+
       <table className="min-w-full border text-sm lg:text-base">
         <thead>
           <tr className="bg-gray-300">
@@ -404,7 +383,16 @@ const StructureContent = (
         </tbody>
       </table>
       <p>
-        From the list of courses you provided, the ones that are directly about
+        From the above two tables, the following conclusions can be drawn: 1. The
+        general education courses in both universities and colleges are 100%
+        identical; 2. The similarity of the core specialized courses is an
+        impressive 78%. In the SPECIALIZATION ELECTIVE courses, only 35% are
+        directly related to AI. Even if students choose all AI courses within
+        the SPECIALIZATION ELECTIVE, they can only complete 50% of the total
+        credits required for the SPECIALIZATION ELECTIVE.
+      </p>
+      <p>
+        The courses that are directly about
         AI specialization are:{" "}
         <span className="font-bold">
           Natural Language Processing, Deep Learning, Evolutionary Computation,
