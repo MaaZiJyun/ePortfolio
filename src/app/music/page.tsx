@@ -51,12 +51,13 @@ const page = () => {
             <div className="content space-y-6 lg:w-1/2">
               <p className="text-lg">
                 Domuki is an independent musician passionate about music
-                creation.Here are the key genres she explores:
+                creation. These are the types I enjoy and skilled in:
               </p>
-              <h1 className="text-3xl lg:text-6xl">
-                Electronic, Orchestral, Experimental, Chinese, POP,
-                Instrumental, Video Game Music, etc.
+              <h1 className="text-3xl lg:text-6xl font-bold">
+                Electronic · Orchestral · Experimental · Chinese · Pop ·
+                Instrumental · Video Game Music
               </h1>
+              <div className="w-full h-px bg-white"></div>
               <p className="text-xl lg:text-2xl">
                 If you are interested in my music works or collaboration with me, feel
                 free to send me an email:{" "}
