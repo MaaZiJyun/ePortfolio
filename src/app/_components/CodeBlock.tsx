@@ -58,7 +58,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
   };
 
   return (
-    <div className="bg-black rounded-lg relative">
+    <div className="bg-black rounded-lg relative mt-6">
       <div className="flex justify-between px-4 py-3 bg-white bg-opacity-40">
         {className && <span className="text-white">{className}</span>}
         <button onClick={handleCopy} className="text-white">
