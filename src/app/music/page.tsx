@@ -58,9 +58,9 @@ const page = () => {
                 Instrumental, Video Game Music, etc.
               </h1>
               <p className="text-xl lg:text-2xl">
-                If you like my work or wish to collaborate with me, feel free to
-                send me an email:{" "}
-                <span className="italic underline">Domukino@gmail.com</span>!
+                If you are interested in my music works or collaboration with me, feel
+                free to send me an email:{" "}
+                <span className="italic underline">Domukino@gmail.com</span>! Thank you ~
               </p>
             </div>
           </div>
