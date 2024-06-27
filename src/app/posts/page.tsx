@@ -11,9 +11,9 @@ const page = () => {
     <PostPreviewer key={post.slug} {...post} />
   ));
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between my-24">
       <Container>
-        <div className="flex flex-col items-center justify-between my-24">
+        <div className="flex flex-col items-center justify-between">
           <div className="flex w-full p-6 lg:px-32">
             <DirectoryBar />
           </div>
@@ -25,7 +25,7 @@ const page = () => {
                 "I will share some of my personal thoughts or insights here."
               }
             />
-            <div className="flex flex-col w-full">{postPreviews}</div>
+            <div className="flex flex-col w-full py-6">{postPreviews}</div>
           </div>
         </div>
       </Container>

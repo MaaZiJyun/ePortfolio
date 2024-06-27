@@ -23,6 +23,7 @@ const articleNav = [
 ];
 
 const basicNav = [
+  { name: "Home", CNname: "ホーム", href: "/"},
   { name: "Study", CNname: "学習", href: "/study", subNav: articleNav },
   { name: "Posts", CNname: "記事", href: "/posts" },
   { name: "Resume", CNname: "履歴", href: "/resume" },

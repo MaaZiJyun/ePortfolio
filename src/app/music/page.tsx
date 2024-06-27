@@ -47,6 +47,25 @@ const page = () => {
           />
         </FadeInContainer>
         <FadeInContainer>
+          <div className="parallax-section">
+            <div className="content space-y-6 lg:w-1/2">
+              <p className="text-lg">
+                Domuki is an independent musician passionate about music
+                creation.Here are the key genres she explores:
+              </p>
+              <h1 className="text-3xl lg:text-6xl">
+                Electronic, Orchestral, Experimental, Chinese, POP,
+                Instrumental, Video Game Music, etc.
+              </h1>
+              <p className="text-xl lg:text-2xl">
+                If you like my work or wish to collaborate with me, feel free to
+                send me an email:{" "}
+                <span className="italic underline">Domukino@gmail.com</span>!
+              </p>
+            </div>
+          </div>
+        </FadeInContainer>
+        <FadeInContainer>
           <div className="flex flex-col lg:px-12 mt-32 lg:mb-32">
             <div className="flex flex-col items-center lg:items-end justify-center pb-32">
               <span className="text-center text-3xl lg:text-6xl">

@@ -19,30 +19,17 @@ const page = () => {
             }
           />
           <FadeInContainer>
-            <div className="lg:flex lg:space-x-20 items-center justify-center mt-10">
-              <div className="lg:flex py-10 lg:mx-20">
-                <div className="hidden lg:flex lg:w-1/4 items-center justify-center">
-                  <div className="w-40 h-40 bg-domuki-logo"></div>
-                </div>
-                <div className="flex flex-col lg:w-3/4 items-center justify-center">
-                  <div className="flex flex-col items-start justify-center">
-                    <p className="text-justify">
-                      Hi, I&apos;m <span className="">Dōmuki</span> (Nickname).
-                      I am a 24-year-old male with a passion for music and
-                      writing. I am fluent in English and native in Chinese. I
-                      graduated from UPM with a Bachelor&apos;s degree in
-                      Software Engineering and am currently pursuing a
-                      Master&apos;s degree at PolyU.
-                    </p>
-                    <div className="mt-2">
-                      <p>
-                        My email is{" "}
-                        <span className="italic">Domukino@gmail.com</span>,
-                        and feel free to contact with me.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex flex-col items-center justify-center py-12">
+              <div className="flex flex-col items-start justify-center">
+                <p className="text-justify">
+                  Hi, I&apos;m Ma Zhiyuan or <span className="">Dōmuki</span>{" "}
+                  (Nickname). I am 24 years old. I graduated from UPM with a
+                  bachelor's degree in software engineering and am currently
+                  pursuing a master's degree at the University of Technology. I
+                  speak fluent English and am a native Chinese speaker. My
+                  research interests are Web3, IoT, artificial intelligence, and
+                  blockchain. 
+                </p>
               </div>
             </div>
           </FadeInContainer>
@@ -97,7 +84,9 @@ const page = () => {
                 <div className="flex w-full font-bold">
                   <div className="flex lg:flex-1">
                     <a href="https://www.polyu.edu.hk/">
-                      <span className="hover:underline">Hong Kong Polytechnic University (PolyU)</span>
+                      <span className="hover:underline">
+                        Hong Kong Polytechnic University (PolyU)
+                      </span>
                     </a>
                   </div>
                   <div className="flex lg:flex-1 text-right justify-end">
@@ -108,6 +97,12 @@ const page = () => {
                   <div className="flex lg:flex-1">MSc</div>
                   <div className="flex text-right justify-end">
                     <span>Department of Computing, Faculty of Engineering</span>
+                  </div>
+                </div>
+                <div className="flex w-full">
+                  <div className="flex lg:flex-1">• Major in Computing</div>
+                  <div className="flex text-right justify-end">
+                    <span>--</span>
                   </div>
                 </div>
               </div>
@@ -141,7 +136,8 @@ const page = () => {
                 <div className="flex w-full">
                   <div className="flex lg:flex-1">
                     <span>
-                      Certificate of Huawei Certified ICT Associate (HCIA)
+                      Certificate of Huawei Certified ICT Associate in
+                      Artificial Intelligence (HCIA-AI)
                     </span>
                   </div>
                   <div className="flex text-right justify-end">
@@ -287,7 +283,7 @@ const page = () => {
           <FadeInContainer>
             <div className="pt-10">
               <div className="title ">
-                <span className="text-lg font-bold">RESEARCH EXPERIENCE</span>
+                <span className="text-lg font-bold">INDUSTRIAL EXPERIENCE</span>
               </div>
               <div className="w-full h-px bg-black"></div>
               <div className="py-2">
@@ -353,6 +349,67 @@ const page = () => {
                   <div className="flex w-full">
                     • Created and produced a demonstration commercial video to
                     promote the app.
+                  </div>
+                </div>
+              </div>
+              <div className="py-2">
+                <div className="flex w-full">
+                  <div className="flex lg:flex-1">
+                    <a href="https://eos-systems.com.my/">
+                      <span className="font-bold hover:underline">
+                        Handan Feituo Information Technology Co. LTD
+                      </span>
+                    </a>
+                  </div>
+                  <div className="flex text-right justify-end">
+                    <p>
+                      <span className="font-bold">Industrial Supervisor: </span>
+                      <span className="hover:underline">Ma Gang</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex w-full">
+                  <div className="flex lg:flex-1">
+                    <p>
+                      <span className="font-bold">Position: </span>
+
+                      <span className="hover:underline">
+                        Assistant Software Engineer
+                      </span>
+                    </p>
+                  </div>
+                  <div className="flex text-right justify-end">
+                    <span>07/2020 – 09/2020</span>
+                  </div>
+                </div>
+                <div className="flex w-full">
+                  <p>
+                    <span className="font-bold">Objective: </span>
+                    <span>
+                      To assist in designing, developing, and testing web
+                      front-end functions, create user-friendly cross-platform
+                      applications, collaborate with the back-end team, and
+                      research new web technologies to enhance user experience.
+                    </span>
+                  </p>
+                </div>
+                <div className="pl-6">
+                  <div className="flex w-full">
+                    • Assist in Web front-end functions involved in the project
+                    in design, development and testing:
+                  </div>
+                  <div className="flex w-full">
+                    • Create user-friendly, cross-platform applications with web
+                    front-end technology and continuously improve and enhance
+                    the user experience
+                  </div>
+                  <div className="flex w-full">
+                    • Work with the back end team to develop the front end of
+                    the site;
+                  </div>
+                  <div className="flex w-full">
+                    • Assist in web frontier technology research and new
+                    technology research.
                   </div>
                 </div>
               </div>

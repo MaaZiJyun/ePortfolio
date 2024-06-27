@@ -59,9 +59,6 @@ const StudyNavBoard: React.FC = () => {
         ))}
       </div>
       <div className="hidden lg:flex flex-col h-72 p-6 lg:w-3/4 mt-5">
-        <p className="text-xl lg:text-3xl mb-6 italic font-bold">
-          Brief Introduction
-        </p>
         <p>
           {currentDiv === 0 && intro1}
           {currentDiv === 1 && intro2}
