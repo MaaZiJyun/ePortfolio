@@ -36,9 +36,10 @@
   }
 }
 
-p > img {
+p>img {
   display: block;
-  margin: 0 auto; /* Centers the image horizontally */
+  margin: 0 auto;
+  /* Centers the image horizontally */
 }
 
 .fade-in {
@@ -67,9 +68,10 @@ header {
 body {
   color: rgb(var(--foreground-rgb));
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(to bottom,
+  /* background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+  background-color: white;
 }
 
 footer {
@@ -131,7 +133,8 @@ footer {
 }
 
 .text-indent {
-  text-indent: 2em; /* Adjust the value as needed */
+  text-indent: 2em;
+  /* Adjust the value as needed */
 }
 
 .bg-domuki-logo {
@@ -174,9 +177,9 @@ footer {
   bottom: 0;
   left: 0;
   background-image: url('/images/domukilogo.png');
-  background-size:contain;
+  background-size: contain;
   background-position: center;
-  background-repeat:inherit;
+  background-repeat: inherit;
   opacity: 0.2;
   z-index: -1;
 }
@@ -194,9 +197,9 @@ footer {
   bottom: 0;
   left: 0;
   background-image: url('/images/domukiphoto001.png');
-  background-size:cover;
+  background-size: cover;
   background-position: top;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   opacity: 0.2;
   z-index: -1;
 }
@@ -214,9 +217,9 @@ footer {
   bottom: 0;
   left: 0;
   background-image: url('/images/latest_album.png');
-  background-size:cover;
+  background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   opacity: 0.3;
   z-index: -1;
 }
@@ -247,7 +250,8 @@ footer {
 .custom-background-wrapper {
   position: relative;
   overflow: hidden;
-  height: 600px; /* Adjust height as needed */
+  height: 600px;
+  /* Adjust height as needed */
 }
 
 .custom-background-wrapper::before {
@@ -264,7 +268,8 @@ footer {
 }
 
 .custom-background-wrapper:hover::before {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1);
+  /* Zoom effect on hover */
 }
 
 .custom-background-wrapper .content {
@@ -272,12 +277,14 @@ footer {
   z-index: 1;
   color: white;
   text-align: center;
-  padding: 50px 20px; /* Adjust padding as needed */
+  padding: 50px 20px;
+  /* Adjust padding as needed */
 }
 
 .parallax-section {
   position: relative;
-  height: 100vh; /* Full height section */
+  height: 100vh;
+  /* Full height section */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,14 +301,48 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/composing.png') no-repeat center center fixed; /* Background image */
-  background-size: cover; /* Ensure the image covers the section */
-  filter: blur(2px); /* Apply blur effect */
-  z-index: -1; /* Ensure background is behind the content */
+  background: url('/images/composing.png') no-repeat center center fixed;
+  /* Background image */
+  background-size: cover;
+  /* Ensure the image covers the section */
+  filter: blur(2px);
+  /* Apply blur effect */
+  z-index: -1;
+  /* Ensure background is behind the content */
   /* opacity: 0.5; */
 }
 
 .parallax-section .content {
-  z-index: 1; /* Ensure content is above the background */
+  z-index: 1;
+  /* Ensure content is above the background */
   padding: 20px;
+}
+
+.code-block-head {
+  font-family: Arial, sans-serif; /* Example font family */
+  font-size: 15px;
+  background-color: #f8f8f8;
+  border: 1px solid #d0d7de;
+}
+
+.custom-syntax-pre {
+  margin: 0 !important;
+  border: 0 !important;
+  /* border-radius: 0; */
+  /* background-color: #333333 !important; */
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid #d0d7de !important;
+  font-size: 15px !important;
+}
+
+.custom-syntax-pre code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+.custom-syntax-pre:hover {
+  background-color: #fdfdfd !important;
 }
