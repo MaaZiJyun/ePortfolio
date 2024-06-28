@@ -1,17 +1,22 @@
 ---
-title: "Flappy Bird"
+title: "Flappy UPM: JavaFX for a game like Flappy Bird"
 date: "2020-07-08 09:05:58"
 categories: "Java Project"
 address: "自習スタジオ"
 author:
   name: 童夢綺
+keywords: ['JavaFX', 'Java', 'Flappy Bird', 'Game Programming']
 ---
 
-### The Screenshots:
+# Introduction
+
+For my first-year Java programming coursework, I took on the challenge of creating a simplified version of Flappy Bird using JavaFX. The project focused on developing a straightforward user interface, where I incorporated the iconic red color associated with UPM (assuming it's my university or a symbol). I replaced the bird with the UPM icon, because I hoped to get a good score in my final if I done with this hahaha. This project allowed me to practice fundamental Java programming skills while exploring basic game development principles and UI design with JavaFX.
+
+# The Screenshots:
 
 ![Alt text for the image](/images/_posts/FlappyBird/001.png)
 
-### The Original Code of Flappy Bird: 
+# The Original Code of Flappy Bird: 
 
 ```java
 package FB;

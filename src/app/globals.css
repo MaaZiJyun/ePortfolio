@@ -320,7 +320,7 @@ footer {
 
 .code-block-head {
   font-family: Arial, sans-serif; /* Example font family */
-  font-size: 15px;
+  font-size: .875rem;
   background-color: #f8f8f8;
   border: 1px solid #d0d7de;
 }
@@ -335,7 +335,7 @@ footer {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border: 1px solid #d0d7de !important;
-  font-size: 15px !important;
+  font-size: .875rem !important;
 }
 
 .custom-syntax-pre code {

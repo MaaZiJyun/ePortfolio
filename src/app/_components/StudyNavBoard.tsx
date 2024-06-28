@@ -41,7 +41,7 @@ const StudyNavBoard: React.FC = () => {
   ];
   return (
     <div className="lg:flex w-full items-start justify-center mt-10 lg:space-x-6">
-      <div className="lg:w-1/4 mt-5 p-6 bg-gray-200">
+      <div className="mt-5 p-6 bg-gray-200">
         <div className="mb-6">
           <span className="font-bold">Subjects (Links):</span>
         </div>

@@ -23,7 +23,7 @@ const articleNav = [
 ];
 
 const basicNav = [
-  { name: "Home", CNname: "ホーム", href: "/"},
+  { name: "Home", CNname: "ホーム", href: "/" },
   { name: "Study", CNname: "学習", href: "/study", subNav: articleNav },
   { name: "Posts", CNname: "記事", href: "/posts" },
   { name: "Resume", CNname: "履歴", href: "/resume" },
@@ -80,11 +80,13 @@ const Navbar = () => {
                   className="w-full h-full flex items-center justify-between px-8 text-lg font-semibold leading-6 text-black"
                 >
                   <div className="flex flex-col items-center">
-                    <span className="text-lg font-semibold tracking-wide">
-                      {item.name}
-                    </span>
+                    <div className="flex">
+                      <span className="text-lg font-semibold tracking-wide">
+                        {item.name}
+                      </span>
+                    </div>
 
-                    <div className="space-x-2">
+                    <div className="w-full flex justify-around">
                       {item.CNname.split("").map((char, index) => (
                         <span className="text-xs font-normal" key={index}>
                           {char}

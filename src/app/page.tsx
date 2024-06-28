@@ -3,6 +3,7 @@ import Container from "./_components/Container";
 import FadeInContainer from "./_components/FadeInContainer";
 import PostPreviewer from "./_components/PostPreviewer";
 import QuotaBoard from "./_components/QuotaBoard";
+import StudyNavBoard from "./_components/StudyNavBoard";
 import YouTubePreviewer from "./_components/YouTubePreviewer";
 import getPostMetadata from "./_controllers/getPostMetadata";
 
@@ -109,6 +110,7 @@ export default function Home() {
             />
           </div>
         </FadeInContainer>
+      
         <FadeInContainer>
           <div className="lg:flex items-center justify-center lg:my-32">
             <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
