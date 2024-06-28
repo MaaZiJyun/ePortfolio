@@ -1,10 +1,19 @@
 import ArticlePreviewer from "./_components/ArticlePreviewer";
 import Container from "./_components/Container";
 import FadeInContainer from "./_components/FadeInContainer";
+import ParallaxSection from "./_components/ParallaxSection";
 import PostPreviewer from "./_components/PostPreviewer";
 import QuotaBoard from "./_components/QuotaBoard";
 import StudyNavBoard from "./_components/StudyNavBoard";
 import YouTubePreviewer from "./_components/YouTubePreviewer";
+import {
+  MusicalNoteIcon,
+  UserIcon,
+  WrenchScrewdriverIcon,
+  ChatBubbleLeftRightIcon,
+} from "@heroicons/react/24/outline";
+import { PlayIcon } from "@heroicons/react/24/outline";
+
 import getPostMetadata from "./_controllers/getPostMetadata";
 
 export default function Home() {
@@ -34,58 +43,69 @@ export default function Home() {
           </div>
         </div>
         <FadeInContainer>
-          <div className="lg:flex w-full items-start justify-around px-6 lg:px-12 my-32">
-            <div className="flex lg:w-1/4 p-6 items-center justify-center">
-              <div className="flex flex-col space-y-5">
-                <span className="font-bold text-xl text-center">
-                  Software Engineer
-                </span>
-                <span className="text-justify text-gray-800">
-                  I hold a Bachelor's degree in Software Engineering. I
-                  frequently worked with frameworks like Flutter for mobile
-                  development and Next.js for web development.
-                </span>
-              </div>
+          <div className="lg:flex w-full h-full items-stretch justify-around">
+            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+              <ParallaxSection backgroundImage={"/images/programming.jpg"}>
+                <div className="flex flex-col items-center justify-center space-y-3 p-24 h-full">
+                  <WrenchScrewdriverIcon className="h-12 w-12 text-white" />
+
+                  <span className="font-bold text-xl text-center">
+                    Software Engineer
+                  </span>
+                  <span className="text-justify">
+                    I hold a Bachelor's degree in Software Engineering, and
+                    frequently worked with frameworks like Flutter and Next.js.
+                  </span>
+                </div>
+              </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 p-6 items-center justify-center">
-              <div className="flex flex-col space-y-5">
-                <span className="font-bold text-xl text-center">
-                  English Assistant
-                </span>
-                <span className="text-justify text-gray-800">
-                  I have achieved an IELTS band score of 7 and have experience
-                  as an English teaching assistant.
-                </span>
-              </div>
+            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+              <ParallaxSection backgroundImage={"/images/english.jpg"}>
+                <div className="flex flex-col items-center justify-center space-y-3 p-24 h-full">
+                  <ChatBubbleLeftRightIcon className="h-12 w-12 text-white" />
+
+                  <span className="font-bold text-xl text-center">
+                    English Assistant
+                  </span>
+                  <span className="text-justify">
+                    I achieved an IELTS band score of 7 and had experience
+                    as an English teaching assistant.
+                  </span>
+                </div>
+              </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 p-6 items-center justify-center">
-              <div className="flex flex-col space-y-5">
-                <span className="font-bold text-xl text-center">
-                  Music Composer
-                </span>
-                <span className="text-justify text-gray-800">
-                  Composing music is my favorite hobby, which I've continued to
-                  pursue for over 5 years, accumulating more than 472,000
-                  listens.
-                </span>
-              </div>
+            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+              <ParallaxSection backgroundImage={"/images/composing.png"}>
+                <div className="flex flex-col items-center justify-center space-y-3 p-24 h-full">
+                  <MusicalNoteIcon className="h-12 w-12 text-white" />
+
+                  <span className="font-bold text-xl text-center">
+                    Music Composer
+                  </span>
+                  <span className="text-justify">
+                    Composing music is my favorite hobby, which I've continued
+                    to pursue for over 5 years, accumulating more than 472,000
+                    listens.
+                  </span>
+                </div>
+              </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 p-6 items-center justify-center">
-              <div className="flex flex-col space-y-5">
-                <span className="font-bold text-xl text-center">Student</span>
-                <span className="text-justify text-gray-800">
-                  Being a student will always be my identity throughout my life.
-                  I have a constant desire to learn new things, expand my
-                  knowledge, and enhance my perspectives.
-                </span>
-              </div>
+            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+              <ParallaxSection backgroundImage={"/images/student.png"}>
+                <div className="flex flex-col items-center justify-center space-y-3 p-24 h-full">
+                  <UserIcon className="h-12 w-12 text-white" />
+
+                  <span className="font-bold text-xl text-center">Student</span>
+                  <span className="text-justify">
+                    Being a student will always be my identity throughout my
+                    life. I have a constant desire to learn new things and enhance my perspectives.
+                  </span>
+                </div>
+              </ParallaxSection>
             </div>
           </div>
         </FadeInContainer>
-        {/* divider */}
-        <div className="lg:flex px-6 lg:px-12 my-32">
-          <div className="w-full h-px bg-black"></div>
-        </div>
+
         <FadeInContainer>
           <div className="lg:flex px-6 lg:px-12 mt-20">
             <div className="flex flex-col lg:flex-1 items-center justify-center m-20">
@@ -110,21 +130,28 @@ export default function Home() {
             />
           </div>
         </FadeInContainer>
-      
+
         <FadeInContainer>
-          <div className="lg:flex items-center justify-center lg:my-32">
-            <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
-              <span className="text-center text-6xl">Latest Work</span>
-              <div className="text-center space-x-5 mt-2">
-                <span>最</span>
-                <span>新</span>
-                <span>作</span>
-                <span>品</span>
+          <div className="relative">
+            <a href="https://www.youtube.com/watch?v=haqHcJHe0w0">
+              <div className="flex lg:flex-row flex-col bg-black bg-opacity-20 hover:bg-opacity-50 transition-all">
+                {/* <YouTubePreviewer videoId="haqHcJHe0w0" /> */}
+                <ParallaxSection backgroundImage={"/images/latest_album.png"}>
+                  <div className="flex flex-col items-center justify-center py-56 space-y-6">
+                    <PlayIcon className="h-28 w-28 text-white" />
+                    <span className="text-center text-3xl lg:text-6xl">
+                      Latest Work
+                    </span>
+                    <div className="text-center space-x-5">
+                      <span>最</span>
+                      <span>新</span>
+                      <span>作</span>
+                      <span>品</span>
+                    </div>
+                  </div>
+                </ParallaxSection>
               </div>
-            </div>
-            <div className="flex lg:w-1/2 h-1/2">
-              <YouTubePreviewer videoId="haqHcJHe0w0" />
-            </div>
+            </a>
           </div>
         </FadeInContainer>
       </Container>
