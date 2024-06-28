@@ -16,7 +16,7 @@ const page = () => {
                 <span className="text-center ">白</span>
                 <span className="text-center">板</span>
               </div>
-              <div className="flex items-center justify-center mt-6 text-lg space-x-2">
+              <div className="flex items-center justify-center mt-6 text-base lg:text-lg space-x-2">
                 {"童夢綺の学習白板".split("").map((char, index) => (
                   <span className="font-normal" key={index}>
                     {char}
