@@ -42,6 +42,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <FadeInContainer>
           <div className="lg:flex w-full h-full items-stretch justify-around">
             <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
@@ -68,8 +69,8 @@ export default function Home() {
                     English Assistant
                   </span>
                   <span className="text-justify">
-                    I achieved an IELTS band score of 7 and had experience
-                    as an English teaching assistant.
+                    I achieved an IELTS band score of 7 and had experience as an
+                    English teaching assistant.
                   </span>
                 </div>
               </ParallaxSection>
@@ -98,16 +99,16 @@ export default function Home() {
                   <span className="font-bold text-xl text-center">Student</span>
                   <span className="text-justify">
                     Being a student will always be my identity throughout my
-                    life. I have a constant desire to learn new things and enhance my perspectives.
+                    life. I have a constant desire to learn new things and
+                    enhance my perspectives.
                   </span>
                 </div>
               </ParallaxSection>
             </div>
           </div>
         </FadeInContainer>
-
         <FadeInContainer>
-          <div className="lg:flex px-6 lg:px-12 mt-20">
+          <div className="lg:flex px-6 lg:px-12 my-32">
             <div className="flex flex-col lg:flex-1 items-center justify-center m-20">
               <span className="text-6xl">Posts</span>
               <div className="mt-2 space-x-5">
@@ -120,15 +121,14 @@ export default function Home() {
             </div>
           </div>
         </FadeInContainer>
+
         <FadeInContainer>
-          <div className="mt-32">
-            <QuotaBoard
-              quota={
-                "You are too concerned about what was and what will be. There is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present."
-              }
-              author={"Kung Fu Panda (2008) - Randall Duk Kim as Oogway"}
-            />
-          </div>
+          <QuotaBoard
+            quota={
+              "You are too concerned about what was and what will be. There is a saying: yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present."
+            }
+            author={"Kung Fu Panda (2008) - Randall Duk Kim as Oogway"}
+          />
         </FadeInContainer>
 
         <FadeInContainer>

@@ -25,7 +25,7 @@ const cssStyles = `
   color: #08d9d6 !important;
 }
 .custom-syntax-pre span.token.operator {
-  color: #ff2e63 !important;
+  color: #8B00FF !important;
 }
 `;
 

@@ -1,3 +1,4 @@
+import PlayIcon from "@heroicons/react/24/outline/PlayIcon";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";

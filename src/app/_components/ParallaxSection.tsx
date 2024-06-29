@@ -28,19 +28,14 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         .parallax-section::before {
           content: "";
           position: absolute;
-          top: -10px; /* Adjust these values */
-          left: -10px; /* Adjust these values */
-          width: calc(100% + 20px); /* Adjust these values */
-          height: calc(100% + 20px); /* Adjust these values */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           background: url(${backgroundImage}) no-repeat center center fixed;
           background-size: cover;
-          filter: blur(10px);
           transition: filter 0.3s ease;
           z-index: -1;
-        }
-
-        .parallax-section:hover::before {
-          filter: blur(0);
         }
 
         .parallax-section .content {
