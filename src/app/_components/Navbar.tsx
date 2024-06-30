@@ -23,16 +23,23 @@ const articleNav = [
 ];
 
 const basicNav = [
-  { name: "Home", CNname: "ホーム", href: "/" },
-  { name: "Study", CNname: "学習", href: "/study", subNav: articleNav },
-  { name: "Posts", CNname: "記事", href: "/posts" },
-  { name: "Resume", CNname: "履歴", href: "/resume" },
-  { name: "Music", CNname: "音楽", href: "/music" },
+  { name: "Home", CNname: "ホーム", color: "#e74c3c", href: "/" },
+  {
+    name: "Study",
+    CNname: "学習",
+    color: "#f39c13",
+    href: "/study",
+    subNav: articleNav,
+  },
+  { name: "Posts", CNname: "記事", color: "#2fcb71", href: "/posts" },
+  { name: "Resume", CNname: "履歴", color: "#3398da", href: "/resume" },
+  { name: "Music", CNname: "音楽", color: "#8d44ad", href: "/music" },
 ];
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // show sub nav of article
   const [showSubNav, setShowSubNav] = useState(false);
@@ -57,7 +64,7 @@ const Navbar = () => {
       ${visible ? "translate-y-0" : "-translate-y-full"} 
       ${prevScrollPos < 10 ? "gradient-bg-white-transparent" : "bg-white"}`}
     >
-      <nav className="flex lg:px-6 ">
+      <nav className="flex lg:pr-6 ">
         <div className="w-full flex items-center justify-between">
           {/* left */}
           <div className="flex lg:w-1/2">
@@ -68,24 +75,35 @@ const Navbar = () => {
 
           {/* right */}
           <div className="hidden lg:flex lg:w-1/2 lg:h-full space-x-1 justify-end">
-            {basicNav.map((item) => (
+            {basicNav.map((item,index) => (
               <div
                 key={item.name}
-                className="relatice hover:border-b-2 hover:border-black"
-                onMouseEnter={() => item.subNav && setShowSubNav(true)}
-                onMouseLeave={() => item.subNav && setShowSubNav(false)}
+                className="relatice hover:border-b-4 transition-all "
+                // onMouseEnter={() => item.subNav && setShowSubNav(true)}
+                // onMouseLeave={() => item.subNav && setShowSubNav(false)}
+                onMouseEnter={() => {
+                  item.subNav && setShowSubNav(true);
+                  setHoveredIndex(index);
+                }}
+                onMouseLeave={() => {
+                  item.subNav && setShowSubNav(false);
+                  setHoveredIndex(null);
+                }}
+                style={{ borderColor: hoveredIndex === index ? item.color : "#000" }}
               >
                 <a
                   href={item.href}
-                  className="w-full h-full flex items-center justify-between px-8 text-lg font-semibold leading-6 text-black"
+                  className="w-full h-full flex items-center justify-between px-8 text-lg font-semibold leading-6"
                 >
-                  <div className="flex flex-col items-center">
+                  <div
+                    className={`flex flex-col items-center transition-all `}
+                    style={{ color: hoveredIndex === index ? item.color : "#000" }}
+                  >
                     <div className="flex">
                       <span className="text-lg font-semibold tracking-wide">
                         {item.name}
                       </span>
                     </div>
-
                     <div className="w-full flex justify-around">
                       {item.CNname.split("").map((char, index) => (
                         <span className="text-xs font-normal" key={index}>

@@ -138,7 +138,9 @@ export default function Home() {
                 {/* <YouTubePreviewer videoId="haqHcJHe0w0" /> */}
                 <ParallaxSection backgroundImage={"/images/latest_album.png"}>
                   <div className="flex flex-col items-center justify-center py-56 space-y-6">
-                    <PlayIcon className="h-28 w-28 hover:h-48 hover:w-48 transition-all text-white" />
+                    <div className="flex w-36 h-36 items-center justify-center">
+                      <PlayIcon className="h-28 w-28 hover:h-36 hover:w-36 transition-all text-white" />
+                    </div>
                     <span className="text-center text-3xl lg:text-6xl">
                       Latest Work
                     </span>
