@@ -5,6 +5,7 @@ import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
 import Section from "../_components/Section";
 import YouTubePreviewer from "../_components/YouTubePreviewer";
+import VideoBoard from "../_components/VideoBoard";
 
 const page = () => {
   return (
@@ -34,8 +35,13 @@ const page = () => {
                   <span>品</span>
                 </div>
               </div>
-              <div className="flex lg:w-1/2">
-                <YouTubePreviewer videoId="haqHcJHe0w0" />
+              <div className="flex items-center justify-center lg:w-1/2 h-full">
+              <VideoBoard
+              videoId={"haqHcJHe0w0"}
+              image={"/images/latest_album.png"}
+              title={""}
+              comment={""}
+            />
               </div>
             </div>
           </FadeInContainer>

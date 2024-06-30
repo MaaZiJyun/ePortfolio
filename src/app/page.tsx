@@ -16,6 +16,7 @@ import { PlayIcon } from "@heroicons/react/24/outline";
 
 import getPostMetadata from "./_controllers/getPostMetadata";
 import ContactForm from "./_components/ContactForm";
+import VideoBoard from "./_components/VideoBoard";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -45,11 +46,14 @@ export default function Home() {
         </div>
 
         <FadeInContainer>
-          <div className="lg:flex w-full h-full items-stretch justify-around">
-            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+          <div className="lg:flex w-full h-full items-stretch justify-around text-white">
+            <div
+              className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
+              // style={{ backgroundColor: "#08D9D6" }}
+            >
               <ParallaxSection backgroundImage={"/images/programming.jpg"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
-                  <WrenchScrewdriverIcon className="h-12 w-12 text-white" />
+                  <WrenchScrewdriverIcon className="h-12 w-12" />
 
                   <span className="font-bold text-xl text-center">
                     Software Engineer
@@ -61,7 +65,10 @@ export default function Home() {
                 </div>
               </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+            <div
+              className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
+              // style={{ backgroundColor: "#252A34" }}
+            >
               <ParallaxSection backgroundImage={"/images/english.jpg"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <ChatBubbleLeftRightIcon className="h-12 w-12 text-white" />
@@ -76,7 +83,10 @@ export default function Home() {
                 </div>
               </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+            <div
+              className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
+              // style={{ backgroundColor: "#FF2E63" }}
+            >
               <ParallaxSection backgroundImage={"/images/composing.png"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <MusicalNoteIcon className="h-12 w-12 text-white" />
@@ -92,7 +102,10 @@ export default function Home() {
                 </div>
               </ParallaxSection>
             </div>
-            <div className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20">
+            <div
+              className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
+              // style={{ backgroundColor: "#EAEAEA" }}
+            >
               <ParallaxSection backgroundImage={"/images/student.png"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <UserIcon className="h-12 w-12 text-white" />
@@ -125,27 +138,12 @@ export default function Home() {
 
         <FadeInContainer>
           <div className="relative">
-            <a href="https://www.youtube.com/watch?v=haqHcJHe0w0">
-              <div className="flex lg:flex-row flex-col bg-black bg-opacity-20 hover:bg-opacity-50 transition-all">
-                {/* <YouTubePreviewer videoId="haqHcJHe0w0" /> */}
-                <ParallaxSection backgroundImage={"/images/latest_album.png"}>
-                  <div className="flex flex-col items-center justify-center py-56 space-y-6">
-                    <div className="flex w-36 h-36 items-center justify-center">
-                      <PlayIcon className="h-28 w-28 hover:h-36 hover:w-36 transition-all text-white" />
-                    </div>
-                    <span className="text-center text-3xl lg:text-6xl">
-                      Latest Work
-                    </span>
-                    <div className="text-center space-x-5">
-                      <span>最</span>
-                      <span>新</span>
-                      <span>作</span>
-                      <span>品</span>
-                    </div>
-                  </div>
-                </ParallaxSection>
-              </div>
-            </a>
+            <VideoBoard
+              videoId={"haqHcJHe0w0"}
+              image={"/images/latest_album.png"}
+              title={"Latest Work"}
+              comment={"最新作品"}
+            />
           </div>
         </FadeInContainer>
         <FadeInContainer>
@@ -159,7 +157,7 @@ export default function Home() {
         <FadeInContainer>
           <div className="flex w-full">
             <div className="hidden lg:flex lg:w-1/2">
-              <ParallaxSection backgroundImage={"/images/domukiphoto001.png"}>
+              <ParallaxSection backgroundImage={"/images/sketch.jpeg"}>
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 py-32">
                   <div>
                     <span className="text-center text-3xl lg:text-6xl">
