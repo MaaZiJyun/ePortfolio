@@ -137,7 +137,7 @@ export default function Home() {
         </FadeInContainer>
 
         <FadeInContainer>
-          <div className="relative">
+          <div className="flex h-[34rem]">
             <VideoBoard
               videoId={"haqHcJHe0w0"}
               image={"/images/latest_album.png"}
