@@ -7,10 +7,10 @@ const page = () => {
     <main className="flex flex-col items-center justify-between my-24">
       <Container>
         <div className="flex flex-col items-center justify-between">
-          <div className="flex w-full lg:w-3/4 p-6 lg:px-32">
+          <div className="flex w-full p-6 lg:px-32">
             <DirectoryBar />
           </div>
-          <div className="flex w-full lg:w-3/4 flex-col items-center justify-center px-6 lg:px-32 text-justify">
+          <div className="flex w-full flex-col items-center justify-center px-6 lg:px-32 text-justify">
             <div className="flex flex-col py-32 ">
               <div className="flex items-center justify-between text-3xl lg:text-6xl">
                 <span className="text-center ">白</span>
