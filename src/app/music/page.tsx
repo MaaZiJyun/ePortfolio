@@ -23,7 +23,7 @@ const page = () => {
             <div className="w-full h-px bg-black"></div>
           </div>
           <FadeInContainer>
-            <div className="lg:flex h-screen items-center justify-center lg:py-32">
+            <div className="lg:flex items-center justify-center lg:py-32">
               <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
                 <span className="text-center text-4xl lg:text-6xl">
                   Latest Work
@@ -35,7 +35,7 @@ const page = () => {
                   <span>品</span>
                 </div>
               </div>
-              <div className="flex items-center justify-center lg:w-1/2 h-full">
+              <div className="flex items-center justify-center lg:w-1/2 h-96">
               <VideoBoard
               videoId={"haqHcJHe0w0"}
               image={"/images/latest_album.png"}
