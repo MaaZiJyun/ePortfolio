@@ -3,6 +3,7 @@ import React, { ReactNode, useState, useEffect, isValidElement } from "react";
 import {
   ClipboardDocumentIcon,
   ClipboardDocumentCheckIcon,
+  CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { githubGist } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -82,7 +83,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
       .writeText(codeString)
       .then(() => {
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setTimeout(() => setCopied(false), 3000);
       })
       .catch((err) => {
         console.error("Failed to copy code: ", err);
@@ -93,17 +94,20 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
     <div className="bg-white mt-6 rounded-lg">
       <style>{cssStyles}</style> {/* Add custom CSS here */}
       <div className="code-block-head flex justify-between px-6 py-2 rounded-tl-lg rounded-tr-lg">
-        <span className="text-black">Source Code</span>
+        <div className="flex items-center justify-center text-black">
+          <CodeBracketIcon className="h-5 w-5 mr-1" />
+          <span>ソースコード</span>
+        </div>
         <button onClick={handleCopy} className="text-black">
           {copied ? (
-            <div className="flex space-x-2 hover:opacity-50">
+            <div className="flex space-x-2 hover:opacity-50 text-green-500">
               <ClipboardDocumentCheckIcon className="h-5 w-5" />
-              <span>Copied!</span>
+              <span>コピーしました!</span>
             </div>
           ) : (
             <div className="flex space-x-2 hover:opacity-50">
               <ClipboardDocumentIcon className="h-5 w-5" />
-              <span>Copy</span>
+              <span>コピー</span>
             </div>
           )}
         </button>

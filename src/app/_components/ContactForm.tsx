@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { PowerIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // Define the type for form data
 interface FormData {
@@ -74,30 +74,40 @@ const ContactForm: React.FC = () => {
         message: "",
       });
     }, 2000);
-    setTimeout(() => {
-      setFormStatus("");
-    }, 5000);
+    // setTimeout(() => {
+    //   setFormStatus("");
+    // }, 5000);
+  };
+
+  const clearFormStatus = () => {
+    setFormStatus("");
   };
 
   return (
     <form onSubmit={handleSubmit} className="p-6 w-full">
       {formStatus && (
         <div
-          className={`flex w-full items-center justify-center border-4 transition-all duration-500 ${
-            isSubmitting ? "border-gray-300" : "border-green-300"
+          className={`flex w-full items-center justify-between border-2 transition-all duration-500 opacity-60 ${
+            isSubmitting ? "border-gray-500" : "border-green-500"
           } ${isSubmitting ? "bg-gray-100" : "bg-green-100"} p-3 mb-6`}
         >
           <p
             className={`text-center ${
-              isSubmitting ? "text-gray-300" : "text-green-400"
+              isSubmitting ? "text-gray-500" : "text-green-500"
             }`}
           >
             {formStatus}
           </p>
+          <button
+            className={` ${isSubmitting ? "text-gray-500" : "text-green-500"}`}
+            onClick={clearFormStatus}
+          >
+            <XMarkIcon className="h-5 w-5" />
+          </button>
         </div>
       )}
       <div className="flex lg:hidden items-center justify-center mb-6">
-        <span className="text-center text-3xl">Contact Me</span>
+        <span className="text-center text-black text-3xl">Contact Me</span>
       </div>
       <div className="mb-4">
         <input
@@ -107,7 +117,7 @@ const ContactForm: React.FC = () => {
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full py-2 border-b-2 ${
+          className={`w-full py-2 border-b-2 bg-transparent text-black ${
             errors.name ? "border-red-500" : "border-gray-300"
           } outline-none focus:border-black focus:text-3xl transition-all duration-500`}
         />
@@ -127,7 +137,7 @@ const ContactForm: React.FC = () => {
           placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full py-2 border-b-2 ${
+          className={`w-full py-2 border-b-2 bg-transparent text-black ${
             errors.email ? "border-red-500" : "border-gray-300"
           } outline-none focus:border-black focus:text-3xl transition-all  duration-500`}
         />
@@ -147,7 +157,7 @@ const ContactForm: React.FC = () => {
           placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
-          className={`w-full py-2 border-b-2 ${
+          className={`w-full py-2 border-b-2 bg-transparent text-black ${
             errors.subject ? "border-red-500" : "border-gray-300"
           } outline-none focus:border-black focus:text-3xl transition-all  duration-500`}
         />
@@ -167,7 +177,7 @@ const ContactForm: React.FC = () => {
           rows={3}
           value={formData.message}
           onChange={handleChange}
-          className={`w-full py-2 border-b-2 ${
+          className={`w-full py-2 border-b-2 bg-transparent text-black ${
             errors.message ? "border-red-500" : "border-gray-300"
           } outline-none focus:border-black focus:text-3xl transition-all  duration-500`}
         />

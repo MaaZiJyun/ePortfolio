@@ -4,6 +4,7 @@ import ParallaxSection from "./ParallaxSection";
 import {
   FaceSmileIcon,
   PlayIcon,
+  PowerIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import YouTubePreviewer from "./YouTubePreviewer";
@@ -70,7 +71,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
             {isDialogOpen && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="fixed inset-0 bg-black bg-opacity-50"></div>
-                <div className="bg-white rounded z-10 text-black">
+                <div className="flex flex-col bg-white rounded z-10 justify-between h-screen w-screen lg:h-auto lg:w-auto text-black">
                   <div className="flex items-center justify-between p-4 ">
                     <div className="flex items-center justify-between">
                       <span className="text-black text-xl font-arial">
@@ -81,7 +82,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
                       className="hover:text-gray-500"
                       onClick={handleCloseDialog}
                     >
-                      <XMarkIcon className="h-10 w-10" />
+                      <PowerIcon className="h-7 w-7" />
                     </button>
                   </div>
                   <div className="h-96 px-4">
@@ -89,7 +90,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
                   </div>
                   <div className="flex items-center justify-center p-4">
                     <FaceSmileIcon className="h-6 w-6 mr-1" />
-                    <span className="text-black text-base font-arial">
+                    <span className="text-black text-sm lg:text-base font-arial">
                       「ただのビデオを再生できるカードですよ～」
                     </span>
                   </div>

@@ -155,9 +155,9 @@ export default function Home() {
           />
         </FadeInContainer>
         <FadeInContainer>
-          <div className="flex w-full">
-            <div className="hidden lg:flex lg:w-1/2">
-              <ParallaxSection backgroundImage={"/images/sketch.jpeg"}>
+          <ParallaxSection backgroundImage={"/images/sketch.jpeg"}>
+            <div className="flex w-full">
+              <div className="hidden lg:flex lg:w-1/2">
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 py-32">
                   <div>
                     <span className="text-center text-3xl lg:text-6xl">
@@ -170,12 +170,12 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </ParallaxSection>
+              </div>
+              <div className="flex w-full lg:w-1/2 py-12 px-6 bg-white bg-opacity-90">
+                <ContactForm />
+              </div>
             </div>
-            <div className="flex w-full lg:w-1/2 my-12 mx-6">
-              <ContactForm />
-            </div>
-          </div>
+          </ParallaxSection>
         </FadeInContainer>
       </Container>
     </main>

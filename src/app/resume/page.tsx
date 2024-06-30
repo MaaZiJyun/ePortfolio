@@ -22,13 +22,13 @@ const page = () => {
             <div className="flex flex-col items-center justify-center py-12">
               <div className="flex flex-col items-start justify-center">
                 <p className="text-justify">
-                  Hi, I&apos;m Ma Zhiyuan or <span className="">Dōmuki</span>{" "}
+                  Hi, I&apos;m Maa or <span className="">Dōmuki</span>{" "}
                   (Nickname). I am 24 years old. I graduated from UPM with a
-                  bachelor's degree in software engineering and am currently
+                  bachelor's degree in Software Engineering and am currently
                   pursuing a master's degree at the University of Technology. I
                   speak fluent English and am a native Chinese speaker. My
-                  research interests are Web3, IoT, artificial intelligence, and
-                  blockchain. 
+                  study interests are Web3, IoT, Artificial Intelligence, and
+                  Blockchain. 
                 </p>
               </div>
             </div>
