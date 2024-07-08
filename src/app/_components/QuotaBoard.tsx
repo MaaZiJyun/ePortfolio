@@ -7,7 +7,7 @@ interface QuotaBoardProps {
 
 const QuotaBoard: React.FC<QuotaBoardProps> = ({ quota, author }) => {
   return (
-    <div className="flex p-12 lg:p-40 bg-black text-white justify-center items-center ">
+    <div className="flex p-12 lg:p-40 bg-black text-white justify-center items-center relative z-10">
       <div className="flex flex-col lg:w-2/3 text-center">
         {quota && quota.trim() !== "" && (
           <span className="text-xl lg:text-3xl italic">{quota}</span>
