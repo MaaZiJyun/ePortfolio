@@ -24,7 +24,9 @@ const page = () => {
               </div>
             </div>
             {/* <div className="w-full h-px bg-black"></div> */}
-            <StudyNavBoard />
+            <div className="pt-12">
+              <StudyNavBoard />
+            </div>
           </div>
         </div>
       </Container>

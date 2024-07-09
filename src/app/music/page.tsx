@@ -23,8 +23,8 @@ const page = () => {
             <div className="w-full h-px bg-black"></div>
           </div> */}
           <FadeInContainer>
-            <div className="lg:flex items-center justify-center lg:py-32 bg-white bg-opacity-60">
-              <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
+            <div className="lg:flex items-center justify-center lg:pt-16 ">
+              <div className="flex flex-col lg:w-1/2 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-80">
                 <span className="text-center text-4xl lg:text-6xl">
                   Latest Work
                 </span>
