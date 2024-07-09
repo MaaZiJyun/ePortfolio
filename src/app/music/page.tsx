@@ -11,19 +11,19 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="bg-latest-album">
-          <div className="flex flex-col h-screen items-center justify-center p-12 lg:p-32">
+        <div className="bg-latest-album pt-24">
+          <div className="flex flex-col items-center justify-center p-12 lg:p-32">
             <span className="text-3xl lg:text-6xl text-center">
               私の音楽作品
             </span>
             <span className="mt-4">Welcome to listen to my music works.</span>
           </div>
           {/* divider */}
-          <div className="lg:flex px-6 lg:px-12">
+          {/* <div className="lg:flex px-6 lg:px-12">
             <div className="w-full h-px bg-black"></div>
-          </div>
+          </div> */}
           <FadeInContainer>
-            <div className="lg:flex items-center justify-center lg:py-32">
+            <div className="lg:flex items-center justify-center lg:py-32 bg-white bg-opacity-60">
               <div className="flex flex-col lg:w-1/2 items-center justify-center p-20">
                 <span className="text-center text-4xl lg:text-6xl">
                   Latest Work
@@ -39,8 +39,8 @@ const page = () => {
                 <VideoBoard
                   videoId={"rfksuI6tyYI"}
                   image={"/images/latest_album.png"}
-                  title={""}
-                  comment={""}
+                  title={"Vast Remix"}
+                  comment={"Epic Orchestral Original Mix"}
                 />
               </div>
             </div>

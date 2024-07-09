@@ -4,27 +4,26 @@ import StudyNavBoard from "../_components/StudyNavBoard";
 
 const page = () => {
   return (
-    <main className="flex flex-col items-center justify-between my-24">
+    <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="flex flex-col items-center justify-between">
-          <div className="flex w-full p-6 lg:px-32">
+          {/* <div className="flex w-full p-6 lg:px-32">
             <DirectoryBar />
-          </div>
-          <div className="flex w-full flex-col items-center justify-center px-6 lg:px-32 text-justify">
-            <div className="flex flex-col py-32 ">
-              <div className="flex items-center justify-between text-3xl lg:text-6xl">
-                <span className="text-center ">白</span>
-                <span className="text-center">板</span>
+          </div> */}
+          <div className="flex w-full flex-col items-center justify-center text-justify bg-domukiphoto-study py-24">
+            <div className="flex flex-col items-center justify-center py-32">
+              <div className="flex items-center justify-between w-full text-3xl lg:text-6xl">
+                <span className="text-center ">私の学習ログ</span>
               </div>
               <div className="flex items-center justify-center mt-6 text-base lg:text-lg space-x-2">
-                {"童夢綺の学習白板".split("").map((char, index) => (
+                {"Domuki's Learning Log".split("").map((char, index) => (
                   <span className="font-normal" key={index}>
                     {char}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="w-full h-px bg-black"></div>
+            {/* <div className="w-full h-px bg-black"></div> */}
             <StudyNavBoard />
           </div>
         </div>

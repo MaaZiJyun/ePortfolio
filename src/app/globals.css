@@ -214,6 +214,26 @@ footer {
   z-index: -1;
 }
 
+.bg-domukiphoto-study {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-domukiphoto-study::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/images/domukiphotostudy.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 .bg-latest-album {
   position: relative;
   overflow: hidden;

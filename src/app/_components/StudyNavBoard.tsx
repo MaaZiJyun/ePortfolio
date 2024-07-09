@@ -40,8 +40,8 @@ const StudyNavBoard: React.FC = () => {
     { name: "Mathematics", CNname: "数学", href: "/study" },
   ];
   return (
-    <div className="lg:flex w-full items-start justify-center mt-10 lg:space-x-6">
-      <div className="mt-5 p-6 bg-gray-200">
+    <div className="lg:flex w-full items-start justify-center py-12 lg:space-x-6 bg-white bg-opacity-50">
+      <div className="mt-5 p-6 bg-white rounded bg-opacity-80">
         <div className="mb-6">
           <span className="font-bold">Subjects (Links):</span>
         </div>
@@ -58,7 +58,7 @@ const StudyNavBoard: React.FC = () => {
           </a>
         ))}
       </div>
-      <div className="hidden lg:flex flex-col h-72 p-6 lg:w-3/4 mt-5">
+      <div className="hidden lg:flex flex-col h-72 p-6 lg:w-2/3 mt-5">
         <p>
           {currentDiv === 0 && intro1}
           {currentDiv === 1 && intro2}
