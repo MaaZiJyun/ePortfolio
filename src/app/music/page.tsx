@@ -88,8 +88,8 @@ const page = () => {
               <span className="text-center mt-5">もっと多くの作品をご覧</span>
             </div>
 
-            <div className="h-screen">
-              <div className="lg:flex h-1/2">
+            <div className="lg:h-screen">
+              <div className="lg:flex lg:h-1/2">
                 <div className="flex lg:flex-1 bg-sketch m-1">
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
                   <VideoBoard
