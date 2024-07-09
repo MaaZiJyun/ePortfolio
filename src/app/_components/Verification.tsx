@@ -38,7 +38,7 @@ const VerificationPage = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-sketch">
       <form
         onSubmit={handleSubmit}
-        className="bg-white bg-opacity-90 rounded-lg shadow-md w-1/4"
+        className="bg-white bg-opacity-90 rounded-lg shadow-md lg:w-1/4"
       >
         {error && (
           <div className="flex items-center justify-center rounded-tl-lg rounded-tr-lg text-white bg-red-500 text-xs font-arial p-1">
