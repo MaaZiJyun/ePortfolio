@@ -36,12 +36,12 @@ const page = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center lg:w-1/2 h-96">
-              <VideoBoard
-              videoId={"haqHcJHe0w0"}
-              image={"/images/latest_album.png"}
-              title={""}
-              comment={""}
-            />
+                <VideoBoard
+                  videoId={"rfksuI6tyYI"}
+                  image={"/images/latest_album.png"}
+                  title={""}
+                  comment={""}
+                />
               </div>
             </div>
           </FadeInContainer>
@@ -80,7 +80,7 @@ const page = () => {
           </div>
         </FadeInContainer>
         <FadeInContainer>
-          <div className="flex flex-col lg:px-12 mt-32 lg:mb-32">
+          <div className="flex flex-col lg:px-12 pt-32 lg:pb-32 bg-domukiphoto">
             <div className="flex flex-col items-center lg:items-end justify-center pb-32">
               <span className="text-center text-3xl lg:text-6xl">
                 Check out more works
@@ -88,20 +88,46 @@ const page = () => {
               <span className="text-center mt-5">もっと多くの作品をご覧</span>
             </div>
 
-            <div className="lg:flex">
-              <div className="flex lg:flex-1 bg-sketch">
-                <YouTubePreviewer videoId="hT3ABJKcMSE" />
+            <div className="h-screen">
+              <div className="lg:flex h-1/2">
+                <div className="flex lg:flex-1 bg-sketch m-1">
+                  {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
+                  <VideoBoard
+                    videoId={"hT3ABJKcMSE"}
+                    image={"/images/domukiphoto.png"}
+                    title={"In My Heart"}
+                    comment={"Epic Orchestral Original Mix"}
+                  />
+                </div>
+                <div className="flex lg:flex-1 bg-sketch m-1">
+                  {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
+                  <VideoBoard
+                    videoId={"haqHcJHe0w0"}
+                    image={"/images/domukiphoto.png"}
+                    title={"Faith"}
+                    comment={"Epic Orchestral Original Mix"}
+                  />
+                </div>
               </div>
-              <div className="flex lg:flex-1 bg-sketch">
-                <YouTubePreviewer videoId="acd6s_GiRTM" />
-              </div>
-            </div>
-            <div className="lg:flex lg:mb-20">
-              <div className="flex lg:flex-1 bg-sketch">
-                <YouTubePreviewer videoId="KWmC_xZwuDY" />
-              </div>
-              <div className="flex lg:flex-1 bg-sketch">
-                <YouTubePreviewer videoId="8aoMvZz-FI4" />
+              <div className="lg:flex h-1/2">
+                <div className="flex lg:flex-1 bg-sketch m-1">
+                  {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
+                  <VideoBoard
+                    videoId={"KWmC_xZwuDY"}
+                    image={"/images/domukiphoto.png"}
+                    title={"Galaxy"}
+                    comment={"Epic Orchestral Original Mix"}
+                  />
+                </div>
+                <div className="flex lg:flex-1 bg-sketch m-1">
+                  {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
+                  <VideoBoard
+                    videoId={"8aoMvZz-FI4"}
+                    image={"/images/domukiphoto.png"}
+                    title={"Vast"}
+                    comment={"Epic Orchestral Original Mix"}
+                  />
+                </div>
               </div>
             </div>
           </div>

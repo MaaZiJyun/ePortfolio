@@ -71,8 +71,8 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
             {isDialogOpen && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="fixed inset-0 bg-black bg-opacity-50"></div>
-                <div className="flex flex-col bg-white rounded z-40 justify-center h-screen w-screen lg:h-auto lg:w-auto text-black">
-                  <div className="flex items-center justify-between p-4 ">
+                <div className="flex flex-col bg-white rounded-lg z-40 justify-center h-screen w-screen lg:h-auto lg:w-auto text-black">
+                  <div className="flex items-center justify-between px-6 pt-6">
                     <div className="flex items-center justify-between">
                       <span className="text-black text-xl font-arial">
                         作品プレビュー
@@ -85,10 +85,10 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
                       <PowerIcon className="h-7 w-7" />
                     </button>
                   </div>
-                  <div className="h-96 px-4">
+                  <div className="h-96 px-6 py-3">
                     <YouTubePreviewer videoId={videoId} />
                   </div>
-                  <div className="flex items-center justify-center p-4">
+                  <div className="flex items-center justify-center px-6 pb-6">
                     <FaceSmileIcon className="h-6 w-6 mr-1" />
                     <span className="text-black text-sm lg:text-base font-arial">
                       「ただのビデオを再生できるカードですよ～」

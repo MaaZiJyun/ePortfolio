@@ -31,15 +31,18 @@ export default function Home() {
             <div className="flex flex-col space-y-5">
               <p className="text-3xl lg:text-6xl">Hi, I am Dōmuki</p>
               <p className="text-justify">
-                I am a 24-year-old male with a passion for music and writing. I
-                am fluent in English and native in Chinese. I graduated from UPM
-                with a Bachelor's degree in Software Engineering and am
-                currently pursuing a Master's degree at PolyU.
+                I'm passionate about music and writing, with a degree in
+                software engineering. I can speak English and native Chinese.
+                Currently, I'm pursuing advanced studies in my field and love
+                exploring new creative endeavors.
               </p>
               <p className="lg:text-lg">
-                <span>My email is </span>
+                <span>
+                  Looking forward to connecting and sharing ideas with
+                  like-minded individuals!
+                </span>
+                <span>Feel free to contact with me: </span>
                 <span className="underline">DOMUKINO@GMAIL.COM</span>
-                <span>, and feel free to contact with me.</span>
               </p>
             </div>
           </div>
@@ -139,7 +142,7 @@ export default function Home() {
         <FadeInContainer>
           <div className="flex h-[34rem]">
             <VideoBoard
-              videoId={"haqHcJHe0w0"}
+              videoId={"rfksuI6tyYI"}
               image={"/images/latest_album.png"}
               title={"Latest Work"}
               comment={"最新作品"}

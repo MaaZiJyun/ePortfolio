@@ -32,8 +32,8 @@ const basicNav = [
     subNav: articleNav,
   },
   { name: "Posts", CNname: "記事", color: "#2fcb71", href: "/posts" },
-  { name: "Resume", CNname: "履歴", color: "#3398da", href: "/resume" },
-  { name: "Music", CNname: "音楽", color: "#8d44ad", href: "/music" },
+  { name: "Music", CNname: "音楽", color: "#3398da", href: "/music" },
+  { name: "Resume", CNname: "履歴", color: "#8d44ad", href: "/resume" },
 ];
 
 const Navbar = () => {
