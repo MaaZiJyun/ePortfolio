@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as CryptoJS from "crypto-js";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const VerificationPage = () => {
   const [password, setPassword] = useState("");
@@ -18,7 +17,8 @@ const VerificationPage = () => {
 
     // Hash the password using MD5
     const hashed = CryptoJS.MD5(password).toString();
-    const hashedasr = CryptoJS.MD5("IAS*(HIW&@IHJs").toString();
+    // const hashedasr = CryptoJS.MD5("0909").toString();
+    const hashedasr = "5992750ad2a8eae2eb1239676a1c6a96";
     // setHashedPassword(hashed);
 
     // Here you can perform any logic with the hashed password
@@ -31,6 +31,8 @@ const VerificationPage = () => {
     if (hashed === hashedasr) {
       localStorage.setItem("isVerified", "true");
       router.push("/resume");
+    } else {
+      setError("Code incorrect. Please try again later ~");
     }
   };
 
@@ -42,7 +44,6 @@ const VerificationPage = () => {
       >
         {error && (
           <div className="flex items-center justify-center rounded-tl-lg rounded-tr-lg text-white bg-red-500 text-xs font-arial p-1">
-            <XMarkIcon className="h-4 w-4 mr-1" />
             <span>{error}</span>
           </div>
         )}

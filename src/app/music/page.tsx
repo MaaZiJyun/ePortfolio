@@ -11,8 +11,8 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="bg-latest-album pt-24">
-          <div className="flex flex-col items-center justify-center p-12 lg:p-32">
+        <div className="bg-latest-album">
+          <div className="flex flex-col items-center justify-center  h-screen">
             <span className="text-3xl lg:text-6xl text-center">
               私の音楽作品
             </span>

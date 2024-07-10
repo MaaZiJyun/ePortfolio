@@ -40,32 +40,36 @@ const StudyNavBoard: React.FC = () => {
     { name: "Mathematics", CNname: "数学", href: "/study" },
   ];
   return (
-    <div className="lg:flex w-full items-start justify-center py-12 lg:space-x-6 bg-white bg-opacity-80">
-      <div className="mt-5 p-6 bg-white rounded bg-opacity-80">
-        <div className="mb-6">
-          <span className="font-bold">Subjects (Links):</span>
+    <div className="lg:flex w-full items-start justify-center py-12 bg-white bg-opacity-80">
+      <div className="flex w-full lg:w-1/3 p-6 ">
+        <div className="w-full p-6 bg-white rounded bg-opacity-80">
+          <div className="mb-6">
+            <span className="font-bold">Subjects (Links):</span>
+          </div>
+          {articleNav.map((subItem, index) => (
+            <a
+              key={subItem.name}
+              href={subItem.href}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex flex-col justify-between text-black my-3 hover:underline">
+                <span className="text-left">{subItem.name}</span>
+              </div>
+            </a>
+          ))}
         </div>
-        {articleNav.map((subItem, index) => (
-          <a
-            key={subItem.name}
-            href={subItem.href}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className="flex flex-col justify-between text-black my-3 hover:underline">
-              <span className="text-left">{subItem.name}</span>
-            </div>
-          </a>
-        ))}
       </div>
-      <div className="hidden lg:flex flex-col h-72 p-6 lg:w-2/3 mt-5">
-        <p>
-          {currentDiv === 0 && intro1}
-          {currentDiv === 1 && intro2}
-          {currentDiv === 2 && intro3}
-          {currentDiv === 3 && intro4}
-          {currentDiv === null && defaultDesc}
-        </p>
+      <div className="hidden lg:flex flex-col p-6 lg:w-2/3">
+        <div className="p-6">
+          <p>
+            {currentDiv === 0 && intro1}
+            {currentDiv === 1 && intro2}
+            {currentDiv === 2 && intro3}
+            {currentDiv === 3 && intro4}
+            {currentDiv === null && defaultDesc}
+          </p>
+        </div>
       </div>
     </div>
   );

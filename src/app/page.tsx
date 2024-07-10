@@ -1,19 +1,14 @@
-import ArticlePreviewer from "./_components/ArticlePreviewer";
 import Container from "./_components/Container";
 import FadeInContainer from "./_components/FadeInContainer";
 import ParallaxSection from "./_components/ParallaxSection";
 import PostPreviewer from "./_components/PostPreviewer";
 import QuotaBoard from "./_components/QuotaBoard";
-import StudyNavBoard from "./_components/StudyNavBoard";
-import YouTubePreviewer from "./_components/YouTubePreviewer";
 import {
   MusicalNoteIcon,
   UserIcon,
   WrenchScrewdriverIcon,
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/outline";
-import { PlayIcon } from "@heroicons/react/24/outline";
-
 import getPostMetadata from "./_controllers/getPostMetadata";
 import ContactForm from "./_components/ContactForm";
 import VideoBoard from "./_components/VideoBoard";

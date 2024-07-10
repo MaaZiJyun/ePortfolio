@@ -1,5 +1,4 @@
 import Container from "../_components/Container";
-import DirectoryBar from "../_components/DirectoryBar";
 import StudyNavBoard from "../_components/StudyNavBoard";
 
 const page = () => {
@@ -10,8 +9,8 @@ const page = () => {
           {/* <div className="flex w-full p-6 lg:px-32">
             <DirectoryBar />
           </div> */}
-          <div className="flex w-full flex-col items-center justify-center text-justify bg-domukiphoto-study py-24">
-            <div className="flex flex-col items-center justify-center py-32">
+          <div className="flex w-full flex-col items-center justify-center text-justify bg-domukiphoto-study">
+            <div className="flex flex-col items-center justify-center h-screen">
               <div className="flex items-center justify-between w-full text-3xl lg:text-6xl">
                 <span className="text-center ">私の学習ログ</span>
               </div>
@@ -24,7 +23,7 @@ const page = () => {
               </div>
             </div>
             {/* <div className="w-full h-px bg-black"></div> */}
-            <div className="pt-12">
+            <div className="w-full pt-12">
               <StudyNavBoard />
             </div>
           </div>

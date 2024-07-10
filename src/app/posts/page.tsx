@@ -1,6 +1,5 @@
 import getPostMetadata from "../_controllers/getPostMetadata";
 import Container from "../_components/Container";
-import FadeInContainer from "../_components/FadeInContainer";
 import PostPreviewer from "../_components/PostPreviewer";
 import Section from "../_components/Section";
 import DirectoryBar from "../_components/DirectoryBar";
