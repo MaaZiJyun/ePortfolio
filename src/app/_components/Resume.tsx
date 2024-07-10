@@ -41,32 +41,33 @@ const ResumePage: React.FC = () => {
 
   return (
     <main className="flex flex-col items-center justify-between my-24">
-      <Container>
-        <div className="flex w-full p-6 lg:px-32 justify-between">
-          <DirectoryBar />
-          <div className="relatice">
-            <button
-              onClick={handleRemoveVerification}
-              className="bg-green-500 text-white p-2 rounded hover:bg-red-500 transition-all duration-500"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              {isHovered ? (
-                <LockClosedIcon className="h-6 w-6" />
-              ) : (
-                <LockOpenIcon className="h-6 w-6" />
+      {isVerified ? (
+        <Container>
+          <div className="flex w-full p-6 lg:px-32 justify-between ">
+            <DirectoryBar />
+            <div className="relatice">
+              <button
+                onClick={handleRemoveVerification}
+                className="bg-green-500 text-white p-2 rounded hover:bg-red-500 transition-all duration-500"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {isHovered ? (
+                  <LockClosedIcon className="h-6 w-6" />
+                ) : (
+                  <LockOpenIcon className="h-6 w-6" />
+                )}
+              </button>
+              {visible && (
+                <div className="absolute bg-black bg-opacity-30 rounded-md p-2">
+                  <span className="text-xs text-white font-arial">
+                    Hide My Resume
+                  </span>
+                </div>
               )}
-            </button>
-            {visible && (
-              <div className="absolute bg-black bg-opacity-30 rounded-md p-2">
-                <span className="text-xs text-white font-arial">
-                  Hide My Resume
-                </span>
-              </div>
-            )}
+            </div>
           </div>
-        </div>
-        {isVerified ? (
+
           <div className="flex flex-col w-full px-6 lg:px-32">
             <Section
               title={"履歴"}
@@ -591,10 +592,12 @@ const ResumePage: React.FC = () => {
               </div>
             </FadeInContainer>
           </div>
-        ) : (
-          <div className="flex w-full h-screen items-center justify-center"></div>
-        )}
-      </Container>
+        </Container>
+      ) : (
+        <div className="flex w-full h-screen items-center justify-center">
+          
+        </div>
+      )}
     </main>
   );
 };
