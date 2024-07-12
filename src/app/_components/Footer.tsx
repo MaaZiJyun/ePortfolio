@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="lg:flex w-full p-6 lg:px-10">
         <div className="flex lg:flex-1 items-center justify-center py-5">
           <span className="text-sm text-center">
-            © 2020 Domuki, Inc. All rights reserved.
+            © 2022 Domuki. All rights reserved.
           </span>
         </div>
         <div className="flex lg:flex-1 items-center justify-center space-x-4 py-5">

@@ -14,8 +14,6 @@ const VerificationPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!password) setError("Name is required");
-
     // Hash the password using MD5
     const hashed = CryptoJS.MD5(password).toString();
     // const hashedasr = CryptoJS.MD5("0909").toString();
@@ -24,12 +22,13 @@ const VerificationPage = () => {
 
     // Here you can perform any logic with the hashed password
     // For example, send it to your server for verification
-    console.log("Hashed Password:", hashed);
-    console.log("Hashed Answer:", hashedasr);
+    // console.log("Hashed Password:", hashed);
+    // console.log("Hashed Answer:", hashedasr);
 
     // Assuming the hashed password matches the invite code
-
-    if (hashed === hashedasr) {
+    if (!password) {
+      setError("Name is required");
+    } else if (hashed === hashedasr) {
       localStorage.setItem("isVerified", "true");
       router.push("/resume");
     } else {
