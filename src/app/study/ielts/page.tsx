@@ -29,7 +29,6 @@ const page: React.FC = () => {
         </div>
         <SubPageContent
           Introduction={IntroductionContent}
-          Structure={StructureContent}
           Content={
             <div className="flex flex-col w-full fade-in">
               <div className="mb-6">
@@ -51,45 +50,42 @@ const page: React.FC = () => {
 };
 
 const IntroductionContent = (
-  <div className="text-justify space-y-5 fade-in">
-    <div className="mb-6">
-      <h2 className="text-xl lg:text-3xl font-bold text-red-700">
-        Purpose of Learning
-      </h2>
-      <span className="text-gray-500 text-lg">
-        (The bried introduction about why should I learn this subject, what I
-        should learn and what I can obtain after my study.)
-      </span>
-    </div>
-    <p>
-      As an international student, English serves as a crucial tool for
-      communication and acquiring knowledge. Recognizing its importance, I
-      understand that mastering the English language is fundamental and
-      essential throughout my journey of studying abroad. Despite achieving a
-      band 7 in 2024, I am aware that there is still a long way to go to reach
-      the proficiency required for advanced academic studies.
-    </p>
-    <p>
-      The primary purpose of my ongoing English language learning is to enhance
-      my ability to engage deeply with academic materials, participate
-      effectively in discussions, and communicate my ideas clearly and
-      confidently. This continued effort aims to bridge any remaining gaps in my
-      language skills, ensuring that I can fully immerse myself in my studies
-      and make the most of my educational opportunities.
-    </p>
-    <p>
-      The outcomes I aim to achieve through this endeavor include improved
-      academic writing and reading comprehension, heightened listening and
-      speaking abilities, and overall increased fluency in English. By attaining
-      these goals, I hope to excel in my academic pursuits, actively contribute
-      to scholarly discussions, and build a solid foundation for my future
-      career.
-    </p>
-  </div>
-);
-
-const StructureContent = (
   <div className="fade-in text-gray-300">
+    <div className="text-justify space-y-5 fade-in">
+      <div className="mb-6">
+        <h2 className="text-xl lg:text-3xl font-bold text-red-700">
+          Purpose
+        </h2>
+        <span className="text-gray-500 text-lg">
+          (The bried introduction about why should I learn this subject, what I
+          should learn and what I can obtain after my study.)
+        </span>
+      </div>
+      <p>
+        As an international student, English serves as a crucial tool for
+        communication and acquiring knowledge. Recognizing its importance, I
+        understand that mastering the English language is fundamental and
+        essential throughout my journey of studying abroad. Despite achieving a
+        band 7 in 2024, I am aware that there is still a long way to go to reach
+        the proficiency required for advanced academic studies.
+      </p>
+      <p>
+        The primary purpose of my ongoing English language learning is to
+        enhance my ability to engage deeply with academic materials, participate
+        effectively in discussions, and communicate my ideas clearly and
+        confidently. This continued effort aims to bridge any remaining gaps in
+        my language skills, ensuring that I can fully immerse myself in my
+        studies and make the most of my educational opportunities.
+      </p>
+      <p>
+        The outcomes I aim to achieve through this endeavor include improved
+        academic writing and reading comprehension, heightened listening and
+        speaking abilities, and overall increased fluency in English. By
+        attaining these goals, I hope to excel in my academic pursuits, actively
+        contribute to scholarly discussions, and build a solid foundation for my
+        future career.
+      </p>
+    </div>
     <h1 className="text-lg font-bold my-5">Foundational Section</h1>
     <ol className="list-decimal list-inside">
       <li>English Phonetic Symbols</li>

@@ -1,0 +1,21 @@
+.subpage-h1{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: rgb(185 28 28);
+
+}
+.subpage-h2{
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: rgb(185 28 28);
+}
+
+.subpage-comment{
+    color: rgb(107 114 128);
+}

@@ -35,18 +35,16 @@ const page = () => {
         </div>
         <SubPageContent
           Introduction={IntroductionContent}
-          Structure={StructureContent}
           Content={
-            <div className="flex flex-col w-full fade-in">
-              <div className="mb-6">
-                <h2 className="text-xl lg:text-3xl font-bold text-red-700">
-                  Content of Learning
-                </h2>
-                <span className="text-gray-500 text-lg">
+            <div className="space-y-5 text-justify">
+              <div className="text-justify space-y-2">
+                <h2 className="subpage-h2">Content of Learning</h2>
+                <span className="subpage-comment">
                   (The following is a note about IELTS and English learning.)
                 </span>
+
+                <div className="flex flex-col">{articlesPreviews}</div>
               </div>
-              <div>{articlesPreviews}</div>
             </div>
           }
           Project={ProjectContent}
@@ -57,49 +55,43 @@ const page = () => {
 };
 
 const IntroductionContent = (
-  <div className="text-justify space-y-5">
-    <h2 className="text-xl lg:text-3xl font-bold text-red-700">
-      Purpose of Learning
-    </h2>
-    <span className="text-gray-500 text-lg">
-      (The bried introduction about why should I learn this subject, what I
-      should learn and what I can obtain after my study.)
-    </span>
-    <p>
-      During my undergraduate study in Software Engineering, There is no
-      Artificial Intelligence major provided in UPM, and at that time, I did not
-      have a clear idea about studying abroad. Therefore, I missed the best
-      opportunity to study artificial intelligence 4 years ago.{" "}
-      <span className="font-bold">
-        However, this should not be an excuse to give up my aspirations.
-      </span>{" "}
-      Motivated by a strong awareness to follow the trend of technological
-      revolution, I have decided to utilize online resources to independently
-      study the necessary knowledge in Artificial Intelligence field.
-    </p>
-    <p>
-      The primary purpose of this self-directed learning is to narrow the gap
-      caused by my previous education and acquire a comprehensive understanding
-      of Artificial Intelligence. By doing so, I aim to equip myself with the
-      skills and expertise needed in this domain and to stay competitive in
-      today's job market.
-    </p>
-    <p>
-      The outcomes of this initiative are multifaceted. Firstly, I intend to
-      learn basic knowledge in general AI techniques, which will enable me to
-      apply them to solve real-world problems. Secondly, I aim to enhance my
-      problem-solving abilities, strategies and thinking skills through
-      practical projects and hands-on experience. Lastly, I will write some
-      detailed learning logs that can serve as records for my study.
-    </p>
-  </div>
-);
-const StructureContent = (
   <div className="space-y-5 text-justify">
+    <div className="text-justify space-y-2">
+      <h2 className="subpage-h2">Purpose</h2>
+      <span className="subpage-comment">
+        (The bried introduction about why should I learn this subject, what I
+        should learn and what I can obtain after my study.)
+      </span>
+      <p>
+        During my undergraduate study in Software Engineering, There is no
+        Artificial Intelligence major provided in UPM, and at that time, I did
+        not have a clear idea about studying abroad. Therefore, I missed the
+        best opportunity to study artificial intelligence 4 years ago.{" "}
+        <span className="font-bold">
+          However, this should not be an excuse to give up my aspirations.
+        </span>{" "}
+        Motivated by a strong awareness to follow the trend of technological
+        revolution, I have decided to utilize online resources to independently
+        study the necessary knowledge in Artificial Intelligence field.
+      </p>
+      <p>
+        The primary purpose of this self-directed learning is to narrow the gap
+        caused by my previous education and acquire a comprehensive
+        understanding of Artificial Intelligence. By doing so, I aim to equip
+        myself with the skills and expertise needed in this domain and to stay
+        competitive in today's job market.
+      </p>
+      <p>
+        The outcomes of this initiative are multifaceted. Firstly, I intend to
+        learn basic knowledge in general AI techniques, which will enable me to
+        apply them to solve real-world problems. Secondly, I aim to enhance my
+        problem-solving abilities, strategies and thinking skills through
+        practical projects and hands-on experience. Lastly, I will write some
+        detailed learning logs that can serve as records for my study.
+      </p>
+    </div>
     <div className="space-y-5 text-justify">
-      <h2 className="text-xl lg:text-3xl font-bold text-red-700">
-        Target of Learning
-      </h2>
+      <h2 className="subpage-h2">Learning Structure</h2>
       <p>
         The conclusion is that: to supplement the lack of knowledge in
         artificial intelligence since my undergraduate, the focus of my study
@@ -412,7 +404,6 @@ const StructureContent = (
     </div>
   </div>
 );
-const ContentContent = <div>None</div>;
 const ProjectContent = <div>None</div>;
 
 export default page;

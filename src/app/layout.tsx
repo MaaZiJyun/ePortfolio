@@ -4,6 +4,7 @@ import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import "./globals.css";
 import './styles/katex-custom.css';  
+import './styles/subpage-custom.css';  
 
 const inter = Inter({ subsets: ["latin"] });
 
