@@ -27,7 +27,7 @@ const LatexBlockComponent = ({ children }: MarkdownComponentProps) => {
 };
 
 const ImageComponent = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} className="max-w-full h-auto" />
+  <img src={src} alt={alt} className="lg:w-1/2 h-auto" />
 );
 
 const MarkdownComponents = {
@@ -51,13 +51,18 @@ const MarkdownComponents = {
     </a>
   ),
   table: ({ children }: MarkdownComponentProps) => (
-    <table className="text-sm my-2 lg:my-4 lg:mx-12">{children}</table>
+    <div className="w-full lg:px-12">
+      <table className="text-sm my-2 lg:my-4">{children}</table>
+    </div>
   ),
   li: ({ children }: MarkdownComponentProps) => (
     <li className="text-black text-sm m-0">{children}</li>
   ),
   pre: ({ children }: MarkdownComponentProps) => (
     <CodeBlock>{children}</CodeBlock>
+  ),
+  blockquote:({ children }: MarkdownComponentProps) => (
+    <div className="px-6 lg:px-12"><blockquote>{children}</blockquote></div>
   ),
   img: ImageComponent,
   Latex: LatexComponent,
