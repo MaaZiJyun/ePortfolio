@@ -57,7 +57,7 @@ export default function GreetingTitle() {
 
   // Define the BlinkingCursor component within the same file
   function BlinkingCursor() {
-    return <span className="blinkingCursor">|</span>;
+    return <span className="blinkingCursor">｜</span>;
   }
 
   const getRandomColor = () => {
