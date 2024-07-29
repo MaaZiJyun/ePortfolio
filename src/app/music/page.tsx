@@ -12,18 +12,18 @@ const page = () => {
     <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="bg-latest-album">
-          <div className="flex flex-col items-center justify-center  h-screen">
+          <div className="flex flex-col items-center justify-center h-screen">
             <span className="text-3xl lg:text-6xl text-center">
-              私の音楽作品
+            童夢綺の音楽作品
             </span>
-            <span className="mt-4">Welcome to listen to my music works.</span>
+            <span className="mt-4">Welcome to listen to Dōmuki's music works.</span>
           </div>
           {/* divider */}
           {/* <div className="lg:flex px-6 lg:px-12">
             <div className="w-full h-px bg-black"></div>
           </div> */}
           <FadeInContainer>
-            <div className="lg:flex items-center justify-center lg:pt-16 ">
+            <div className="lg:flex items-center justify-center">
               <div className="flex flex-col lg:w-1/2 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-80">
                 <span className="text-center text-4xl lg:text-6xl">
                   Latest Work

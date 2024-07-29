@@ -13,18 +13,23 @@ const page = () => {
     <main className="flex flex-col items-center justify-between my-24">
       <Container>
         <div className="flex flex-col items-center justify-between">
-          <div className="flex w-full p-6 lg:px-32">
-            <DirectoryBar />
-          </div>
-
           <div className="flex flex-col w-full px-6 lg:px-32">
-            <Section
-              title={"記事"}
-              description={
-                "I will share some of my personal thoughts or insights here."
-              }
-            />
-            <div className="flex flex-col w-full py-6">{postPreviews}</div>
+            <div className="flex w-full flex-col items-center justify-center text-justify">
+              <div className="flex flex-col items-between justify-center py-24">
+                <div className="flex items-center justify-center w-full text-3xl lg:text-6xl">
+                  <span className="text-center ">童夢綺の記事</span>
+                </div>
+                <div className="flex items-center justify-center mt-6 text-base lg:text-lg space-x-2">
+                  {"Dōmuki's blog".split("").map((char, index) => (
+                    <span className="font-normal" key={index}>
+                      {char}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="w-full h-px bg-black"></div>
+            <div className="flex flex-col w-full py-12">{postPreviews}</div>
           </div>
         </div>
       </Container>

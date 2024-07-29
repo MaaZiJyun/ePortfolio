@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning: Supervised and Unsupervise Learning"
 abstract: ""
-date: "2020-03-16"
+date: "2024-07-16"
 address: "自習スタジオ"
 author:
   name: 童夢綺
@@ -11,6 +11,8 @@ keywords: []
 # What is Machine Learning
 
 > Field of study that gives computers the ability to learn without being explicitly programmed. (Arthur Samuel 1959)
+
+Machine Learning is like having a super smart friend who learns from examples. You give it data (like pictures of cats and dogs) and tell it what each one is. The machine looks for patterns and learns from this data. Later, when you show it a new picture, it can make a pretty good guess whether it’s a cat or a dog, even though it hasn’t seen that exact picture before.
 
 The more opportunities you give a learning algorithm to learn the better it will perform.
 
@@ -23,15 +25,7 @@ Learning algorithm is like getting some sets of tools, so we need have great too
 
 ## Supervise Learning
 
-Supervise Learning is the most frequently used algorithm of machine learning. According to recent surveys, supervised learning methods, including regression and classification, are employed in over 70% of machine learning projects, highlighting their widespread application and effectiveness.
-
-X features could be anything from pixel values in an image to words in a text document, and Y labels are the ground truth that the model aims to predict.
-
-| **X (Input)** | **Y (Output)** | **Application**     |
-| :------------ | :------------- | :------------------ |
-| Email         | Spam or not    | Spam Filtering      |
-| Audio         | Text           | Speech Recognition  |
-| English       | Chinese        | Machine Translation |
+Supervise Learning is like you train a computer with a bunch of examples that already have the answers (or labels). You give the computer data (like pictures of fruits) along with the correct labels (like "apple" or "orange"). The computer learns from these examples and, starts to recognize patterns. Later, when you show the computer a new picture of a fruit, it can make an educated guess.
 
 ### Regression
 
@@ -99,6 +93,29 @@ In this case, the algorithm should find the proper boundary line through these d
 | :--------------------------------------------------- | :--------------------------------------------- |
 | Learn from data *labeled* with the *"right answers"* | find something interesting in *unlabeled* data |
 
+What different from supervised learning is that dataset provided for unsupervised learning are not labeled. 
+
+Imagine you're at a party with a bunch of people you've never met. You want to figure out who might be friends or who has similar interests, but no one tells you anything directly. So, you start observing and listening to conversations. You notice some people talking a lot about sports, others about movies, and some about cooking. Based on these patterns, you group people into clusters, like "sports fans," "movie buffs," and "foodies."
+
+### Clustering Learning (Group similar data)
+
+If the previous example of tumor is reused at here, the data on patients' tumor size and age are given but not whether the tumor was benign or malignant. There is no red or blue color because the labels indicating whether a tumor is benign or malignant were not provided.
+
+![Alt text for the image](/images/_posts/Machine_Learning/ml004.png)
+
+It is not supposed to diagnose, instead, the task is to find some structure or pattern that might be in this data. From the given dataset it might decide, that there are 2 clusters or groups in different position. And this is a particular type of unsupervised learning called clustering.
+
+### Anomaly Detection (Find unusual data points)
+
+Imagine you're a baker making vanilla cupcakes every day. One day, you find a green cupcake with sprinkles among your usual batch. It stands out because it's not what you expect.
+
+Anomaly detection is like noticing that odd cupcake. It helps you spot things that don't fit in with the usual pattern, whether it's in cupcakes or data. So, it's like saying, "Hey, this one looks different!"
+
+### Dimensionality Reduction (Compress data using fewer numbers)
+
+Dimensionality Reduction in data is like packing for that trip. You start with a big "suitcase" full of all the data features (like height, weight, color, etc.). But not all of them are useful for what you're trying to do. So, you sort through and pick only the most important features, the ones that really matter for your task, and leave the rest behind.
+
+This way, just like traveling with a lighter suitcase, your data becomes easier to handle, process, and understand. And best of all, you can still enjoy the trip (or get good results) without all the extra baggage!
 
 # Summary
 

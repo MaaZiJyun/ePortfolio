@@ -9,8 +9,8 @@ import './styles/subpage-custom.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DOMUKI WEB",
-  description: "Domuki no websaito",
+  title: "童夢綺のウェブサイト",
+  description: "こんにちは、童夢綺です。よろしくね！",
 };
 
 export default function RootLayout({

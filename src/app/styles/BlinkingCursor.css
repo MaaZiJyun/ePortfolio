@@ -1,0 +1,14 @@
+/* BlinkingCursor.css */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}
+
+.blinkingCursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}

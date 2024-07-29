@@ -50,17 +50,16 @@ const page: React.FC = () => {
 };
 
 const IntroductionContent = (
-  <div className="fade-in text-gray-300">
+  <div className="fade-in">
     <div className="text-justify space-y-5 fade-in">
       <div className="mb-6">
-        <h2 className="text-xl lg:text-3xl font-bold text-red-700">
-          Purpose
-        </h2>
-        <span className="text-gray-500 text-lg">
+        <h2 className="subpage-h2">Purpose</h2>
+        <span className="subpage-comment">
           (The bried introduction about why should I learn this subject, what I
           should learn and what I can obtain after my study.)
         </span>
       </div>
+
       <p>
         As an international student, English serves as a crucial tool for
         communication and acquiring knowledge. Recognizing its importance, I
@@ -86,6 +85,7 @@ const IntroductionContent = (
         future career.
       </p>
     </div>
+    <h2 className="subpage-h2">Learning Structure</h2>
     <h1 className="text-lg font-bold my-5">Foundational Section</h1>
     <ol className="list-decimal list-inside">
       <li>English Phonetic Symbols</li>

@@ -12,6 +12,7 @@ import {
 import getPostMetadata from "./_controllers/getPostMetadata";
 import ContactForm from "./_components/ContactForm";
 import VideoBoard from "./_components/VideoBoard";
+import GreetingTitle from "./_components/GreetingTitle";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -24,10 +25,11 @@ export default function Home() {
         <div className="flex w-full h-screen bg-sketch items-center justify-center">
           <div className="lg:flex lg:w-1/2 px-6">
             <div className="flex flex-col space-y-5">
-              <p className="text-3xl lg:text-6xl">Hi, I am Dōmuki</p>
+              {/* <p className="text-3xl lg:text-6xl">Hi, this is Dōmuki</p> */}
+              <GreetingTitle />
               <p className="text-justify">
                 I'm passionate about music and writing, with a degree in
-                software engineering. I can speak English and native Chinese.
+                software engineering. I can speak English and native Mandarin.
                 Currently, I'm pursuing advanced studies in my field and love
                 exploring new creative endeavors.
               </p>
@@ -54,10 +56,10 @@ export default function Home() {
                   <WrenchScrewdriverIcon className="h-12 w-12" />
 
                   <span className="font-bold text-xl text-center">
-                    Software Engineer
+                    Application Developer
                   </span>
                   <span className="text-justify">
-                    I hold a Bachelor's degree in Software Engineering, and
+                    He hold a Bachelor's degree in Software Engineering, and
                     frequently worked with frameworks like Flutter and Next.js.
                   </span>
                 </div>
@@ -75,7 +77,7 @@ export default function Home() {
                     English Assistant
                   </span>
                   <span className="text-justify">
-                    I achieved an IELTS band score of 7 and had experience as an
+                    He achieved an IELTS with band 7 and had experience as an
                     English teaching assistant.
                   </span>
                 </div>
@@ -93,9 +95,9 @@ export default function Home() {
                     Music Composer
                   </span>
                   <span className="text-justify">
-                    Composing music is my favorite hobby, which I've continued
-                    to pursue for over 5 years, accumulating more than 472,000
-                    listens.
+                    Composing music is his favorite hobby, which he've continued
+                    to pursue for over 5 years. He specializes in pure music and
+                    orchestral music.
                   </span>
                 </div>
               </ParallaxSection>
@@ -110,9 +112,9 @@ export default function Home() {
 
                   <span className="font-bold text-xl text-center">Student</span>
                   <span className="text-justify">
-                    Being a student will always be my identity throughout my
-                    life. I have a constant desire to learn new things and
-                    enhance my perspectives.
+                    Being a student will always be his identity throughout his
+                    life. He have a constant desire to learn new things and
+                    enhance his perspectives.
                   </span>
                 </div>
               </ParallaxSection>

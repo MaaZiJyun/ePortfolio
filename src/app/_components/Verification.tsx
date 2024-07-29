@@ -27,7 +27,7 @@ const VerificationPage = () => {
 
     // Assuming the hashed password matches the invite code
     if (!password) {
-      setError("Name is required");
+      setError("Invitation Code is required");
     } else if (hashed === hashedasr) {
       localStorage.setItem("isVerified", "true");
       router.push("/resume");

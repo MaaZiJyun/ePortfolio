@@ -63,23 +63,27 @@ const IntroductionContent = (
         should learn and what I can obtain after my study.)
       </span>
       <p>
-        During my undergraduate study in Software Engineering, There is no
-        Artificial Intelligence major provided in UPM, and at that time, I did
-        not have a clear idea about studying abroad. Therefore, I missed the
-        best opportunity to study artificial intelligence 4 years ago.{" "}
-        <span className="font-bold">
-          However, this should not be an excuse to give up my aspirations.
-        </span>{" "}
-        Motivated by a strong awareness to follow the trend of technological
-        revolution, I have decided to utilize online resources to independently
-        study the necessary knowledge in Artificial Intelligence field.
+        During undergraduate study in Software Engineering, There is no
+        Artificial Intelligence major provided in UPM, and at that time, I
+        didn't have a clear direction for my future academic path yet.
+        Therefore, I missed the best opportunity to study artificial
+        intelligence 4 years ago.
       </p>
       <p>
-        The primary purpose of this self-directed learning is to narrow the gap
-        caused by my previous education and acquire a comprehensive
-        understanding of Artificial Intelligence. By doing so, I aim to equip
-        myself with the skills and expertise needed in this domain and to stay
-        competitive in today's job market.
+        Unfortunately, the decision I made four years ago has affected my
+        current choices. Due to my lack of background in artificial
+        intelligence, I was unsuccessful in my graduate school applications.
+        However, motivated by the willing to follow the trend of technological
+        revolution and the fear of being replaced, I have no choice but to
+        utilize online resources to study the necessary knowledge in Artificial
+        Intelligence field independently.
+      </p>
+      <p>
+        The primary purpose of learning is to narrow the gap caused by my
+        previous education and acquire a comprehensive understanding of
+        Artificial Intelligence. By doing so, I aim to equip myself with the
+        skills in this domain and to stay competitive in today's job market and
+        satisfy personal interest of study.
       </p>
       <p>
         The outcomes of this initiative are multifaceted. Firstly, I intend to
@@ -87,7 +91,7 @@ const IntroductionContent = (
         apply them to solve real-world problems. Secondly, I aim to enhance my
         problem-solving abilities, strategies and thinking skills through
         practical projects and hands-on experience. Lastly, I will write some
-        detailed learning logs that can serve as records for my study.
+        detailed learning logs that can serve as records for learning.
       </p>
     </div>
     <div className="space-y-5 text-justify">
@@ -107,6 +111,7 @@ const IntroductionContent = (
         <li>Computer Vision and Pattern Recognition</li>
         <li>Practical Artificial Intelligence</li>
       </ol>
+      <h2 className="subpage-h2">Discussion</h2>
       <p>
         The specific course names and contents may vary from different
         universities. My bachelor study was completed from UPM in Malaysia.
@@ -378,6 +383,7 @@ const IntroductionContent = (
           </tr>
         </tbody>
       </table>
+      <h2 className="subpage-h2">Conclusion</h2>
       <p>
         From the above two tables, the following conclusions can be drawn: 1.
         The general education courses in both universities and colleges are 100%
