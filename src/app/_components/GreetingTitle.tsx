@@ -22,7 +22,6 @@ export default function GreetingTitle() {
   useEffect(() => {
     if (isTyping) {
       if (typingIndex < greets[index].length) {
-        console.log(`${typingIndex} and ${greets[index].length}`);
         const typingTimeout = setTimeout(() => {
           setDisplayedText((prevText) => prevText + greets[index][typingIndex]);
           setTypingIndex((prevTypingIndex) => prevTypingIndex + 1);
@@ -32,7 +31,7 @@ export default function GreetingTitle() {
       } else {
         // Set a timeout to end the pause after 3 seconds
         const timeoutId = setTimeout(() => {
-          console.log("stop");
+        //   console.log("stop");
           setIsPaused(true);
           setIsTyping(false);
         }, 3000); // 3-second delay
