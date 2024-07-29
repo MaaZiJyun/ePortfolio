@@ -14,7 +14,7 @@ const page = () => {
   ));
 
   const pageTitle = "Learning Notes of Artificial Intelligence";
-  const pageDesc = "私の人工知能学習ノート";
+  const pageDesc = "童夢綺の人工知能学習ノート";
 
   return (
     <main className="flex flex-col items-center justify-between mt-32">

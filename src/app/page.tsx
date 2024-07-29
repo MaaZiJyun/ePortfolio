@@ -164,7 +164,7 @@ export default function Home() {
                       Contact Me
                     </span>
                     <div className="distribute-text">
-                      {"私に連絡してください".split("").map((char, index) => (
+                      {"童夢綺に連絡してください".split("").map((char, index) => (
                         <span key={index}>{char}</span>
                       ))}
                     </div>

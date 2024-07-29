@@ -23,7 +23,7 @@ const page: React.FC = () => {
               <div className="text-3xl lg:text-6xl font-bold lg:w-2/3">
                 My Learning Notes of IELTS
               </div>
-              <div className="text-base">私のIELTS学習ノート</div>
+              <div className="text-base">童夢綺のIELTS学習ノート</div>
             </div>
           </div>
         </div>
