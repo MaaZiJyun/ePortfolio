@@ -7,7 +7,7 @@ const page = () => {
       <Container>
         <div className="flex flex-col items-center justify-between">
           <div className="relative  w-full">
-            <div className="flex flex-col items-center justify-center font-arial py-48 bg-blue-500 mb-20">
+            <div className="flex flex-col items-center justify-center font-arial py-48 bg-blue-500 mb-48 lg:mb-20">
               <div className="flex items-center justify-between text-3xl lg:text-6xl">
                 <span className="text-center text-white">自習委員会</span>
               </div>
@@ -21,7 +21,7 @@ const page = () => {
             </div>
             <div className="absolute bottom-0 w-full">
               <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center bg-white lg:w-1/2 rounded-xl shadow-xl py-6 px-10 text-justify h-40">
+                <div className="flex items-center justify-center bg-white lg:w-1/2 rounded-xl shadow-xl py-6 px-10 text-justify h-1/2 lg:h-40">
                   <p className="text-sm font-arial">
                     The Self-Study Committee
                     <span className="italic">, "自習委員会",</span> is an
@@ -214,7 +214,7 @@ const page = () => {
                     </table>
                   </div>
                 </div>
-                <div className="lg:flex flex-col w-full lg:w-2/3 items-center justify-center text-justify space-y-2">
+                <div className="lg:flex flex-col w-full lg:w-2/3 items-center justify-center text-justify space-y-2 mt-12 lg:mt-2">
                   <div className="flex flex-col w-full rounded-xl items-start justify-center p-3">
                     <span className="mb-3">
                       Complete online courses on the basics of machine learning
@@ -602,6 +602,7 @@ const page = () => {
                     perspective on the subject matter.
                   </p>
                   <div className="flex flex-col items-center justify-center p-6">
+                  <div className="w-full overflow-x-auto">
                     <table className="bg-white text-sm">
                       <thead className="bg-black text-white">
                         <tr>
@@ -682,6 +683,7 @@ const page = () => {
                         </tr>
                       </tbody>
                     </table>
+                    </div>
                     <span className="italic">
                       Table 1: Formal and Informal Resources
                     </span>
@@ -808,116 +810,120 @@ const page = () => {
                     documentation.
                   </p>
                   <div className="flex flex-col items-center justify-center p-6">
-                    <table className="bg-white">
-                      <thead className="bg-black text-white">
-                        <tr>
-                          <th className="py-3 px-4 text-left ">Method</th>
-                          <th className="py-3 px-4 text-left ">Pros</th>
-                          <th className="py-3 px-4 text-left ">Cons</th>
-                          <th className="py-3 px-4 text-left ">Cases</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="">
-                          <td className="py-3 px-4">Paper Note</td>
-                          <td className="py-3 px-4">
-                            - Tangible
-                            <br />
-                            - portable
-                            <br />
-                            - Enhances memory via writing
-                            <br />- Easy to annotate
-                          </td>
-                          <td className="py-3 px-4">
-                            - Difficult to organize and search
-                            <br />- Susceptible to damage or loss
-                          </td>
-                          <td className="py-3 px-4">
-                            - Quick note-taking during lectures or meetings
-                            <br />- Brainstorming and sketching ideas
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50 ">
-                          <td className="py-3 px-4">Audio Recordings</td>
-                          <td className="py-3 px-4">
-                            - Convenient for capturing thoughts on the go
-                            <br />
-                            - Can be replayed for auditory learners
-                            <br />- Captures nuances in speech and tone
-                          </td>
-                          <td className="py-3 px-4">
-                            - Time-consuming to review
-                            <br />
-                            - Requires transcription for quick reference
-                            <br />- May be harder to organize and search
-                          </td>
-                          <td className="py-3 px-4">
-                            - Recording lectures, interviews, or discussions
-                            <br />- Capturing personal reflections or
-                            brainstorming sessions
-                          </td>
-                        </tr>
-                        <tr className="">
-                          <td className="py-3 px-4">Video Summaries</td>
-                          <td className="py-3 px-4">
-                            - Visual and auditory learning combined
-                            <br />
-                            - Captures body language and visual cues
-                            <br />- Useful for complex explanations
-                          </td>
-                          <td className="py-3 px-4">
-                            - Requires equipment and setup
-                            <br />
-                            - Time-consuming to produce and review
-                            <br />- Large file sizes and storage needs
-                          </td>
-                          <td className="py-3 px-4">
-                            - Demonstrating procedures or tutorials
-                            <br />- Recording presentations or speeches
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50 ">
-                          <td className="py-3 px-4">Diagrams and Mind Maps</td>
-                          <td className="py-3 px-4">
-                            - Excellent for visualizing relationships and
-                            concepts
-                            <br />
-                            - Simplifies complex information
-                            <br />- Engages visual learners
-                          </td>
-                          <td className="py-3 px-4">
-                            - Can be time-consuming to create
-                            <br />
-                            - May oversimplify information
-                            <br />- Not suitable for all types of information
-                          </td>
-                          <td className="py-3 px-4">
-                            - Organizing ideas and concepts
-                            <br />- Planning projects or presentations
-                          </td>
-                        </tr>
-                        <tr className="">
-                          <td className="py-3 px-4">Digital Notes</td>
-                          <td className="py-3 px-4">
-                            - Easily organized and searchable
-                            <br />
-                            - Can include hyperlinks and multimedia
-                            <br />- Cloud storage and backup options
-                          </td>
-                          <td className="py-3 px-4">
-                            - Requires access to digital devices
-                            <br />
-                            - Potential for distraction from other digital
-                            content
-                            <br />- Data security and privacy concerns
-                          </td>
-                          <td className="py-3 px-4">
-                            - Collecting and organizing research
-                            <br />- Integrating multimedia content with notes
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div className="w-full overflow-x-auto">
+                      <table className="bg-white text-sm">
+                        <thead className="bg-black text-white">
+                          <tr>
+                            <th className="py-3 px-4 text-left ">Method</th>
+                            <th className="py-3 px-4 text-left ">Pros</th>
+                            <th className="py-3 px-4 text-left ">Cons</th>
+                            <th className="py-3 px-4 text-left ">Cases</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="">
+                            <td className="py-3 px-4">Paper Note</td>
+                            <td className="py-3 px-4">
+                              - Tangible
+                              <br />
+                              - portable
+                              <br />
+                              - Enhances memory via writing
+                              <br />- Easy to annotate
+                            </td>
+                            <td className="py-3 px-4">
+                              - Difficult to organize and search
+                              <br />- Susceptible to damage or loss
+                            </td>
+                            <td className="py-3 px-4">
+                              - Quick note-taking during lectures or meetings
+                              <br />- Brainstorming and sketching ideas
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50 ">
+                            <td className="py-3 px-4">Audio Recordings</td>
+                            <td className="py-3 px-4">
+                              - Convenient for capturing thoughts on the go
+                              <br />
+                              - Can be replayed for auditory learners
+                              <br />- Captures nuances in speech and tone
+                            </td>
+                            <td className="py-3 px-4">
+                              - Time-consuming to review
+                              <br />
+                              - Requires transcription for quick reference
+                              <br />- May be harder to organize and search
+                            </td>
+                            <td className="py-3 px-4">
+                              - Recording lectures, interviews, or discussions
+                              <br />- Capturing personal reflections or
+                              brainstorming sessions
+                            </td>
+                          </tr>
+                          <tr className="">
+                            <td className="py-3 px-4">Video Summaries</td>
+                            <td className="py-3 px-4">
+                              - Visual and auditory learning combined
+                              <br />
+                              - Captures body language and visual cues
+                              <br />- Useful for complex explanations
+                            </td>
+                            <td className="py-3 px-4">
+                              - Requires equipment and setup
+                              <br />
+                              - Time-consuming to produce and review
+                              <br />- Large file sizes and storage needs
+                            </td>
+                            <td className="py-3 px-4">
+                              - Demonstrating procedures or tutorials
+                              <br />- Recording presentations or speeches
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50 ">
+                            <td className="py-3 px-4">
+                              Diagrams and Mind Maps
+                            </td>
+                            <td className="py-3 px-4">
+                              - Excellent for visualizing relationships and
+                              concepts
+                              <br />
+                              - Simplifies complex information
+                              <br />- Engages visual learners
+                            </td>
+                            <td className="py-3 px-4">
+                              - Can be time-consuming to create
+                              <br />
+                              - May oversimplify information
+                              <br />- Not suitable for all types of information
+                            </td>
+                            <td className="py-3 px-4">
+                              - Organizing ideas and concepts
+                              <br />- Planning projects or presentations
+                            </td>
+                          </tr>
+                          <tr className="">
+                            <td className="py-3 px-4">Digital Notes</td>
+                            <td className="py-3 px-4">
+                              - Easily organized and searchable
+                              <br />
+                              - Can include hyperlinks and multimedia
+                              <br />- Cloud storage and backup options
+                            </td>
+                            <td className="py-3 px-4">
+                              - Requires access to digital devices
+                              <br />
+                              - Potential for distraction from other digital
+                              content
+                              <br />- Data security and privacy concerns
+                            </td>
+                            <td className="py-3 px-4">
+                              - Collecting and organizing research
+                              <br />- Integrating multimedia content with notes
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <span className="italic">
                       Table 2: Different Forms of Documentation
                     </span>
