@@ -7,6 +7,7 @@ import { TypeOfArticle } from "@/app/_controllers/TypeOfArticle";
 import DirectoryBar from "@/app/_components/DirectoryBar";
 import dynamic from "next/dynamic";
 import MarkdownRenderer from "@/app/_components/MarkdownRender";
+import Link from "next/link";
 
 const getArticleContent = (slug: string) => {
   const folder = `notes_${TypeOfArticle.ArtificialIntelligence}/`;
@@ -42,7 +43,9 @@ const PostPage = (props: any) => {
             <span className="text-lg lg:text-xl">
               {article.data.author.name}
             </span>
-            <span className="lg:text-lg">{article.data.address}</span>
+            <Link href="/study">
+              <span className="mt-2 lg:text-sm">{article.data.address}</span>
+            </Link>
           </div>
           <div className="abstract mt-10">
             {article.data.abstract && article.data.abstract.trim() !== "" && (

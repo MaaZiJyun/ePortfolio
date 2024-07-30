@@ -2,7 +2,7 @@
 title: "Machine Learning: Supervised and Unsupervise Learning"
 abstract: ""
 date: "2024-07-16"
-address: "自習スタジオ"
+address: "自習委員会"
 author:
   name: 童夢綺
 keywords: []
@@ -89,13 +89,13 @@ In this case, the algorithm should find the proper boundary line through these d
 
 ## Unsupervise Learning
 
-| **Supervise Learning**                               | **Unsupervise Learning**                       |
-| :--------------------------------------------------- | :--------------------------------------------- |
-| Learn from data *labeled* with the *"right answers"* | find something interesting in *unlabeled* data |
-
 What different from supervised learning is that dataset provided for unsupervised learning are not labeled. 
 
 Imagine you're at a party with a bunch of people you've never met. You want to figure out who might be friends or who has similar interests, but no one tells you anything directly. So, you start observing and listening to conversations. You notice some people talking a lot about sports, others about movies, and some about cooking. Based on these patterns, you group people into clusters, like "sports fans," "movie buffs," and "foodies."
+
+| **Supervise Learning**                               | **Unsupervise Learning**                       |
+| :--------------------------------------------------- | :--------------------------------------------- |
+| Learn from data *labeled* with the *"right answers"* | find something interesting in *unlabeled* data |
 
 ### Clustering Learning (Group similar data)
 

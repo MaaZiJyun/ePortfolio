@@ -32,15 +32,15 @@ const ImageComponent = ({ src, alt }: { src: string; alt: string }) => (
 
 const MarkdownComponents = {
   h1: ({ children }: MarkdownComponentProps) => (
-    <h1 className="text-lg font-bold text-black mt-6 mb-0">{children}</h1>
+    <h1 className="text-lg font-bold text-black mt-10 mb-0">{children}</h1>
   ),
   h2: ({ children }: MarkdownComponentProps) => (
-    <h2 className="text-lg font-bold italic text-black mt-3 mb-0">
+    <h2 className="text-lg font-bold italic text-black mt-8 mb-0">
       {children}
     </h2>
   ),
   h3: ({ children }: MarkdownComponentProps) => (
-    <h3 className="text-base font-bold text-black mt-3 mb-0">{children}</h3>
+    <h3 className="text-base font-bold text-black mt-6 mb-0">{children}</h3>
   ),
   p: ({ children }: MarkdownComponentProps) => (
     <p className="text-base text-indent text-black mt-2 mb-0">{children}</p>

@@ -42,7 +42,7 @@ const PostPage = (props: any) => {
           </div>
           <div className="flex flex-col info text-center mt-10">
             <span className="text-lg lg:text-xl">{post.data.author.name}</span>
-            <span className="lg:text-lg">{post.data.address}</span>
+            <span className="lg:text-sm">{post.data.address}</span>
           </div>
           <div className="abstract mt-10">
             {post.data.abstract && post.data.abstract.trim() && (
