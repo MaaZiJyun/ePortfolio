@@ -61,8 +61,15 @@ const MarkdownComponents = {
   pre: ({ children }: MarkdownComponentProps) => (
     <CodeBlock>{children}</CodeBlock>
   ),
-  blockquote:({ children }: MarkdownComponentProps) => (
-    <div className="px-6 lg:px-12"><blockquote>{children}</blockquote></div>
+  code: ({ children }: MarkdownComponentProps) => (
+    <code className="bg-gray-100 px-2 py-1 rounded text-red-500">
+      {children}
+    </code>
+  ),
+  blockquote: ({ children }: MarkdownComponentProps) => (
+    <div className="px-6 lg:px-12">
+      <blockquote>{children}</blockquote>
+    </div>
   ),
   img: ImageComponent,
   Latex: LatexComponent,
