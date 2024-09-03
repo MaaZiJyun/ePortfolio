@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { useState } from 'react';
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
@@ -8,26 +9,67 @@ interface MarkdownComponentProps {
   children: ReactNode;
 }
 
-const LatexComponent = ({ children }: MarkdownComponentProps) => {
-  const latexString = Array.isArray(children) ? children.join("") : children;
-  const html = katex.renderToString(latexString as string, {
+const extractText = (node: React.ReactNode): string => {
+  console.log(node);
+  
+  if (typeof node === 'string') {
+    return node;
+  }
+  if (React.isValidElement(node)) {
+    // Handle React elements
+    return extractText(node.props.children);
+  }
+  if (Array.isArray(node)) {
+    // Handle arrays of nodes
+    return node.map(extractText).join('_');
+  }
+  // Default case for unsupported node types
+  return '';
+};
+
+// const LatexComponent = ({ children }: MarkdownComponentProps) => {
+//   const latexString = Array.isArray(children) ? children.join("") : children;
+//   const html = katex.renderToString(latexString as string, {
+//     throwOnError: false,
+//     displayMode: false,
+//   });
+//   return <span dangerouslySetInnerHTML={{ __html: html }} />;
+// };
+
+const LatexComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Extract text from React nodes
+  const latexString = extractText(children);
+
+  console.log(latexString);
+  
+
+  // Render the LaTeX string to HTML using KaTeX
+  const html = katex.renderToString(latexString, {
     throwOnError: false,
     displayMode: false,
   });
+
   return <span dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
-const LatexBlockComponent = ({ children }: MarkdownComponentProps) => {
-  const latexString = Array.isArray(children) ? children.join("") : children;
-  const html = katex.renderToString(latexString as string, {
+const LatexBlockComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Extract text from React nodes
+  const latexString = extractText(children);
+
+  // console.log(latexString);
+  
+
+  // Render the LaTeX string to HTML using KaTeX
+  const html = katex.renderToString(latexString, {
     throwOnError: false,
     displayMode: true,
   });
+
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 const ImageComponent = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} className="lg:w-1/2 h-auto" />
+  <img src={src} alt={alt} className="lg:w-2/3 h-auto" />
 );
 
 const MarkdownComponents = {
@@ -56,7 +98,7 @@ const MarkdownComponents = {
     </div>
   ),
   li: ({ children }: MarkdownComponentProps) => (
-    <li className="text-black text-sm m-0">{children}</li>
+    <li className="text-black text-sm m-0 ml-10">{children}</li>
   ),
   pre: ({ children }: MarkdownComponentProps) => (
     <CodeBlock>{children}</CodeBlock>

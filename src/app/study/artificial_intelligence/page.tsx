@@ -40,7 +40,7 @@ const page = () => {
               <div className="text-justify space-y-2">
                 <h2 className="subpage-h2">Content of Learning</h2>
                 <span className="subpage-comment">
-                  (The following is a note about IELTS and English learning.)
+                  (The following is a note about AI learning.)
                 </span>
 
                 <div className="flex flex-col">{articlesPreviews}</div>

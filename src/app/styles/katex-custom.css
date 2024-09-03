@@ -1,6 +1,7 @@
 .katex {
     color: #000; /* Tomato color for example */
-    font-size: 1.5em; /* Increase the size of the formula */
+    font-size: 1.6em; /* Increase the size of the formula */
+    padding: 0.2em 0.4em;
   }
   
   .katex .mord {

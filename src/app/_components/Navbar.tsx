@@ -13,11 +13,11 @@ const articleNav = [
     CNname: "人工知能",
     href: "/study/artificial_intelligence",
   },
-  // {
-  //   name: "Blockchain Technology",
-  //   CNname: "ブロックチェーン技術",
-  //   href: "/study/blockchain_technology",
-  // },
+  {
+    name: "Blockchain Technology",
+    CNname: "ブロックチェーン技術",
+    href: "/study/blockchain_technology",
+  },
   { name: "IELTS", CNname: "IELTS", href: "/study/ielts" },
   // { name: "Mathematics", CNname: "数学", href: "/study/mathematics" },
 ];
