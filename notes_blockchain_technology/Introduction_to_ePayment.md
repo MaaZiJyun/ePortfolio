@@ -1,6 +1,6 @@
 ---
 title: "Introduction to E-Payment"
-abstract: "Lecture 1 covered the evolution of payment systems, starting with Traditional Payments like cash and credit cards. It then explored E-Payments, including online banking and secure Internet Payment Systems with protocols like SET and 3D Secure.The lecture highlighted E-wallets (e.g., Apple Wallet), Mobile Payments through smartphones, and prominent Asian platforms like Alipay and WeChat Pay. It concluded with Cryptocurrency, focusing on Bitcoin and blockchain technology's role in secure, peer-to-peer transactions. Overall, the lecture traced the shift from traditional to modern payment methods, emphasizing their impact on the industry."
+abstract: "Lecture 1 in DISTRIBUTED LEDGER TECHNOLOGY, CRYPTOCURRENCY AND E-PAYMENT covered the evolution of payment systems, starting with Traditional Payments like cash and credit cards. It then explored E-Payments, including online banking and secure Internet Payment Systems with protocols like SET and 3D Secure.The lecture highlighted E-wallets (e.g., Apple Wallet), Mobile Payments through smartphones, and prominent Asian platforms like Alipay and WeChat Pay. It concluded with Cryptocurrency, focusing on Bitcoin and blockchain technology's role in secure, peer-to-peer transactions. Overall, the lecture traced the shift from traditional to modern payment methods, emphasizing their impact on the industry."
 date: "2024-09-02"
 address: "自習スタジオ"
 author:
