@@ -5,7 +5,7 @@ date: "2024-09-04"
 address: "自習スタジオ"
 author:
   name: 童夢綺 Domuki
-keywords: ["ePayment", "protocols", "SET", "3D Secure", ]
+keywords: ["cryptography", "OTP", "symmetric cipher", ]
 ---
 
 # Overview
@@ -243,19 +243,17 @@ Vernam's cipher uses a **key** that is **as long as the message** itself. This k
 - **Equal Probability for All Messages**: For any two messages <Latex>m_0</Latex> and <Latex>m_1</Latex> of the same length (in the message space <Latex>M</Latex>), and for any ciphertext <Latex>c</Latex> in the ciphertext space <Latex>C</Latex>, the probability that <Latex>m_0</Latex> encrypts to <Latex>c</Latex> is equal to the probability that <Latex>m_1</Latex> encrypts to <Latex>c</Latex>.
 - **Key Uniformity**: The key <Latex>k</Latex> is uniformly distributed in the key space <Latex>K</Latex>. This means each key is equally likely to be chosen.
 
-**Why the probability that 𝑚0  encrypts to 𝑐 should be equal to the probability that 𝑚1 encrypts to 𝑐?**
-
-What happens if the probabilities are different?
-
-Let’s say Alice encrypts "HELLO" and "WORLD" **several times** using a **weak encryption scheme**. An attacker records the ciphertexts:
-
-10 encryptions of "HELLO" produce "XYZ" 9 times (90%).
-
-10 encryptions of "WORLD" produce "XYZ" only once (10%).
-
-After observing this many times, the attacker starts to realize that "XYZ" is far more likely to be the encryption of "HELLO" than "WORLD."
-
-The attacker doesn’t know the 90% chance upfront but <u>learns it through repeated observation, analyzing patterns, or exploiting weaknesses in the encryption process</u>. Once they have gathered enough data, they can guess that whenever they see the ciphertext "XYZ", it’s most likely from "HELLO" because that’s what happens most of the time. **But If the probabilities are the same, the attacker won't be able to find out which message was encrypted, even if they intercept the ciphertext multiple times.**
+> **Why the probability that 𝑚0  encrypts to 𝑐 should be equal to the probability that 𝑚1 encrypts to 𝑐? What happens if the probabilities are different?**
+> 
+> Let’s say Alice encrypts "HELLO" and "WORLD" **several times** using a **weak encryption scheme**. An attacker records the > ciphertexts:
+> 
+> 10 encryptions of "HELLO" produce "XYZ" 9 times (90%).
+> 
+> 10 encryptions of "WORLD" produce "XYZ" only once (10%).
+> 
+> After observing this many times, the attacker starts to realize that "XYZ" is far more likely to be the encryption of "HELLO" than "WORLD."
+> 
+> The attacker doesn’t know the 90% chance upfront but <u>learns it through repeated observation, analyzing patterns, or exploiting weaknesses in the encryption process</u>. Once they have gathered enough data, they can guess that whenever they see the ciphertext "XYZ", it’s most likely from "HELLO" because that’s what happens most of the time. **But If the probabilities are the same, the attacker won't be able to find out which message was encrypted, even if they intercept the ciphertext multiple times.**
 
 ## OTP Security
 
