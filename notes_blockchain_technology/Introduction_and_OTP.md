@@ -136,7 +136,7 @@ Key: 3 (Shift each letter by 3 positions)
 
 **Decryption Process**: To decrypt, shift each letter back by 3 positions to retrieve the original plaintext.
 
-## Substitution Cipher
+## Substitution Cipher - A bad cipher
 
 A substitution cipher **replaces** each **letter** in the plaintext **with another letter** from the alphabet. The substitution is consistent throughout the message. 𝑘 indicates a mapping. Caesar cipher (no key): shift by 3.
 
@@ -255,9 +255,11 @@ Vernam's cipher uses a **key** that is **as long as the message** itself. This k
 > 
 > The attacker doesn’t know the 90% chance upfront but <u>learns it through repeated observation, analyzing patterns, or exploiting weaknesses in the encryption process</u>. Once they have gathered enough data, they can guess that whenever they see the ciphertext "XYZ", it’s most likely from "HELLO" because that’s what happens most of the time. **But If the probabilities are the same, the attacker won't be able to find out which message was encrypted, even if they intercept the ciphertext multiple times.**
 
-## OTP Security
+## OTP Security - A good cipher
 
-**Lemma.** OTP has perfect secrecy.
+**Lemma.** OTP has **perfect secrecy**.
+
+**Bad news**: perfect security => key leangth >= message length
 
 **Proof:**
 

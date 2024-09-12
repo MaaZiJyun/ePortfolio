@@ -1,16 +1,74 @@
+.katex-display {
+  display: block;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #F5F5F5;
+  border-radius: 0.5em;
+  padding: 2em;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .katex-display {
+    background-color: transparent;
+    display: flex !important;
+  }
+
+  .katex-display:hover {
+    background-color: #F5F5F5;
+  }
+
+  .katex:hover {
+    font-size: 1.8em;
+  }
+}
+
 .katex {
-    color: #000; /* Tomato color for example */
-    font-size: 1.6em; /* Increase the size of the formula */
-    padding: 0.2em 0.4em;
-  }
-  
-  .katex .mord {
-    color: inherit;
-    font-size: 1em; /* Ensure the inherited color is applied */
-  }
-  
-  .katex .mspace {
-    color: inherit;
-    font-size: 1.2em; /* Ensure the inherited color is applied */
-  }
-  
+  color: #000;
+  width: auto;
+  /* Tomato color for example */
+  font-size: 1.6em;
+  /* Increase the size of the formula */
+  /* padding: 0.2em 0.4em; */
+  text-align: left !important;
+  /* width: fit-content; */
+  transition: font-size 0.3s ease-in-out;
+}
+
+.katex .katex-html {
+  display: inline;
+  width: fit-content;
+  /* overflow: scroll; */
+}
+
+.katex .katex-html .newline {
+  margin: 0.4em;
+}
+
+.base {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.katex .mord {
+  color: inherit;
+  font-size: 1em;
+  /* Ensure the inherited color is applied */
+}
+
+.katex .mord.text {
+  /* color: #D3D3D3; */
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  /* margin: 0 1em; */
+}
+
+.katex .mspace {
+  color: inherit;
+  font-size: 1.2em;
+  /* Ensure the inherited color is applied */
+}
