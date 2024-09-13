@@ -18,7 +18,7 @@ Critically review the newly emerging blockchain standards and architectures, and
 
 ## Turning Completeness
 
-In computability theory, a system of data-manipulation rules is said to be Turing-complete or computationally universal if it can be used to simulate any Turing machine. This means that <u>this system is able to recognize or decode other data-manipulation rule sets.</u>
+In computability theory, a system of data-manipulation rules is said to be Turing-complete or computationally universal if it can be used to simulate any Turing machine. This means that <u>this system is able to recognize or decode other data-manipulation rule sets.</u> Can do any kind of calculation.
 
 
 

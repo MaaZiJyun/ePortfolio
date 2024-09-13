@@ -36,6 +36,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Change the background color and text color of selected text */
 ::selection {
   background: rgba(91, 231, 19, 0.4);
