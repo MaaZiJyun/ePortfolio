@@ -79,7 +79,7 @@ const LatexBlockComponent: React.FC<{ children: React.ReactNode }> = ({
 };
 
 const ImageComponent = ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} className="lg:w-2/3 h-auto" />
+  <img src={src} alt={alt} className="w-full lg:w-2/3 h-auto hover:w-full hover:shadow-xl transition-all duration-300 " />
 );
 
 const MarkdownComponents = {
@@ -122,8 +122,8 @@ const MarkdownComponents = {
     </a>
   ),
   table: ({ children }: MarkdownComponentProps) => (
-    <div className="w-full lg:px-12">
-      <table className="text-sm my-2 lg:my-4">{children}</table>
+    <div className="w-full lg:px-12 overflow-x-scroll">
+      <table className="text-sm">{children}</table>
     </div>
   ),
   li: ({ children }: MarkdownComponentProps) => (
