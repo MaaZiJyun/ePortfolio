@@ -8,6 +8,8 @@ import DirectoryBar from "@/app/_components/DirectoryBar";
 import dynamic from "next/dynamic";
 import MarkdownRenderer from "@/app/_components/MarkdownRender";
 import Link from "next/link";
+import ToC from "@/app/_components/Toc";
+import generateToc from "@/app/_controllers/generateToc";
 
 const getArticleContent = (slug: string) => {
   const folder = `notes_${TypeOfArticle.ArtificialIntelligence}/`;
@@ -28,8 +30,11 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const article = getArticleContent(slug);
   const keywords = article.data.keywords as string[];
+  const toc = generateToc(article.content);
   return (
-    <main className="flex flex-col items-center justify-between my-32">
+    <div className="my-32">
+      <ToC toc={toc} /> {/* Client component */}
+    <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="lg:flex justify-between px-6 lg:px-60 mb-10">
           <DirectoryBar />
@@ -73,6 +78,7 @@ const PostPage = (props: any) => {
         </div>
       </Container>
     </main>
+    </div>
   );
 };
 export default PostPage;
