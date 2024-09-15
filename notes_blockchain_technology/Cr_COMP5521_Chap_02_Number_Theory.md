@@ -1,5 +1,5 @@
 ---
-title: "Number Theory"
+title: "Cr. COMP5521 Chap. 02: Number Theory [undone]"
 abstract: "Lecture 2 in DISTRIBUTED LEDGER TECHNOLOGY, CRYPTOCURRENCY AND E-PAYMENT"
 date: "2024-09-09"
 address: "自習スタジオ"
@@ -7,6 +7,12 @@ author:
   name: 童夢綺 Domuki
 keywords: ["Distributed Algorithms", "Protocols", "Blockchains", ]
 ---
+
+# Number Theory
+
+Number theory is a branch of pure mathematics that studies the properties and relationships of integers. It is one of the oldest and most abstract areas of mathematics, yet it has significant applications in modern fields like cryptography, computer science, and coding theory.
+
+![Alt text for the image](/images/_posts/Blockchain_Technology/COMP5521-L1-016.gif)
 
 # Divisibility
 
@@ -190,8 +196,6 @@ a \cdot x + b \cdot y = GCD(a,b)
 ### How to calculate modular inverse?
 
 Example: To calculate the modular inverse of 911 mod 999
-
-
 
 # Summary
 

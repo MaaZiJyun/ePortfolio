@@ -1,11 +1,11 @@
 ---
-title: "Introduction and OTP"
-abstract: "Lecture 1 in APPLIED CRYPTOGRAPHY FOR FINANCIAL APPLICATIONS "
+title: "Cr. COMP5563 Chap. 01: Intro. & OTP"
+abstract: ""
 date: "2024-09-04"
 address: "自習スタジオ"
 author:
   name: 童夢綺 Domuki
-keywords: ["cryptography", "OTP", "symmetric cipher", ]
+keywords: []
 ---
 
 # Overview

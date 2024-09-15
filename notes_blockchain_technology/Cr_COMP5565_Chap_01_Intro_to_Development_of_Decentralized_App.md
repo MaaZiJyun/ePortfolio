@@ -1,11 +1,11 @@
 ---
-title: "Introduction to Development of Decentralized Application"
-abstract: "Lecture 1 in Decentralized Apps Fundamentals and Development"
+title: "Cr. COMP5565 Chap. 01: Intro. to Development of Decentralized App [undone]"
+abstract: ""
 date: "2024-09-02"
 address: "自習スタジオ"
 author:
   name: 童夢綺 Domuki
-keywords: ["DApp", "Decentralized", ]
+keywords: []
 ---
 
 # Objectives

@@ -1,5 +1,5 @@
 ---
-title: "Stream Cipher"
+title: "Cr. COMP5567 Chap. 02: Stream Cipher [undone]"
 abstract: "Lecture 2 in Distributed Algorithms and Protocols for Blockchains"
 date: "2024-09-11"
 address: "自習スタジオ"

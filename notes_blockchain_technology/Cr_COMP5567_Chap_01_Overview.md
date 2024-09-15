@@ -1,6 +1,6 @@
 ---
-title: "Overview of Distributed Algorithms and Protocols for Blockchains"
-abstract: "Lecture 1 in Distributed Algorithms and Protocols for Blockchains"
+title: "Cr. COMP5567 Chap. 01: Overview [undone]"
+abstract: ""
 date: "2024-09-06"
 address: "自習スタジオ"
 author:

@@ -1,7 +1,7 @@
 ---
-title: "COMP5567 Tutorial One"
+title: "Cr. COMP5567 Chap. 02: Tutorial One"
 abstract: ""
-date: "2024-09-04"
+date: "2024-09-14"
 address: "自習スタジオ"
 author:
   name: 童夢綺 Domuki
