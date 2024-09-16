@@ -30,38 +30,39 @@ const ToC = ({ toc }: { toc: TocItem[] }) => {
   return (
     <div>
       {!showToc && (
-        <button
-          onClick={toggleToc}
-          className="fixed bottom-0 left-0 w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-50 hover:bg-red-600"
-          aria-label="Toggle Table of Contents"
-        >
-          <ListBulletIcon className="h-6 w-6 text-white" />
-        </button>
+        <div className="fixed bottom-0 left-0 z-20">
+          <div className="flex flex-col">
+            <button
+              className=" w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-20 hover:bg-purple-600"
+              aria-label="Toggle Table of Contents"
+            >
+              <ShareIcon className="h-6 w-6 text-white" />
+            </button>
+            <button
+              onClick={scrollToTop}
+              className=" w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-20 hover:bg-blue-600"
+              aria-label="Toggle Table of Contents"
+            >
+              <ArrowUpIcon className="h-6 w-6 text-white" />
+            </button>
+            <button
+              onClick={toggleToc}
+              className="w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-50 hover:bg-red-600"
+              aria-label="Toggle Table of Contents"
+            >
+              <ListBulletIcon className="h-6 w-6 text-white" />
+            </button>
+          </div>
+        </div>
       )}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-14 left-0 w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-20 hover:bg-blue-600"
-        aria-label="Toggle Table of Contents"
-      >
-        <ArrowUpIcon className="h-6 w-6 text-white" />
-      </button>
-      <button
-        
-        className="fixed bottom-28 left-0 w-14 h-14 bg-black bg-opacity-60 text-white flex items-center justify-center z-20 hover:bg-purple-600"
-        aria-label="Toggle Table of Contents"
-      >
-        <ShareIcon className="h-6 w-6 text-white" />
-      </button>
 
-      {showToc && (
-        <aside className="fixed w-full lg:w-1/4 h-screen bottom-0 left-0 overflow-y-auto p-4 bg-gray-100 z-20 py-32">
-          <button
-            onClick={toggleToc}
-            className="absolute bottom-0 left-0 w-full h-14 bg-black bg-opacity-60 text-white shadow-lg flex items-center justify-center hover:bg-red-500"
-            aria-label="Toggle Table of Contents"
-          >
-            閉じる
-          </button>
+      {/* {showToc && ( */}
+      <aside
+        className={`fixed top-0 left-0 w-full w-full lg:w-1/4 h-full bg-white shadow-xl transform z-20 ${
+          showToc ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <div className="relative h-full overflow-y-scroll py-32 px-6">
           <h1 className="text-4xl">Table of Content</h1>
           <ul className="my-6 mx-2">
             {toc.map((item) => {
@@ -92,8 +93,16 @@ const ToC = ({ toc }: { toc: TocItem[] }) => {
               );
             })}
           </ul>
-        </aside>
-      )}
+          <button
+            onClick={toggleToc}
+            className="absolute bottom-0 left-0 w-full h-14 bg-black bg-opacity-60 text-white shadow-lg flex items-center justify-center hover:bg-red-500"
+            aria-label="Toggle Table of Contents"
+          >
+            閉じる
+          </button>
+        </div>
+      </aside>
+      {/* )} */}
     </div>
   );
 };
