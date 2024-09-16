@@ -62,37 +62,39 @@ const ToC = ({ toc }: { toc: TocItem[] }) => {
           showToc ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="relative h-full overflow-y-scroll py-32 px-6">
-          <h1 className="text-4xl">Table of Content</h1>
-          <ul className="my-6 mx-2">
-            {toc.map((item) => {
-              let itemClass = "";
-              switch (item.level) {
-                case 1:
-                  itemClass = "text-lg pl-2"; // h1 style
-                  break;
-                case 2:
-                  itemClass = "text-md pl-4"; // h2 style
-                  break;
-                case 3:
-                  itemClass = "text-sm pl-6"; // h3 style
-                  break;
-                default:
-                  itemClass = "text-sm pl-8"; // lower levels if needed
-              }
-              return (
-                <li key={item.id} className={itemClass}>
-                  <a
-                    href={`#${item.id}`}
-                    className="text-black hover:text-red-600"
-                    onClick={() => setShowToc(false)}
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+        <div className="relative h-full py-32 px-3">
+          <h1 className="text-4xl px-3">Table of Content</h1>
+          <div className="flex h-full px-3 overflow-y-scroll">
+            <ul className="my-6 mx-2">
+              {toc.map((item) => {
+                let itemClass = "";
+                switch (item.level) {
+                  case 1:
+                    itemClass = "text-lg pl-2"; // h1 style
+                    break;
+                  case 2:
+                    itemClass = "text-md pl-4"; // h2 style
+                    break;
+                  case 3:
+                    itemClass = "text-sm pl-6"; // h3 style
+                    break;
+                  default:
+                    itemClass = "text-sm pl-8"; // lower levels if needed
+                }
+                return (
+                  <li key={item.id} className={itemClass}>
+                    <a
+                      href={`#${item.id}`}
+                      className="text-black hover:text-red-600"
+                      onClick={() => setShowToc(false)}
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
           <button
             onClick={toggleToc}
             className="absolute bottom-0 left-0 w-full h-14 bg-black bg-opacity-60 text-white shadow-lg flex items-center justify-center hover:bg-red-500"

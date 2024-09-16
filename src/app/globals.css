@@ -40,6 +40,35 @@ html {
   scroll-behavior: smooth;
 }
 
+.hide-scrollbar {
+  overflow: hidden; /* Hide scrollbar */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0.1em; /* Hide scrollbar for WebKit browsers */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.show-scrollbar {
+  overflow: auto; /* Show scrollbar when needed */
+}
+
+.show-scrollbar::-webkit-scrollbar {
+  width: 0.1em; /* Custom scrollbar width */
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb background */
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scrollbar thumb background on hover */
+}
+
 /* Change the background color and text color of selected text */
 ::selection {
   background: rgba(91, 231, 19, 0.4);

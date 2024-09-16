@@ -1,5 +1,5 @@
 ---
-title: "Cr. COMP5521 Chap. 02: Number Theory [undone]"
+title: "Cr. COMP5521 Chap. 02: Number Theory"
 abstract: "Lecture 2 in DISTRIBUTED LEDGER TECHNOLOGY, CRYPTOCURRENCY AND E-PAYMENT"
 date: "2024-09-09"
 address: "自習スタジオ"
