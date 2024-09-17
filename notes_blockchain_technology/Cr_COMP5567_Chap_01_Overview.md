@@ -38,9 +38,9 @@ Simple Definition: A blockchain is like a <u>digital notebook that keeps track o
 
 ![Alt text for the image](/images/_posts/Blockchain_Technology/COMP5521-L1-008.png)
 
-| **Centralized Ledger**                                                 | **Distributed Ledger**                                     |
-| :--------------------------------------------------------------------- | :--------------------------------------------------------- |
-| Only “Central Institution” maintains the ledger                                       | Every nodes maintain the ledger                            |
+| **Centralized Ledger**                                                     | **Distributed Ledger**                                     |
+| :------------------------------------------------------------------------- | :--------------------------------------------------------- |
+| Only “Central Institution” maintains the ledger                            | Every nodes maintain the ledger                            |
 | Each individual can have a part of the ledgers (related to itself)         | Every nodes have the full ledger                           |
 | All the individuals are requesting and sending transactions from/to “Bank” | All the nodes make consensus and validate the transactions |
 
@@ -53,5 +53,45 @@ Simple Definition: A blockchain is like a <u>digital notebook that keeps track o
 > The 6-layer architecture focuses more on detailed, independent analysis of specific functional modules within the blockchain, making it ideal for deeper research, optimization, and innovation.
 >
 > The 5-layer architecture emphasizes simplicity and comprehensibility, suitable for more macro-level analysis and early-stage application development.
+
+## Hardware and Infrastructure Layer
+
+This layer contains the **specific hardware and infrastructure** for blockchain systems. (All computing technology need supports from hardware)
+
+However, Traditional hardware is **not efficient** for blockchain systems.
+- a large number of hashing computation is needed
+- Proof of capacity requires a large volume of hard drive
+
+**Specialized hardware** for blockchain systems (What blockchain really needs)
+- CPU: several kh/s
+- GPU: several mh/s
+- Specialized ASIC chips: more than 2400+ mh/s
+
+**Mining pool (infrastructure) vs. individual miners**
+- A single miner is **very unlikely** to mine a block (single is weak)
+- Multiple miners form a mining pool and the rewards are distributed to the miners based on their shares of mining rates
+- The expected rewards are similar (or the same), but forming a mining pool **decreases the variance**
+
+<drawer title="Mining pool decreases the variance?">
+When you mine alone, you receive rewards **only if** you find a block. However, the probability is very low due to the high competition and difficulty. High Variance here means that the payout is very inconsistent and unpredictable, **whether the reward will be large or zero**. (You could go for long periods without finding any blocks, meaning you earn nothing for a long time, followed by a large reward if you're successful)
+
+But when you mine by mining pool, it is much more likely to find blocks regularly due to the combined computational power, miners **receive more frequent rewards although it is a little**. However, the variance or the uncertainty in the miner's income is reduced by this regular payout.
+</drawer>
+
+## Data Layer
+
+UTXO-based and account-based transaction models：
+
+Account-based: public and private key pair for each account
+
+- The public key is like your account number; other people can send cryptocurrencies to this account
+- The private key is like your password; you can use it to sign the transaction (sending cryptocurrencies to others)  
+
+UTXO-based (unspent transaction output)
+
+- A user has multiple UTXO accounts (each with a public and private key pair)
+- A transaction consists of multiple UTXOs as input and multiple other UTXOs as output
+- The input UTXOs of a transaction will be invalid once the transaction is confirmed
+
 
 # Blockchain models

@@ -1,39 +1,45 @@
 "use client";
 
-import { ArrowRightIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 interface DrawerProps {
+  issue: string;
   title: string;
   children: React.ReactNode;
 }
 
-const Drawer: React.FC<DrawerProps> = ({ title, children }) => {
+const Drawer: React.FC<DrawerProps> = ({ issue, title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="my-4">
+    <div className="my-4 font-arial text-black font-light text-sm">
       <button
-        className="flex w-full items-center justify-end text-right hover:text-gray-400"
+        className="flex w-full px-3 py-2 rounded-lg items-center justify-between text-right border border-black hover:opacity-60"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? (
-          <ArrowUpIcon className="h-5 w-5 mx-2" />
-        ) : (
-          <ArrowRightIcon className="h-5 w-5 mx-2" />
-        )}
-        <span>{isOpen ? "Close the note of " : `View more about `} </span>
-        <span className="font-bold italic mx-1">{title}</span>
+        <div>
+          {/* <span>Issue: </span> */}
+          <span className="text-base font-bold">"{issue}"</span>
+        </div>
+        <div className="flex">
+          <span className="">{title}</span>
+          {isOpen ? (
+            <ArrowUpIcon className="h-5 w-5 mx-1" />
+          ) : (
+            <ArrowDownIcon className="h-5 w-5 mx-1" />
+          )}
+        </div>
       </button>
 
       <div
-        className={`bg-gray-100 rounded overflow-hidden transition-transform duration-300 ease-in-out transform ${
-          isOpen ? "scale-y-full" : "scale-y-0"
-        }`}
+        className={`bg-black bg-opacity-10 rounded-lg px-6 overflow-hidden duration-300 ease-in-out transition-all 
+        ${isOpen ? "scale-y-full" : "scale-y-0"} 
+        ${isOpen ? "max-h-full" : "max-h-0"}
+        ${isOpen ? "py-6" : "py-0"}
+        `}
         style={{
           transformOrigin: "top",
-          height: isOpen ? "auto" : "0",
-          padding: isOpen ? "0.75em 1.5em" : "0 0",
         }}
       >
         {children}

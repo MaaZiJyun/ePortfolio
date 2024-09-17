@@ -119,7 +119,7 @@ const MarkdownComponents = {
     },
   },
   p: ({ children }: MarkdownComponentProps) => (
-    <p className="text-base text-indent text-black mt-2 mb-0">{children}</p>
+    <p className="text-base text-indent text-black my-2">{children}</p>
   ),
   a: ({ children, href }: { children: ReactNode; href: string }) => (
     <a href={href} className="text-blue-500 underline">
@@ -137,19 +137,13 @@ const MarkdownComponents = {
     </thead>
   ),
   tbody: ({ children }: MarkdownComponentProps) => (
-    <tbody className="border-b-2 border-black">
-      {children}
-    </tbody>
+    <tbody className="border-b-2 border-black">{children}</tbody>
   ),
   th: ({ children }: MarkdownComponentProps) => (
-    <th className="text-left px-3 py-1">
-      {children}
-    </th>
+    <th className="text-left px-3 py-1">{children}</th>
   ),
   td: ({ children }: MarkdownComponentProps) => (
-    <td className="text-left px-3 py-1">
-      {children}
-    </td>
+    <td className="text-left px-3 py-1">{children}</td>
   ),
   li: ({ children }: MarkdownComponentProps) => (
     <li className="text-black text-sm m-0 ml-10">{children}</li>
@@ -171,7 +165,9 @@ const MarkdownComponents = {
     </div>
   ),
   drawer: ({ children, ...props }: any) => (
-    <Drawer title={props.title}>{children}</Drawer>
+    <Drawer title={props.title} issue={props.issue}>
+      {children}
+    </Drawer>
   ),
   img: ImageComponent,
   Latex: LatexComponent,

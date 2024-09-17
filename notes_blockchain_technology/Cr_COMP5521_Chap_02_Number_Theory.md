@@ -10,13 +10,13 @@ keywords: ["Distributed Algorithms", "Protocols", "Blockchains", ]
 
 # Number Theory
 
-Number theory is a branch of pure mathematics that studies the properties and relationships of integers. It is one of the oldest and most abstract areas of mathematics, yet it has significant applications in modern fields like cryptography, computer science, and coding theory.
+Number theory is a branch of **pure mathematics** that studies the properties and relationships of **integers**. It is one of the oldest and **most abstract areas of mathematics** (so no need to be panic when there's something incomprehensible), yet it has significant applications in modern fields like <u>cryptography, computer science, and coding theory</u>.
 
 ![Alt text for the image](/images/_posts/Blockchain_Technology/COMP5521-L1-016.gif)
 
 # Part 1: Divisibility and GCD
 
-Definition: the ability of **being completely divided without any reminder**.
+Definition: the ability of **being completely divided without any reminder**. (整除)
 
 Explain: there are <Latex>a</Latex> apples, which need to be given to <Latex>b</Latex> people. As result, everyone has the same number of apples and **no apple left**.
 
@@ -31,49 +31,53 @@ Examples: 4 % 2 = 0
 
 In mathematics, when division is "not exact" or "doesn't divide evenly," it means that in integer division, the division operation does not result in a whole number; instead, there is a non-zero remainder. Well, if the integer cannot be completely divided, and the result seems like this:  
 
-<LatexBlock>\frac{a}{b} = q \text{ with remainder } r</LatexBlock>
+<LatexBlock>\frac{d_0}{d} = q \text{ ... } r</LatexBlock>
 
 Or in another way:  
 
-<LatexBlock>a = b \cdot q + r</LatexBlock>.
+<LatexBlock>d_0 = d \cdot q + r</LatexBlock>.
 
 Where:
 
-- <Latex>a</Latex> is the **dividend**, the number that is being divided.
-- <Latex>b</Latex> is the **divisor**, the number by which the dividend is divided.
+- <Latex>d_0</Latex> is the **dividend**, the number that is being divided.
+- <Latex>d</Latex> is the **divisor**, the number by which the dividend is divided.
 - <Latex>q</Latex> is the **quotient**, which is an integer;
 - <Latex>r</Latex> is the **remainder**, and it satisfies <Latex>0 \leq r < b</Latex>;
 
-For example: if <Latex>a = 10</Latex> and <Latex>b = 3</Latex>, then:
+<drawer issue="Is there any example in real numbers?" title="Example">
+For example: if <Latex>a = 10</Latex> and <Latex>b = 3</Latex>, then: <Latex>10 = 3 \cdot 3 + 1</Latex>.
+</drawer>
 
-<LatexBlock>10 = 3 \cdot 3 + 1</LatexBlock>.
+If the purpose is to calculate the **reminder** of <Latex>a</Latex> being divided by <Latex>b</Latex>, then:
 
-If the purpose is to calculate the reminder of <Latex>a</Latex> being divided by <Latex>b</Latex>, then:
+<LatexBlock>
+d_0 \mod d = r \newline
+d_0 \equiv r (\mod d)
+</LatexBlock>.
 
-<LatexBlock>a \mod b = r</LatexBlock>.
-
-## Euclidean Algorithm
+## Greatest Common Divisor
 
 Greatest Common Divisor (GCD): The **greatest common divisor** of <Latex>a</Latex> and <Latex>b</Latex>, i.e., <Latex>gcd(a, b)</Latex>, is the **largest integer** that divides both <Latex>a</Latex> and <Latex>b</Latex>.
 
-**How to get the greatest common divisor?**
+<drawer issue="Is any case help to understand GCD?" title="Example in real world">
+GCD, in other words, it’s the largest number that both (or all) numbers share as a factor.
 
-Example: divide 48 by 18 and find the remainder:
+There is a case that in real world utilizing GCD:
+
+Imagine you have two pieces of rope, one 12 meters long and the other 18 meters long, and you want to **cut them into the largest possible equal lengths**. The GCD helps here. For 12 and 18 meters, the GCD is 6 meters, so you can cut both ropes into segments that are 6 meters long.
+</drawer>
+
+## Euclidean Algorithm
+
+The Euclidean algorithm works by repeatedly applying the relation:
 
 <LatexBlock>
-48 = 18 \cdot 2 + 12 \newline
-18 = 12 \cdot 1 + 6 \newline
-12 = 6 \cdot 2 + 0 \newline
-\therefore GCD(48, 18) = 6
+gcd(a,b) = gcd(b, a \mod b)
 </LatexBlock>.
 
-And then, it can be represented in form of <Latex>a \cdot x + b \cdot y = gcd(a,b)</Latex>
+The process continues until the remainder **becomes 0**, at which point the GCD is the **last non-zero remainder**.
 
-Which is: <Latex>GCD(48, 18) = 48 \cdot (−1) + 18 \cdot 3 = 6</Latex>
-
-In this case, <Latex>x = -1</Latex> and <Latex>y = 3</Latex>
-
-In an abstract way: 
+In detail: 
 
 <LatexBlock>
 a = b \cdot q + r \newline
@@ -85,6 +89,23 @@ r = r_1 \cdot q_2 + r_2 \newline
 Until meet the 0:
 
 <LatexBlock>r_{n-2} = r_{n-1} \cdot q_n + 0 </LatexBlock>.
+
+<drawer issue="How to get the greatest common divisor?" title="Divide 48 by 18 and find the remainder">
+Example: divide 48 by 18 and find the remainder:
+
+<LatexBlock>
+\quad 48 = 18 \cdot 2 + 12 \newline
+\quad 18 = 12 \cdot 1 + 6 \newline
+\quad 12 = 6 \cdot 2 + 0 \newline
+\therefore GCD(48, 18) = 6
+</LatexBlock>.
+
+And then, it can be represented in form of <Latex>a \cdot x + b \cdot y = gcd(a,b)</Latex>
+
+Which is: <Latex>GCD(48, 18) = 48 \cdot (−1) + 18 \cdot 3 = 6</Latex>
+
+In this case, <Latex>x = -1</Latex> and <Latex>y = 3</Latex>
+</drawer>
 
 # Part 2: Modular Arithmetic
 
@@ -108,60 +129,31 @@ Definition: Two integers <Latex>a</Latex> and <Latex>b</Latex> are said to be co
 - <Latex>≡</Latex>: This symbol represents congruence. It indicates that the two values are equivalent in terms of their remainders when divided by <Latex>n</Latex>.
 - <Latex>(\mod n)</Latex>: This notation means "modulo <Latex>n</Latex>." It specifies the modulus, which is the divisor <Latex>n</Latex>.
 
-**Note that if <Latex>a ≡ 0 (\mod n)</Latex>, then <Latex>n ｜ a</Latex>.**
+**Note 1: if <Latex>a ≡ 0 (\mod n)</Latex>, then <Latex>n ｜ a</Latex>.**
 
-But why?
+**Note 2: if <Latex>gcd(a, n) = 1</Latex>, <Latex>a \cdot x ≡ a \cdot y (\mod n)</Latex>, then <Latex>x ≡ y (\mod n)</Latex>**
 
-Because: <Latex>a = q \cdot n</Latex>. But how does <Latex>a</Latex> equals <Latex>q \cdot n</Latex>?
+<drawer issue="Why Note 2 is true?" title="Proof Explaination">
+Why <Latex>gcd(a, n) = 1</Latex>, <Latex>a \cdot x ≡ a \cdot y (\mod n)</Latex>, then <Latex>x ≡ y (\mod n)</Latex>?
 
-Proof:
-
-<LatexBlock>
-a - b = (q_1 \cdot n + r_1) - (q_2 \cdot n + r_2) \newline
-a - b = (q_1 - q_2) \cdot n + r_1 - r_2 \newline
-\because \text{known that} \ a ≡ b (\mod n) \newline
-\therefore r_1 = r_2 \; \newline
-\therefore a - b = (q_1 - q_2) \cdot n = \triangle q \cdot n
-</LatexBlock>
-
-In this case: 
-
-<LatexBlock>
-a - 0 = \triangle q \cdot n \newline
-\therefore a = \triangle q \cdot n \newline
-\therefore n | a = \triangle q
-</LatexBlock>
-
-**If <Latex>gcd(a, n) = 1</Latex>, <Latex>a \cdot x ≡ a \cdot y \mod n</Latex>, then <Latex>x ≡ y \mod n</Latex>**
-
-But why <Latex>x ≡ y \mod n</Latex>?
-
-*Given:* 
-
-<LatexBlock>
-gcd(a,n)=1 \newline
-a \cdot x≡a \cdot y \ ( \mod n)
-</LatexBlock>
-
-*Proof:*
+*Proof:* 
 
 <LatexBlock>
 \because a \cdot x≡a \cdot y \ ( \mod n) \newline
 \therefore a \cdot x - a \cdot y≡ 0 \ ( \mod n) \newline
 \therefore a \ (x-y) ≡ 0 \ ( \mod n) \newline
-\because \text{The reminder of} \ a \ (x-y) \ \text{being divided by n is 0} \newline
-\therefore a \ (x-y) \ \text{is divisible by n, which is a multiple of n} \newline
-\therefore a \ (x-y) = q \cdot n \, \text{where q is some integer.} \newline
-\therefore x-y = \frac{q \cdot n}{a} \newline
-\because \text{x, y, a, n are all integers} \newline
+\therefore a \ (x-y) \ \text{is a multiple of n} \newline
+\therefore a \ (x-y) = q \cdot n \, \text{where q is a integer.} \newline
+\therefore x-y = \frac{q \cdot n}{a} \, \text{where all numbers are integers} \newline
 \therefore x - y \ \text{must be an integer and} \ \frac{q \cdot n}{a} \ \text{must be an integer as well} \newline
-\therefore k⋅n \ \text{is divisible by} \ a \newline
-\because a \text{ and } n \text{ are coprime} \ gcd(a,n) = 1 \, a \text{ does not divide } n \newline
-\therefore a \text{ must divide } q \, \frac{q}{a} = q_{\ new} \newline
+\because a \text{ and } n \text{ are coprime} \, a \text{ does not divide } n \newline
+\therefore q \text{ must be a multiple of } a \, \text{or} \frac{q \cdot n}{a} \ \text{won't be an integer}\newline
+\quad let \ q_{\ new} = q | a \newline
 \therefore (x - y) \mod n = q_{\ new} \cdot n \mod n = 0 \newline
 \therefore x - y ≡ 0 (\mod n)\newline
 \ \ \ x ≡ y \ ( \mod n)
 </LatexBlock>
+</drawer>
 
 ## Modular Inverse
 
@@ -175,6 +167,7 @@ a^{-1} \text{just for present and } a^{-1} \neq \frac{1}{a} \text{at here}
 
 **There exists <Latex>a</Latex> modular inverse for <Latex>a</Latex> mod <Latex>b</Latex> if <Latex>a</Latex> is relatively prime to <Latex>b</Latex>**
 
+<drawer issue="Proof There exists a modular inverse for a mod b if a is relatively prime to b" title="Proof Explaination">
 Proof: If <Latex>gcd(a,b)=1</Latex>, then <Latex>a</Latex> has a modular inverse modulo <Latex>b</Latex>
 
 <LatexBlock>
@@ -187,6 +180,7 @@ Proof: If <Latex>gcd(a,b)=1</Latex>, then <Latex>a</Latex> has a modular inverse
 \therefore a \cdot x ≡ 1 \ (\mod b) \newline
 \therefore a \cdot a^{-1} ≡ 1 \ (\mod n)
 </LatexBlock>
+</drawer>
 
 **Arithmetic Modulo 8**
 
@@ -234,38 +228,40 @@ Column <Latex>w^{-1}</Latex> : These represent the multiplicative inverses modul
 
 ## Bezout's Identity
 
+For any two integers <Latex>a</Latex> and <Latex>b</Latex>, there exist integers <Latex>x</Latex> and <Latex>y</Latex> such that:
+
 <LatexBlock>
 a \cdot x + b \cdot y = GCD(a,b)
 </LatexBlock>
 
-**How to calculate modular inverse?**
-
+<drawer issue="How to calculate modular inverse?" title="To calculate the modular inverse of 911 mod 999">
 Example: To calculate the modular inverse of 911 mod 999.
 
 <LatexBlock>
 \text{let} \ a = 911 \ \text{and} \ b = 999 \; \newline
 \text{According to Euclidean algorithm:} \newline
-L_1: 999 = 1 \cdot 911 + 88 \newline
-L_2: 911 = 10 \cdot 88 + 31 \newline
-L_3: 88 = 2 \cdot 31 + 26 \newline
-L_4: 31 = 1 \cdot 26 + 5 \newline
-L_5: 26 = 5 \cdot 5 + 1 \newline
+\quad L_1: 999 = 1 \cdot 911 + 88 \newline
+\quad L_2: 911 = 10 \cdot 88 + 31 \newline
+\quad L_3: 88 = 2 \cdot 31 + 26 \newline
+\quad L_4: 31 = 1 \cdot 26 + 5 \newline
+\quad L_5: 26 = 5 \cdot 5 + 1 \newline
 \therefore gcd(a, b) = 1 \newline
 \text{Then, Tracing backward:} \newline
 \text{Begin with } L_5: 1 = 26 – 5 \cdot 5 \newline
 \text{Substitute } L_4 \text{ to replace 5:} \newline
-1 = 26 – 5 \cdot (31 – 1 \cdot 26) = -5 \cdot 31 + 6 \cdot 26 \newline
+\quad 1 = 26 – 5 \cdot (31 – 1 \cdot 26) = -5 \cdot 31 + 6 \cdot 26 \newline
 \text{Substitute } L_3 \text{ to replace 26:} \newline
-1= -5 \cdot 31 + 6 \cdot (88 – 2 \cdot 31) = 6 \cdot 88 – 17 \cdot 31 \newline
+\quad 1= -5 \cdot 31 + 6 \cdot (88 – 2 \cdot 31) = 6 \cdot 88 – 17 \cdot 31 \newline
 \text{Substitute } L_2 \text{ to replace 31:} \newline
-1= 6 \cdot 88 – 17 \cdot (911 – 10 \cdot 88) = -17 \cdot 911 + 176 \cdot 88 \newline
+\quad 1= 6 \cdot 88 – 17 \cdot (911 – 10 \cdot 88) = -17 \cdot 911 + 176 \cdot 88 \newline
 \text{Substitute } L_1 \text{ to replace 88:} \newline
-1= -17 \cdot 911 + 176 \cdot (999 – 1 \cdot 911) = 176 \cdot 999 – 193 \cdot 911 \newline
+\quad 1= -17 \cdot 911 + 176 \cdot (999 – 1 \cdot 911) = 176 \cdot 999 – 193 \cdot 911 \newline
 \therefore gcd(911, 999) = 1 = -193 \cdot 911 + 176 \cdot 999 \newline
 \text{Modular reduction: }1 (\mod 999) = -193 \cdot 911 + 176 \cdot 999 (\mod 999) \newline
 \text{Result: } 1 ≡ 806 \cdot 911 (\mod 999) \newline
 \therefore 806 \text{ is the modular inverse of } 911 \text{ modulo } 999.
 </LatexBlock>
+</drawer>
 
 # Part 3: Prime Number, Fermat’s Theorem and Euler’s Theorem
 
@@ -285,32 +281,29 @@ If <Latex>p</Latex> is prime and <Latex>a</Latex> is a positive integer not divi
 a^{p-1} ≡ 1 (\mod p) \ \text{Fermat's Little Theorem}
 </LatexBlock>
 
-How? Here's the proof: 
+<drawer issue="How does Fermat's Little Theorem come" title="Proof Explaination">
+Here's the proof: 
 
 <LatexBlock>
 \text{Known: } a \nmid p \, a > 0 \; \newline
 \because (p-1) < p \newline
 \therefore ( \text{any number} \mod p) \in \\{1, 2, 3, ..., (p-1)\\}\newline
-\text{If let } p = 5 \, \ 8 \cdot \\{1,2,3,4\\} = \\{ 8, 16, 24, 32\\}\newline
-\text{And } \\{ 8, 16, 24, 32\\} ≡ \\{1,2,3,4\\} \ (\mod 5)\newline
 \therefore a \cdot \\{1, 2, 3, ..., (p-1)\\} ≡ \\{1, 2, 3, ..., (p-1)\\} \ (\mod p) \newline
-\\{a, 2 \cdot a, 3 \cdot a, ..., (p-1) \cdot a\\} ≡ \\{1, 2, 3, ..., (p-1)\\} \ (\mod p) \newline
+\quad \\{a, 2 \cdot a, 3 \cdot a, ..., (p-1) \cdot a\\} ≡ \\{1, 2, 3, ..., (p-1)\\} \ (\mod p) \newline
 \therefore a \cdot 2 \cdot a \cdot 3 \cdot a \cdot ... \cdot (p-1) \cdot a \mod p = 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) \newline
-a \cdot 2 \cdot a \cdot 3 \cdot a \cdot ... \cdot (p-1) \cdot a = a^{p-1}(p-1)!\newline
-1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) = (p-1)!\newline
-a^{p-1}(p-1)! \mod p = (p-1)!\newline
-a^{p-1}(p-1)! ≡ (p-1)! \ (\mod p)\newline
-\because ax ≡ ay (\mod n) \text{ equals to } x ≡ y (\mod n)\newline
+\quad a^{p-1}(p-1)! \mod p = (p-1)!\newline
+\quad a^{p-1}(p-1)! ≡ (p-1)! \ (\mod p)\newline
 \therefore a^{p-1} ≡ 1 (\mod p)\newline
 </LatexBlock>
 
-<drawer title="Table of Example">
-So, why <Latex>a \cdot \\{1, 2, 3, ..., (p-1)\\} ≡ \\{1, 2, 3, ..., (p-1)\\} \ (\mod p) </Latex> can be transform to <Latex>a \cdot 2 \cdot a \cdot 3 \cdot a \cdot ... \cdot (p-1) \cdot a  ≡ 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) (\mod p)?</Latex>
+But, why <Latex>a \cdot \\{1, 2, 3, ..., (p-1)\\} ≡ \\{1, 2, 3, ..., (p-1)\\} \ (\mod p) </Latex> can be transform to <Latex>a \cdot 2 \cdot a \cdot 3 \cdot a \cdot ... \cdot (p-1) \cdot a  ≡ 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) (\mod p)?</Latex>
 
-It is called: **Permutation Property in Fermat's Little Theorem**
+In **Permutation Property in Fermat's Little Theorem**:
 
 1. <Latex>\\{a, 2 \cdot a, 3 \cdot a, ..., (p-1) \cdot a\\}</Latex> is simply a rearranged (permuted) version of <Latex>\\{1, 2, 3, ..., (p-1)\\}</Latex>
 2. The product of elements remains the same: <Latex>a \cdot 2 \cdot a \cdot 3 \cdot a \cdot ... \cdot (p-1) \cdot a  ≡ 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) (\mod p)</Latex>
+
+And here's an example for better understanding:
 
 Assume that <Latex>p = 3</Latex>, because <Latex>a \nmid b</Latex>, reminders shouldn't be 0;
 
@@ -337,7 +330,6 @@ If <Latex>a = 2</Latex>, <Latex>2 \times 1 \cdot 2 \times 2 ≡ 1 \cdot 2 \ (\mo
 If <Latex>a = 4</Latex>, <Latex>4 \times 1 \cdot 4 \times 2 ≡ 1 \cdot 2 \ (\mod 3)</Latex>
 
 Therefore, <Latex>a \times 1 \cdot a \times 2 \cdot a \times 3 \cdot ... \cdot a \times (p-1)  ≡ 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-1) (\mod p)</Latex>
-
 </drawer>
 
 ## Euler’s Totient Function
@@ -356,7 +348,7 @@ For a positive integer <Latex>n</Latex>, Euler's Totient Function <Latex>\phi(n)
 \phi(p) = p - 1
 </LatexBlock>
 
-<drawer title="Example">
+<drawer issue="Example of Phi calculation" title="calculation example">
 For <Latex>p = 7</Latex>, a prime number:<Latex>\phi(7) = 7 - 1 = 6</Latex>
 
 The numbers from 1 to 6 (i.e., 1, 2, 3, 4, 5, 6) are all coprime with 7.
@@ -385,7 +377,7 @@ n = p_1^{k_1} \cdot p_2^{k_2} \cdots p_m^{k_m}
 
 and <Latex> p_1, p_2, \ldots, p_m </Latex> are distinct prime numbers.
 
-<drawer title="Example">
+<drawer issue="How to do calculation in the general formula?" title="Calculation Example">
 For <Latex>n = 30</Latex>, Factorize <Latex>30 = 2 \cdot 3 \cdot 5</Latex>
 
 Therefore, <Latex>\phi(30) = 30 \left(1 - \frac{1}{2}\right) \left(1 - \frac{1}{3}\right) \left(1 - \frac{1}{5}\right) = 8</Latex>
@@ -395,6 +387,7 @@ Thus, <Latex>\phi(30) = 8</Latex>, meaning there are 8 numbers from 1 to 30 that
 
 If <Latex>n = p^{k}</Latex> (<Latex>p</Latex> is prime), then <Latex>\phi(n) = p^{k} - p^{k-1}</Latex>
 
+<drawer issue="Why the statement above is true?" title="Proof Explaination">
 Proof:
 
 <LatexBlock>
@@ -413,6 +406,7 @@ If <Latex>n = p^{k}</Latex> (<Latex>p</Latex> is prime), there is only one prime
 Simplify this further:
 
 <LatexBlock>\phi(n) = p^{k} - p^{k-1}</LatexBlock>
+</drawer>
 
 # Part 4: Efficient Modulo Operation for Large Numbers
 
@@ -428,8 +422,7 @@ Let <Latex>n_1, n_2, \ldots, n_k</Latex> be pairwise coprime positive integers, 
 x \equiv a_i \pmod{n_i} \quad \text{for } i = 1, 2, \ldots, k
 </LatexBlock>
 
-### Proof Outline
-
+<drawer issue="Further explain of Chinese Remainder Theorem (CRT)" title="Proof Outline">
 1. **Define the Problem:**
 
    We want to find an integer <Latex>x</Latex> that satisfies:
@@ -468,8 +461,9 @@ x \equiv a_i \pmod{n_i} \quad \text{for } i = 1, 2, \ldots, k
 5. **Uniqueness:**
 
    The solution <Latex>x</Latex> is unique modulo <Latex>N</Latex> because the moduli are pairwise coprime, ensuring that the solution within the range <Latex>0</Latex> to <Latex>N-1</Latex> is unique.
+</drawer>
 
-<drawer title="Example">
+<drawer issue="How to do calculation by using Chinese Remainder Theorem?" title="Example">
 Consider the following system of congruences:
 
 <LatexBlock>
