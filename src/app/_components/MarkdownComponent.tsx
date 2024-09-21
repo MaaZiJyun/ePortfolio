@@ -5,6 +5,7 @@ import "katex/dist/katex.min.css";
 import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
 import CodeBlock from "./CodeBlock";
 import Drawer from "./Drawer";
+import Level from "./Level";
 
 interface MarkdownComponentProps {
   children: ReactNode;
@@ -169,6 +170,7 @@ const MarkdownComponents = {
       {children}
     </Drawer>
   ),
+  level: ({ children, ...props }: any) => <Level lv={props.lv} />,
   img: ImageComponent,
   Latex: LatexComponent,
   LatexBlock: LatexBlockComponent,

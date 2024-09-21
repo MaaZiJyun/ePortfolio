@@ -1,5 +1,5 @@
 ---
-title: "Cr. COMP5567 Chap. 01: Overview [undone]"
+title: "Cr. COMP5567 Chap. 01: Overview"
 abstract: ""
 date: "2024-09-06"
 address: "自習スタジオ"
@@ -9,12 +9,13 @@ keywords: ["Distributed Algorithms", "Protocols", "Blockchains", ]
 ---
 
 # Definition of Blockchain
+<level lv="1">content</level>
 
 ## Bitcoin and Cryptocurrencies
 
 When talking about blockchain technology, Bitcoin and Cryptocurrencies are always the topic that will never be absent. Since it is the most famous application of blockchain technology in the world so far.
 
-In 2008, Bitcoin was create and launched by Satoshi Nakamoto. And after that, more and more people joined the crowd. More and more different types of cryptocurrenies were launched, such as Ethereum for smart contract, Monero for annonymous and FileCoin for storage.
+In 2008, Bitcoin was create & launched by Satoshi Nakamoto. After that, more and more different types of cryptocurrenies were launched, such as Ethereum for smart contract, Monero for annonymous and FileCoin for storage.
 
 ## Evolution of Blockchain Technology
 
@@ -28,13 +29,9 @@ Blockchain 4.0? and Web 3.0?
 
 ## What is Blockchain
 
-Wikipedia: a type of Digital Ledger Technology (DLT) that consists of growing list of records, called blocks, that are securely linked together using cryptography.
+A type of **Digital Ledger Technology (DLT)** that consists of **growing list of records**, called blocks, that are **securely linked together** using **cryptography**. (Wikipedia)
 
-Oxford dictionary: a system in which a record of transactions made in bitcoin or another cryptocurrency are maintained across several computers that are linked in a peer-to-peer network.
-
-Simple Definition: A blockchain is like a <u>digital notebook that keeps track of things</u>, but once you write something in it, you can’t change it. Imagine it as a **long chain of boxes**, where each box holds information. Each **new box** gets **added to the end of the chain**, and **everyone** who **uses the chain** **can see** what’s inside the boxes, making it very safe and hard to cheat.
-
-## Distributed Ledger
+## Difference between Distributed and Centralized Ledger
 
 ![Alt text for the image](/images/_posts/Blockchain_Technology/COMP5521-L1-008.png)
 
@@ -45,6 +42,7 @@ Simple Definition: A blockchain is like a <u>digital notebook that keeps track o
 | All the individuals are requesting and sending transactions from/to “Bank” | All the nodes make consensus and validate the transactions |
 
 # Blockchain layered structure
+<level lv="1">content</level>
 
 > **Somebody said that there are 6 layers in blockchain structure, but someone said it should be 5. which one is correct?**
 >
@@ -80,7 +78,9 @@ But when you mine by mining pool, it is much more likely to find blocks regularl
 
 ## Data Layer
 
-UTXO-based and account-based transaction models：
+All core data structures and infrastructure for Blockchain System.
+
+**UTXO-based and account-based**
 
 Account-based: public and private key pair for each account
 
@@ -95,6 +95,8 @@ UTXO-based (unspent transaction output)
 
 ## Network Layer 
 
+It is responsible for communication and data exchange between nodes in Blockchain network.
+
 | Distributed Algorithms      | Concept                                                                                                                                   |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | **Peer-to-peer networking** | a network of nodes which functions as  clients and servers simultaneously                                                                 |
@@ -102,15 +104,19 @@ UTXO-based (unspent transaction output)
 | **Peer discovery**          | the method for a newly joining node to establish connections with other nodes in the blockchain network                                   |
 | **Remote procedure call**   | simplifies distributed computing by allowing developers to write code that calls remote functions the same way they would call local ones |
 
-## Connections with other nodes in the blockchain network
+## Connections Layer
 
-A blockchain can be maintained by nodes all around the world, but how can they keep a consistent ledger?
+It is responsible for ensuring all nodes in the network agree on single version of the Blockchain's state. Common consensus algorithm in Blockchain are PoW, PoS.
+
+**A blockchain can be maintained by nodes all around the world, but how can they keep a consistent ledger?**
 
 The answer is: **Consensus protocol (consensus layer)**, A procedure through which all the nodes of the blockchain network reach a common agreement about the present state of the distributed ledger.
 
 **Consensus is crucial to running a blockchain** because it ensures that all participants (nodes) in a decentralized network agree on the state of the blockchain (e.g., transaction history, balances, smart contract states). Since blockchain operates without a central authority, consensus mechanisms allow the network to maintain integrity, security, and trust.
 
 ## Application and Presentation Layer
+
+It plays a key role in how user interact with system, concerning with providing interfaces. Smart contracts and Decentralized app are applied in this layer.
 
 ### Smart contracts or Chaincode
 
@@ -126,6 +132,7 @@ Bitcoin doesn’t support smart contracts, but uses a scripting system
 An application that can operate autonomously, typically through **the use of smart contracts**, that run **on a decentralized computing**, blockchain or other distributed ledger system.
 
 # Blockchain models
+<level lv="1">content</level>
 
 ## Why Blockchain Models Matter?
 
@@ -195,6 +202,9 @@ A hybrid blockchain is a blockchain that is controlled by a single stakeholder, 
 | **Participants**       | Open to anyone; anyone can join and participate.                                                             | Restricted to known entities; usually within a single organization.                      | Restricted to a group of predefined entities or organizations.                              | A mix of open and restricted participation depending on design.                        |
 | **Energy Consumption** | High energy consumption (especially with Proof of Work).                                                     | Low energy consumption as consensus mechanisms are more efficient.                       | Moderate energy consumption, as consensus is more efficient than public chains.             | Depends on the specific consensus mechanisms used; generally moderate.                 |
 
+# Synchrony, Concurrency & Ordering
+<level lv="4">content</level>
+
 ## Synchrony
 
 It is hard or impossible to set limits on the time taken for process execution, message delivery, or clock drift of blockchain nodes. Therefore, time differences are unavoidable.
@@ -220,36 +230,37 @@ Even if the clocks on all the nodes are set to the same time initially, their cl
 In blockchains, we are interested in knowing whether an event at one node **occurred before, after, or concurrently with another event** at other nodes.
 
 ## Message Concurrency & Ordering
+<level lv="7">content</level>
 
 ### FIFO Order
 
-**Same Node Sending**: If messages <Latex>m_1</Latex> and <Latex>m_2</Latex> are sent from the same node, <Latex>m_1</Latex> must be sent before <Latex>m_2</Latex>.
+**Sending from Same Node**: If messages <Latex>m_1</Latex> and <Latex>m_2</Latex> are sent from the same node, <Latex>m_1</Latex> must be sent before <Latex>m_2</Latex>.
 
-**Delivery Order**: When these messages reach another node, they must be delivered in the same order they were sent. This means that <Latex>m_1</Latex> will be delivered before <Latex>m_2</Latex> at the receiving node.
+**All Nodes with Same Delivery Order**: When these messages reach another node, they must be delivered in the same order they were sent. This means that <Latex>m_1</Latex> will be delivered before <Latex>m_2</Latex> at the receiving node.
 
 ### Absolute order
 
-**Message Sending from Different Nodes**: they do not have to originate from the same sender/ broadcast resource.
+**Sending from Different Nodes**: they do not have to originate from the same sender/ broadcast resource.
 
-**Timestamping**:Each message is associated with a timestamp (e.g., <Latex>t_1</Latex> for <Latex>m_1</Latex> and <Latex>t_2</Latex> for <Latex>m_2</Latex>). If <Latex>t_1 < t_2</Latex>, it indicates that <Latex>m_1</Latex> was sent before <Latex>m_2</Latex> in the global sense.
+**Sorting by Timestamping**:Each message is associated with a timestamp (e.g., <Latex>t_1</Latex> for <Latex>m_1</Latex> and <Latex>t_2</Latex> for <Latex>m_2</Latex>). If <Latex>t_1 < t_2</Latex>, it indicates that <Latex>m_1</Latex> was sent before <Latex>m_2</Latex> in the global sense.
 
-**Delivery Order Across All Nodes**: When these messages reach another node, they must be delivered in the same order they were sent. (<Latex>m_1</Latex> before <Latex>m_2</Latex> because <Latex>t_1 < t_2</Latex>)
+**All Nodes with Same Delivery Order**: When these messages reach another node, they must be delivered in the same order they were sent. (<Latex>m_1</Latex> before <Latex>m_2</Latex> because <Latex>t_1 < t_2</Latex>)
 
 ### Consistent/total order
 
-**No Global Timestamp Required**
+**No Timestamp Required**
 
-**Message Sending from Different Nodes**: they do not have to originate from the same sender/ broadcast resource.
+**Sending from Different Nodes**: they do not have to originate from the same sender/ broadcast resource.
 
-**Consistency Across Nodes**: Total order ensures that <u>all nodes deliver messages in the same sequence</u>. Regardless of when messages are sent or how long they take to arrive, every node must process them in the same order. 
+**All Nodes with Same Delivery Order**: Total order ensures that <u>all nodes deliver messages in the same sequence</u>. Regardless of when messages are sent or how long they take to arrive, every node must process them in the same order. 
 
 ### Causal order
 
-**No Global Timestamp Required**
+**No Timestamp Required**
 
-**Same Node Sequence**: If messages <Latex>m_1</Latex> and <Latex>m_2</Latex> are sent from the same node, <Latex>m_1</Latex> must be sent before <Latex>m_2</Latex>. This maintains the causal relationship where <Latex>m_1</Latex> is a prerequisite for <Latex>m_2</Latex>.
+**Sequence of Sending from Same Node**: If messages <Latex>m_1</Latex> and <Latex>m_2</Latex> are sent from the same node, <Latex>m_1</Latex> must be sent before <Latex>m_2</Latex>. This maintains the causal relationship where <Latex>m_1</Latex> is a prerequisite for <Latex>m_2</Latex>.
 
-**Different Nodes Sequence**: if <Latex>m_1</Latex> is sent from node <Latex>n_1</Latex> and <Latex>m_2</Latex> is sent from node 
+**Sequence of Sending from Different Nodes**: if <Latex>m_1</Latex> is sent from node <Latex>n_1</Latex> and <Latex>m_2</Latex> is sent from node 
 <Latex>n_2</Latex>, <Latex>n_2</Latex> should deliver <Latex>m_1</Latex> before sending <Latex>m_2</Latex> if <Latex>m_2</Latex> causally depends on <Latex>m_1</Latex>.
 
 **Transitivity**: If message <Latex>m_1</Latex> causally affects <Latex>m_2</Latex> (i.e., <Latex>m_1</Latex> happens before <Latex>m_2</Latex>), and <Latex>m_2</Latex> causally affects <Latex>m_3</Latex>, then <Latex>m_1</Latex> must also be delivered before <Latex>m_3</Latex>. This transitive property helps maintain the overall causal relationship across a chain of messages.
@@ -268,6 +279,7 @@ In blockchains, we are interested in knowing whether an event at one node **occu
 More Exercise in this [Tutorial One](https://domuki.top/study/blockchain_technology/Cr_COMP5567_Chap_02_Tutorial_One).
 
 ## Failure model
+<level lv="3">content</level>
 
 Both blockchain nodes and communication channels among the nodes may fail
 
