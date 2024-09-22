@@ -1,5 +1,5 @@
 ---
-title: "Cr. COMP5567 Chap. 02: Tutorial One"
+title: "Cr. COMP5567: Tutorial One"
 abstract: ""
 date: "2024-09-14"
 address: "自習スタジオ"

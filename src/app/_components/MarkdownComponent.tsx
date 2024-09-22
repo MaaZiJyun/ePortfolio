@@ -93,7 +93,7 @@ const MarkdownComponents = {
     component: ({ children }: HeadingProps) => {
       const id = generateIdFromTitle(children?.toString() || "");
       return (
-        <h1 className="text-lg font-bold text-black mt-10 mb-0" id={id}>
+        <h1 className="text-xl font-bold text-black mt-10 mb-0" id={id}>
           {children}
         </h1>
       );
