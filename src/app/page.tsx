@@ -3,6 +3,7 @@ import FadeInContainer from "./_components/FadeInContainer";
 import ParallaxSection from "./_components/ParallaxSection";
 import PostPreviewer from "./_components/PostPreviewer";
 import QuotaBoard from "./_components/QuotaBoard";
+import generateRandomColor from "@/app/_controllers/generateRandomColor";
 import {
   MusicalNoteIcon,
   UserIcon,
@@ -19,6 +20,7 @@ export default function Home() {
   const postPreviews = postMetadata.map((post) => (
     <PostPreviewer key={post.slug} {...post} />
   ));
+
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
@@ -49,7 +51,7 @@ export default function Home() {
           <div className="lg:flex w-full h-full items-stretch justify-around text-white">
             <div
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
-              // style={{ backgroundColor: "#08D9D6" }}
+              style={{ backgroundColor: generateRandomColor() }}
             >
               <ParallaxSection backgroundImage={"/images/programming.jpg"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
@@ -67,7 +69,7 @@ export default function Home() {
             </div>
             <div
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
-              // style={{ backgroundColor: "#252A34" }}
+              style={{ backgroundColor: generateRandomColor() }}
             >
               <ParallaxSection backgroundImage={"/images/english.jpg"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
@@ -85,7 +87,7 @@ export default function Home() {
             </div>
             <div
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
-              // style={{ backgroundColor: "#FF2E63" }}
+              style={{ backgroundColor: generateRandomColor() }}
             >
               <ParallaxSection backgroundImage={"/images/composing.png"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
@@ -104,7 +106,7 @@ export default function Home() {
             </div>
             <div
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
-              // style={{ backgroundColor: "#EAEAEA" }}
+              style={{ backgroundColor: generateRandomColor() }}
             >
               <ParallaxSection backgroundImage={"/images/student.png"}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">

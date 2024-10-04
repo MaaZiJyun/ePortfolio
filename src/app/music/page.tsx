@@ -82,9 +82,11 @@ const page = () => {
           <div className="flex flex-col lg:px-12 pt-32 lg:pb-32 ">
             <div className="flex flex-col items-center lg:items-end justify-center pb-32">
               <span className="text-center text-3xl lg:text-6xl">
+                代表作をご覧
+              </span>
+              <span className="text-center mt-5">
                 Check out representative works
               </span>
-              <span className="text-center mt-5">代表作をご覧</span>
             </div>
 
             <div className="lg:h-screen">

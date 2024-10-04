@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "../styles/BlinkingCursor.css";
+import generateRandomColor from "../_controllers/generateRandomColor";
 
 export default function GreetingTitle() {
   const greets = [
@@ -49,7 +50,7 @@ export default function GreetingTitle() {
         // Switch to the next greeting after deleting is complete
         setIsTyping(true);
         setTypingIndex(0);
-        setBgColor(getRandomColor());
+        setBgColor(generateRandomColor());
         setIndex((prevIndex) => (prevIndex + 1) % greets.length);
       }
     }
@@ -59,15 +60,6 @@ export default function GreetingTitle() {
   function BlinkingCursor() {
     return <span className="blinkingCursor">｜</span>;
   }
-
-  const getRandomColor = () => {
-    const letters = "456789ABC";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 9)];
-    }
-    return color;
-  };
 
   return (
     <h1 className="text-3xl lg:text-6xl">
