@@ -3,6 +3,7 @@ import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
 import VideoBoard from "../_components/VideoBoard";
+import generateRandomColor from "../_controllers/generateRandomColor";
 
 const page = () => {
   return (
@@ -91,40 +92,52 @@ const page = () => {
 
             <div className="lg:h-screen">
               <div className="lg:flex lg:h-1/2">
-                <div className="flex lg:flex-1 m-1">
+                <div
+                  style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:flex-1 m-1"
+                >
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
                   <VideoBoard
                     videoId={"hT3ABJKcMSE"}
-                    image={"/images/domukiText.png"}
+                    image={""}
                     title={"In My Heart"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
-                <div className="flex lg:flex-1 m-1">
+                <div
+                  style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:flex-1 m-1"
+                >
                   {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
                   <VideoBoard
                     videoId={"haqHcJHe0w0"}
-                    image={"/images/domukiText.png"}
+                    image={""}
                     title={"Faith"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
               </div>
               <div className="lg:flex h-1/2">
-                <div className="flex lg:flex-1 m-1">
+                <div
+                  style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:flex-1 m-1"
+                >
                   {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
                   <VideoBoard
                     videoId={"KWmC_xZwuDY"}
-                    image={"/images/domukiText.png"}
+                    image={""}
                     title={"Galaxy"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
-                <div className="flex lg:flex-1 m-1">
+                <div
+                  style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:flex-1 m-1"
+                >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <VideoBoard
                     videoId={"8aoMvZz-FI4"}
-                    image={"/images/domukiText.png"}
+                    image={""}
                     title={"Vast"}
                     comment={"Epic Orchestral Original Mix"}
                   />
