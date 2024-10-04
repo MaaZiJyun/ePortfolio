@@ -38,7 +38,7 @@ const VerificationPage = () => {
 
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-domukiphoto">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-sketch">
         <form
           onSubmit={handleSubmit}
           className="bg-white bg-opacity-90 rounded-lg shadow-md lg:w-1/4"

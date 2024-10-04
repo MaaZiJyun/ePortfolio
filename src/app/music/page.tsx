@@ -1,22 +1,21 @@
-import PlayIcon from "@heroicons/react/24/outline/PlayIcon";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
-import Section from "../_components/Section";
-import YouTubePreviewer from "../_components/YouTubePreviewer";
 import VideoBoard from "../_components/VideoBoard";
 
 const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="bg-latest-album">
+        <div className="bg-sketch">
           <div className="flex flex-col items-center justify-center h-screen">
             <span className="text-3xl lg:text-6xl text-center">
-            童夢綺の音楽作品
+              童夢綺の音楽作品
             </span>
-            <span className="mt-4">Welcome to listen to Dōmuki's music works.</span>
+            <span className="mt-4">
+              Welcome to listen to Dōmuki's music works.
+            </span>
           </div>
           {/* divider */}
           {/* <div className="lg:flex px-6 lg:px-12">
@@ -80,50 +79,50 @@ const page = () => {
           </div>
         </FadeInContainer>
         <FadeInContainer>
-          <div className="flex flex-col lg:px-12 pt-32 lg:pb-32 bg-domukiphoto">
+          <div className="flex flex-col lg:px-12 pt-32 lg:pb-32 ">
             <div className="flex flex-col items-center lg:items-end justify-center pb-32">
               <span className="text-center text-3xl lg:text-6xl">
-                Check out more works
+                Check out representative works
               </span>
-              <span className="text-center mt-5">もっと多くの作品をご覧</span>
+              <span className="text-center mt-5">代表作をご覧</span>
             </div>
 
             <div className="lg:h-screen">
               <div className="lg:flex lg:h-1/2">
-                <div className="flex lg:flex-1 bg-sketch m-1">
+                <div className="flex lg:flex-1 m-1">
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
                   <VideoBoard
                     videoId={"hT3ABJKcMSE"}
-                    image={"/images/domukiphoto.png"}
+                    image={"/images/domukiText.png"}
                     title={"In My Heart"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
-                <div className="flex lg:flex-1 bg-sketch m-1">
+                <div className="flex lg:flex-1 m-1">
                   {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
                   <VideoBoard
                     videoId={"haqHcJHe0w0"}
-                    image={"/images/domukiphoto.png"}
+                    image={"/images/domukiText.png"}
                     title={"Faith"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
               </div>
               <div className="lg:flex h-1/2">
-                <div className="flex lg:flex-1 bg-sketch m-1">
+                <div className="flex lg:flex-1 m-1">
                   {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
                   <VideoBoard
                     videoId={"KWmC_xZwuDY"}
-                    image={"/images/domukiphoto.png"}
+                    image={"/images/domukiText.png"}
                     title={"Galaxy"}
                     comment={"Epic Orchestral Original Mix"}
                   />
                 </div>
-                <div className="flex lg:flex-1 bg-sketch m-1">
+                <div className="flex lg:flex-1 m-1">
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <VideoBoard
                     videoId={"8aoMvZz-FI4"}
-                    image={"/images/domukiphoto.png"}
+                    image={"/images/domukiText.png"}
                     title={"Vast"}
                     comment={"Epic Orchestral Original Mix"}
                   />

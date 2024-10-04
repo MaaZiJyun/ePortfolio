@@ -155,7 +155,7 @@ export default function Home() {
           />
         </FadeInContainer>
         <FadeInContainer>
-          <ParallaxSection backgroundImage={"/images/sketch.jpeg"}>
+          <ParallaxSection backgroundImage={"/images/domukiphoto.png"}>
             <div className="flex w-full">
               <div className="hidden lg:flex lg:w-1/2">
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 py-32">
