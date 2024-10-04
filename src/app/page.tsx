@@ -14,12 +14,27 @@ import getPostMetadata from "./_controllers/getPostMetadata";
 import ContactForm from "./_components/ContactForm";
 import VideoBoard from "./_components/VideoBoard";
 import GreetingTitle from "./_components/GreetingTitle";
+import { TypeOfArticle } from "./_controllers/TypeOfArticle";
+import getArticleMetadata from "./_controllers/getArticleMetadata";
+import QuickPreviewer from "./_components/QuickPreviewer";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreviewer key={post.slug} {...post} />
+  const BTarticlesMetadata = getArticleMetadata(
+    TypeOfArticle.BlockchainTechnology
+  );
+  const AIarticlesMetadata = getArticleMetadata(
+    TypeOfArticle.ArtificialIntelligence
+  );
+  const AIarticlesPreviews = AIarticlesMetadata.slice(0, 5).map((article) => (
+    <QuickPreviewer key={article.slug} {...article} />
   ));
+  const BTarticlesPreviews = BTarticlesMetadata.slice(0, 5).map((article) => (
+    <QuickPreviewer key={article.slug} {...article} />
+  ));
+  const postPreviews = postMetadata
+    .slice(0, 5)
+    .map((post) => <QuickPreviewer key={post.slug} {...post} />);
 
   return (
     <main className="flex flex-col items-center justify-between">
@@ -53,7 +68,7 @@ export default function Home() {
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
               style={{ backgroundColor: generateRandomColor() }}
             >
-              <ParallaxSection backgroundImage={"/images/programming.jpg"}>
+              <ParallaxSection backgroundImage={""}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <WrenchScrewdriverIcon className="h-12 w-12" />
 
@@ -71,7 +86,7 @@ export default function Home() {
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
               style={{ backgroundColor: generateRandomColor() }}
             >
-              <ParallaxSection backgroundImage={"/images/english.jpg"}>
+              <ParallaxSection backgroundImage={""}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <ChatBubbleLeftRightIcon className="h-12 w-12 text-white" />
 
@@ -89,7 +104,7 @@ export default function Home() {
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
               style={{ backgroundColor: generateRandomColor() }}
             >
-              <ParallaxSection backgroundImage={"/images/composing.png"}>
+              <ParallaxSection backgroundImage={""}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <MusicalNoteIcon className="h-12 w-12 text-white" />
 
@@ -108,7 +123,7 @@ export default function Home() {
               className="flex lg:w-1/4 items-center justify-center bg-black bg-opacity-20"
               style={{ backgroundColor: generateRandomColor() }}
             >
-              <ParallaxSection backgroundImage={"/images/student.png"}>
+              <ParallaxSection backgroundImage={""}>
                 <div className="flex flex-col items-center justify-center space-y-3 p-12 h-full">
                   <UserIcon className="h-12 w-12 text-white" />
 
@@ -124,16 +139,20 @@ export default function Home() {
           </div>
         </FadeInContainer>
         <FadeInContainer>
-          <div className="lg:flex px-6 lg:px-12 my-32">
-            <div className="flex flex-col lg:flex-1 items-center justify-center m-20">
-              <span className="text-6xl">Posts</span>
-              <div className="mt-2 space-x-5">
-                <span className="text-center">記</span>
-                <span className="text-center">事</span>
-              </div>
+          <div className="lg:px-16 px-6 my-24 ">
+            <div className="flex items-center justify-center mb-12">
+              <h1 className="lg:text-4xl text-3xl font-bold underline text-center">Some of the Notes and Articles</h1>
             </div>
-            <div className="flex lg:flex-1">
-              <div className="flex flex-col w-full">{postPreviews}</div>
+            <div className="lg:flex lg:space-x-3">
+              <div className="hidden lg:flex flex-col lg:flex-1 items-center justify-start shadow-lg p-5">
+                <div className="flex flex-col w-full">{BTarticlesPreviews}</div>
+              </div>
+              <div className="hidden lg:flex flex-col lg:flex-1 items-center justify-start shadow-lg p-5">
+                <div className="flex flex-col w-full">{AIarticlesPreviews}</div>
+              </div>
+              <div className="flex flex-col lg:flex-1 items-center justify-start shadow-lg p-5">
+                <div className="flex flex-col w-full">{postPreviews}</div>
+              </div>
             </div>
           </div>
         </FadeInContainer>
@@ -166,9 +185,11 @@ export default function Home() {
                       Contact Me
                     </span>
                     <div className="distribute-text">
-                      {"童夢綺に連絡してください".split("").map((char, index) => (
-                        <span key={index}>{char}</span>
-                      ))}
+                      {"童夢綺に連絡してください"
+                        .split("")
+                        .map((char, index) => (
+                          <span key={index}>{char}</span>
+                        ))}
                     </div>
                   </div>
                 </div>
