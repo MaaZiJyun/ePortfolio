@@ -160,7 +160,7 @@ export default function Home() {
         <FadeInContainer>
           <div className="flex h-[34rem]">
             <VideoBoard
-              videoId={"rfksuI6tyYI"}
+              videoId={"vRf5UtbauGw"}
               image={"/images/latest_album.png"}
               title={"Latest Work"}
               comment={"最新作品"}

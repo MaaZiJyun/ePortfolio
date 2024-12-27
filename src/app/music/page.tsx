@@ -37,7 +37,7 @@ const page = () => {
               </div>
               <div className="flex items-center justify-center lg:w-1/2 h-96">
                 <VideoBoard
-                  videoId={"rfksuI6tyYI"}
+                  videoId={"vRf5UtbauGw"}
                   image={"/images/latest_album.png"}
                   title={"Vast Remix"}
                   comment={"Epic Orchestral Original Mix"}
@@ -136,7 +136,7 @@ const page = () => {
                 >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <VideoBoard
-                    videoId={"8aoMvZz-FI4"}
+                    videoId={"vRf5UtbauGw"}
                     image={""}
                     title={"Vast"}
                     comment={"Epic Orchestral Original Mix"}
