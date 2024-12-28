@@ -16,8 +16,8 @@ const NoteList: React.FC<NoteListProps> = ({ allData }) => {
           </h1>
         </div>
         <div className="lg:flex lg:space-x-3">
-          {allData.map((data) => (
-            <NoteListCard data={data}/>
+          {allData.map((data, index) => (
+            <NoteListCard data={data} key={index}/>
           ))}
         </div>
       </div>
