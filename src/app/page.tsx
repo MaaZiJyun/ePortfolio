@@ -18,6 +18,7 @@ import { TypeOfArticle } from "./_controllers/TypeOfArticle";
 import getArticleMetadata from "./_controllers/getArticleMetadata";
 import QuickPreviewer from "./_components/_NoteList/QuickPreviewer";
 import NoteList from "./_components/_NoteList/NoteList";
+import { LatestWork } from "./_controllers/MusicWorks";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -143,10 +144,10 @@ export default function Home() {
         <FadeInContainer>
           <div className="flex h-[34rem]">
             <VideoBoard
-              videoId={"vRf5UtbauGw"}
-              image={"/images/latest_album.png"}
-              title={"Latest Work"}
-              comment={"最新作品"}
+              videoId={LatestWork.videoId}
+              image={LatestWork.image}
+              title={LatestWork.title}
+              comment={LatestWork.comment}
             />
           </div>
         </FadeInContainer>

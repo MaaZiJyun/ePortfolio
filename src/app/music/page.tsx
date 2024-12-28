@@ -1,8 +1,10 @@
+import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
 import VideoBoard from "../_components/_Video/VideoBoard";
+import { FirstWork, LatestWork, SecondWork, ThirdWork } from "../_controllers/MusicWorks";
 import generateRandomColor from "../_controllers/generateRandomColor";
 
 const page = () => {
@@ -10,13 +12,19 @@ const page = () => {
     <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="bg-domukiphoto">
-          <div className="flex flex-col items-center justify-center h-screen">
+          <div className="flex flex-col items-center justify-center font-arial h-screen text-black">
+            {/* <div className="flex flex-col items-center justify-center h-screen">
             <span className="text-3xl lg:text-6xl text-center">
               童夢綺の音楽作品
             </span>
             <span className="mt-4">
               Welcome to listen to Dōmuki's music works.
             </span>
+          </div> */}
+            <AnimeHeroTitle
+              title={"童夢綺の音楽作品"}
+              description={"私の音楽作品をぜひ聴いてください！"}
+            />
           </div>
           {/* divider */}
           {/* <div className="lg:flex px-6 lg:px-12">
@@ -80,12 +88,12 @@ const page = () => {
           </div>
         </FadeInContainer>
         <FadeInContainer>
-          <div className="flex flex-col lg:px-12 pt-32 lg:pb-32 ">
-            <div className="flex flex-col items-center lg:items-end justify-center pb-32">
+          <div className="flex flex-col pt-32 lg:pb-32 lg:px-12">
+            <div className="lg:flex items-center lg:items-center justify-center lg:space-x-12 pb-32">
               <span className="text-center text-3xl lg:text-6xl">
                 代表作をご覧
               </span>
-              <span className="text-center mt-5">
+              <span className="text-center text-xl lg:text-3xl uppercase">
                 Check out representative works
               </span>
             </div>
@@ -93,53 +101,53 @@ const page = () => {
             <div className="lg:h-screen">
               <div className="lg:flex lg:h-1/2">
                 <div
-                  style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:flex-1 m-1"
+                  // style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:w-1/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
                   <VideoBoard
-                    videoId={"hT3ABJKcMSE"}
-                    image={""}
-                    title={"In My Heart"}
-                    comment={"Epic Orchestral Original Mix"}
+                    videoId={LatestWork.videoId}
+                    image={LatestWork.image}
+                    title={LatestWork.title}
+                    comment={LatestWork.comment}
                   />
                 </div>
                 <div
-                  style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:flex-1 m-1"
+                  // style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:w-2/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
                   <VideoBoard
-                    videoId={"haqHcJHe0w0"}
-                    image={""}
-                    title={"Faith"}
-                    comment={"Epic Orchestral Original Mix"}
+                    videoId={FirstWork.videoId}
+                    image={FirstWork.image}
+                    title={FirstWork.title}
+                    comment={FirstWork.comment}
                   />
                 </div>
               </div>
               <div className="lg:flex h-1/2">
                 <div
-                  style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:flex-1 m-1"
+                  // style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:w-2/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
                   <VideoBoard
-                    videoId={"KWmC_xZwuDY"}
-                    image={""}
-                    title={"Galaxy"}
-                    comment={"Epic Orchestral Original Mix"}
+                    videoId={SecondWork.videoId}
+                    image={SecondWork.image}
+                    title={SecondWork.title}
+                    comment={SecondWork.comment}
                   />
                 </div>
                 <div
-                  style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:flex-1 m-1"
+                  // style={{ backgroundColor: generateRandomColor() }}
+                  className="flex lg:w-1/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <VideoBoard
-                    videoId={"vRf5UtbauGw"}
-                    image={""}
-                    title={"Vast"}
-                    comment={"Epic Orchestral Original Mix"}
+                     videoId={ThirdWork.videoId}
+                     image={ThirdWork.image}
+                     title={ThirdWork.title}
+                     comment={ThirdWork.comment}
                   />
                 </div>
               </div>

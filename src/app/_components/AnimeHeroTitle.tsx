@@ -25,7 +25,7 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
   return (
     <>
       <div
-        className="text-white py-6 w-full"
+        className="py-6 w-full"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -44,7 +44,7 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
               } `}
             >
               {description.split("").map((char, index) => (
-                <span className="font-normal text-white" key={index}>
+                <span className="font-normal" key={index}>
                   {char}
                 </span>
               ))}
