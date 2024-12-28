@@ -45,10 +45,10 @@ const page = () => {
               </div>
               <div className="flex items-center justify-center lg:w-1/2 h-96">
                 <VideoBoard
-                  videoId={"vRf5UtbauGw"}
-                  image={"/images/latest_album.png"}
-                  title={"Luminous Remix"}
-                  comment={"Epic Orchestral Original Mix"}
+                  videoId={LatestWork.videoId}
+                  image={LatestWork.image}
+                  title={LatestWork.title}
+                  comment={LatestWork.comment}
                 />
               </div>
             </div>
