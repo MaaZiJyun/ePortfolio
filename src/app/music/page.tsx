@@ -32,7 +32,7 @@ const page = () => {
           </div> */}
           <FadeInContainer>
             <div className="lg:flex items-center justify-center">
-              <div className="flex flex-col lg:w-1/2 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-80">
+              <div className="flex flex-col lg:w-1/3 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-90">
                 <span className="text-center text-4xl lg:text-6xl">
                   Latest Work
                 </span>
@@ -43,7 +43,7 @@ const page = () => {
                   <span>品</span>
                 </div>
               </div>
-              <div className="flex items-center justify-center lg:w-1/2 h-96">
+              <div className="flex items-center justify-center lg:w-2/3 h-96">
                 <VideoBoard
                   videoId={LatestWork.videoId}
                   image={LatestWork.image}
