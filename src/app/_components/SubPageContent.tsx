@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-type SubPage = "Introduction" | "Content" | "Project";
+type SubPage = "Introduction" | "Content" | "Outcome";
 
 interface SubPageContentProps {
   Introduction: React.ReactNode; // Accepts any valid React node
@@ -22,7 +22,7 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
   return (
     <div className="px-6 lg:px-24 my-24">
       <div className="flex items-center justify-between border-b-2 border-black">
-        {["Introduction", "Content", "Project"].map((page) => (
+        {["Introduction", "Content", "Outcome"].map((page) => (
           <div
             key={page}
             className={`flex w-1/3 items-center justify-center cursor-pointer py-3 hover:bg-black hover:text-white ${
@@ -37,7 +37,7 @@ const SubPageContent: React.FC<SubPageContentProps> = ({
       <div className="mt-14">
         {activePage === "Introduction" && Introduction}
         {activePage === "Content" && Content}
-        {activePage === "Project" && Project}
+        {activePage === "Outcome" && Project}
       </div>
     </div>
   );

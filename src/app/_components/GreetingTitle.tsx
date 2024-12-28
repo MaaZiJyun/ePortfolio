@@ -64,7 +64,7 @@ export default function GreetingTitle() {
   return (
     <h1 className="text-3xl lg:text-6xl">
       <span
-        className="bg-white bg-opacity-80 shadow-lg px-3 py-2 rounded-xl font-arial"
+        className="bg-white shadow-lg px-3 py-2 rounded-xl font-arial"
         style={{
           color: bgColor, // Set backgroundColor to bgColor
           transition: "color 0.5s ease",

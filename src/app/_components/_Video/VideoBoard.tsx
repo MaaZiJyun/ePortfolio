@@ -37,7 +37,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
     <div className="w-full h-full">
       <div
         className={`flex lg:flex-row flex-col w-full h-full bg-black ${
-          isHovered ? "bg-opacity-40" : "bg-opacity-10"
+          isHovered ? "bg-opacity-60" : "bg-opacity-10"
         } transition duration-500`}
       >
         <ParallaxSection backgroundImage={image}>

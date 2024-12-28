@@ -1,3 +1,4 @@
+import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import Container from "../_components/Container";
 import StudyNavBoard from "../_components/StudyNavBoard";
 
@@ -6,18 +7,9 @@ const page = () => {
     <main className="flex flex-col items-center justify-between">
       <Container>
         <div className="flex flex-col items-center justify-between">
-          <div className="relative  w-full">
-            <div className="flex flex-col items-center justify-center font-arial py-48 bg-blue-500 mb-48 lg:mb-20">
-              <div className="flex items-center justify-between text-3xl lg:text-6xl">
-                <span className="text-center text-white">自習委員会</span>
-              </div>
-              <div className="flex items-center justify-center mt-6 text-base lg:text-lg space-x-2">
-                {"自習管理部門（杜撰）".split("").map((char, index) => (
-                  <span className="font-normal text-white" key={index}>
-                    {char}
-                  </span>
-                ))}
-              </div>
+          <div className="relative w-full">
+            <div className="flex flex-col items-center justify-center font-arial bg-orange-700 mb-48 lg:mb-20">
+              <AnimeHeroTitle title={"自習委員会"} description={"自分で楽しんでいるだけ (笑)"}/>
             </div>
             <div className="absolute bottom-0 w-full">
               <div className="flex items-center justify-center">
@@ -262,7 +254,7 @@ const page = () => {
             </div>
           </div>
           <div className="w-full px-12 lg:px-32">
-            <div className="w-full h-1 bg-blue-500"></div>
+            <div className="w-full h-1 bg-red-500"></div>
           </div>
           <div className="flex flex-col w-full px-6 lg:px-32">
             <div className="flex flex-col w-full items-center justify-center text-justify my-24">

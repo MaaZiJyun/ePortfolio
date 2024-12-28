@@ -71,7 +71,7 @@ export default function Home() {
                   <WrenchScrewdriverIcon className="h-12 w-12" />
 
                   <span className="font-bold text-xl text-center">
-                    Application Developer
+                    Software Developer
                   </span>
                   <span className="text-justify">
                     He hold a Bachelor's degree in Software Engineering, and
@@ -161,7 +161,7 @@ export default function Home() {
         <FadeInContainer>
           <ParallaxSection backgroundImage={"/images/domukiphoto.png"}>
             <div className="flex w-full">
-              <div className="hidden lg:flex lg:w-1/2">
+              <div className="hidden lg:flex lg:w-1/2 bg-white bg-opacity-40">
                 <div className="flex h-full w-full flex-col items-center justify-center px-6 py-32">
                   <div>
                     <span className="text-center text-3xl lg:text-6xl">
@@ -177,7 +177,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex w-full lg:w-1/2 py-12 px-6 bg-white bg-opacity-90">
+              <div className="flex w-full lg:w-1/2 py-12 px-6 bg-white">
                 <ContactForm />
               </div>
             </div>

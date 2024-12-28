@@ -151,11 +151,32 @@ const IntroductionContent = (
   </div>
 );
 const ProjectContent = (
-  <div className="fade-in h-40">
-    <span className="italic">
-      IELTS is an English proficiency test, so there is no need to create a
-      project.
-    </span>
+  <div className="fade-in">
+    <div className="bg-white shadow-lg rounded-lg px-6 py-12">
+      <h2 className="text-xl lg:text-4xl font-bold text-center mb-8">最新のIELTS結果</h2>
+      <div className="grid grid-cols-2 gap-4 text-center">
+        <div className="p-4 bg-gray-100 rounded-lg">
+          <h3 className="lg:text-lg font-semibold">Listening</h3>
+          <p className="text-xl font-bold text-red-600">{'7.0'}</p>
+        </div>
+        <div className="p-4 bg-gray-100 rounded-lg">
+          <h3 className="lg:text-lg font-semibold">Reading</h3>
+          <p className="text-xl font-bold text-red-600">{'6.5'}</p>
+        </div>
+        <div className="p-4 bg-gray-100 rounded-lg">
+          <h3 className="lg:text-lg font-semibold">Writing</h3>
+          <p className="text-xl font-bold text-red-600">{'7.0'}</p>
+        </div>
+        <div className="p-4 bg-gray-100 rounded-lg">
+          <h3 className="lg:text-lg font-semibold">Speaking</h3>
+          <p className="text-xl font-bold text-red-600">{'7.0'}</p>
+        </div>
+      </div>
+      <div className="mt-6 p-4 bg-red-100 rounded-lg text-center">
+        <h3 className="lg:text-lg font-semibold">Overall Band Score</h3>
+        <p className="text-xl lg:text-3xl font-bold text-red-700">{'7.0'}</p>
+      </div>
+    </div>
   </div>
 );
 
