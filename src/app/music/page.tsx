@@ -4,6 +4,7 @@ import FadeInContainer from "../_components/FadeInContainer";
 import MusicTitleHero from "../_components/MusicTitleHero";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
+import SmallVideoBoard from "../_components/_Video/SmallVideoBoard";
 import VideoBoard from "../_components/_Video/VideoBoard";
 import {
   FirstWork,
@@ -94,7 +95,7 @@ const page = () => {
                   className="flex lg:w-1/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
-                  <VideoBoard
+                  <SmallVideoBoard
                     videoId={LatestWork.videoId}
                     image={LatestWork.image}
                     title={LatestWork.title}
@@ -106,7 +107,7 @@ const page = () => {
                   className="flex lg:w-2/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
-                  <VideoBoard
+                  <SmallVideoBoard
                     videoId={FirstWork.videoId}
                     image={FirstWork.image}
                     title={FirstWork.title}
@@ -120,7 +121,7 @@ const page = () => {
                   className="flex lg:w-2/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
-                  <VideoBoard
+                  <SmallVideoBoard
                     videoId={SecondWork.videoId}
                     image={SecondWork.image}
                     title={SecondWork.title}
@@ -132,7 +133,7 @@ const page = () => {
                   className="flex lg:w-1/3 m-1"
                 >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
-                  <VideoBoard
+                  <SmallVideoBoard
                     videoId={ThirdWork.videoId}
                     image={ThirdWork.image}
                     title={ThirdWork.title}

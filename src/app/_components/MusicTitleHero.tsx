@@ -15,10 +15,12 @@ const MusicTitleHero = () => {
   return (
     <>
       <div
-        className="bg-domuki-shadow transition-all duration-1000"
+        className="transition-all duration-1000"
         style={{
           backgroundImage: "url('/images/domuki_shadow.png')",
-          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: isHovered ? "150%" : "110%",
           backgroundColor: isHovered
             ? "rgba(153, 27, 27, 0.6)"
             : "rgba(153, 27, 27, 0.8)",
