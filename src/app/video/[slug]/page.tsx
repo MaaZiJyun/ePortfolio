@@ -1,7 +1,6 @@
 import YouTubePreviewer from "@/app/_components/_Video/YouTubePreviewer";
-import { FaceSmileIcon, PowerIcon } from "@heroicons/react/16/solid";
 
-const VideoPage = (props: any) => {
+const PostPage = (props: any) => {
   const slug = props.params.slug;
 
   return (
@@ -14,4 +13,4 @@ const VideoPage = (props: any) => {
     </>
   );
 };
-export default VideoPage;
+export default PostPage;
