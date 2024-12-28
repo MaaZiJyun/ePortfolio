@@ -1,4 +1,4 @@
-interface MusicMetadata {
+export interface MusicMetadata {
     videoId: string,
     image: string,
     title: string,
@@ -31,4 +31,7 @@ const ThirdWork: MusicMetadata = { // Create an object of type MusicMetadata
     comment: "Epic Orchestral Original Mix",
 };
 
-export { LatestWork, FirstWork, SecondWork, ThirdWork }
+const MusicList: MusicMetadata[] = [LatestWork, FirstWork, SecondWork, ThirdWork];
+
+
+export { LatestWork, FirstWork, SecondWork, ThirdWork ,MusicList}

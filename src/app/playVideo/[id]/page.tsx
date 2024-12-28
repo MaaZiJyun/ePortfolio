@@ -1,17 +1,14 @@
+import YouTubePreviewer from "@/app/_components/_Video/YouTubePreviewer";  
+import { MusicList, MusicMetadata } from "@/app/_controllers/MusicWorks";
+import { NextPage } from 'next'; // Import NextPage type
 // /playVideo/[id]/page.js  
 
 export async function generateStaticParams() {  
   // Define or fetch the possible video IDs  
-  const ids = ["video1", "video2", "video3"]; // Replace with actual video IDs  
-
-  // Return an array of objects with the id parameter  
-  return ids.map((id) => ({  
-    id,  
+  return MusicList.map((data: MusicMetadata) => ({  
+    id: data.videoId, // Ensure the key is 'id' to match the dynamic route
   }));  
 }  
-
-import YouTubePreviewer from "@/app/_components/_Video/YouTubePreviewer";  
-import { NextPage } from 'next'; // Import NextPage type
 
 interface Params {
   id: string; // Define the expected structure of params
