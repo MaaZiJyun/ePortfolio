@@ -1,6 +1,7 @@
 import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
+import MusicTitleHero from "../_components/MusicTitleHero";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
 import VideoBoard from "../_components/_Video/VideoBoard";
@@ -17,28 +18,7 @@ const page = () => {
     <main className="flex flex-col items-center justify-between">
       <Container>
         {/* <div className="bg-blue-500"> */}
-        <div className="bg-domuki-shadow">
-          <div className="flex flex-col items-center justify-center font-hefeng h-screen text-black">
-            {/* <div className="flex flex-col items-center justify-center h-screen">
-            <span className="text-3xl lg:text-6xl text-center">
-              童夢綺の音楽作品
-            </span>
-            <span className="mt-4">
-              Welcome to listen to Dōmuki's music works.
-            </span>
-          </div> */}
-            <div className="w-2/3">
-              <AnimeHeroTitle
-                title={"童夢綺の音楽作品"}
-                description={"私の音楽作品をぜひ聴いてください！"}
-              />
-            </div>
-          </div>
-          {/* divider */}
-          {/* <div className="lg:flex px-6 lg:px-12">
-            <div className="w-full h-px bg-black"></div>
-          </div> */}
-        </div>
+        <MusicTitleHero />
         <FadeInContainer>
           <div className="lg:flex items-center justify-center">
             <div className="flex flex-col lg:w-1/3 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-90">

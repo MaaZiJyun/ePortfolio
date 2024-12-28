@@ -32,15 +32,15 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
         <div className="flex flex-col h-96 items-center justify-center">
           <div>
             <div
-              className={`distribute-text transition-all duration-1000 mb-4 font-bold${
-                isHovered ? "lg:text-lg" : "text-3xl lg:text-6xl"
+              className={`distribute-text transition-all duration-1000 mb-4 ${
+                isHovered ? "lg:text-xl" : "text-xxl"
               } `}
             >
               <span>{title}</span>
             </div>
             <div
               className={`distribute-text transition-all duration-1000 ${
-                isHovered ? "text-2xl lg:text-4xl" : "lg:text-lg"
+                isHovered ? "text-2xl lg:text-6xl" : "lg:text-lg"
               } `}
             >
               {description.split("").map((char, index) => (

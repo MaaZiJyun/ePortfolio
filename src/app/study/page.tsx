@@ -9,7 +9,12 @@ const page = () => {
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full">
             <div className="flex flex-col items-center justify-center font-arial bg-yellow-500 mb-48 lg:mb-20 text-white">
-              <AnimeHeroTitle title={"自習委員会"} description={"自分で楽しんでいるだけ (笑)"}/>
+              <div className="w-2/3">
+                <AnimeHeroTitle
+                  title={"自習委員会"}
+                  description={"自分で楽しんでいるだけ (笑)"}
+                />
+              </div>
             </div>
             <div className="absolute bottom-0 w-full">
               <div className="flex items-center justify-center">
@@ -594,87 +599,91 @@ const page = () => {
                     perspective on the subject matter.
                   </p>
                   <div className="flex flex-col items-center justify-center p-6">
-                  <div className="w-full overflow-x-auto">
-                    <table className="bg-white text-sm">
-                      <thead className="bg-black text-white">
-                        <tr>
-                          <th className="py-3 px-4 text-left">Type</th>
-                          <th className="py-3 px-4 text-left">Resource</th>
-                          <th className="py-3 px-4 text-left">Main Focus</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="">
-                          <td className="py-3 px-4">Formal</td>
-                          <td className="py-3 px-4">Textbooks</td>
-                          <td className="py-3 px-4">
-                            Comprehensive, structured knowledge, often used in
-                            academic settings.
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50 ">
-                          <td className="py-3 px-4">Formal</td>
-                          <td className="py-3 px-4">Online Courses (MOOCs)</td>
-                          <td className="py-3 px-4">
-                            Organized learning with a defined curriculum, often
-                            leading to certificates.
-                          </td>
-                        </tr>
-                        <tr className="">
-                          <td className="py-3 px-4">Formal</td>
-                          <td className="py-3 px-4">
-                            Academic Journals and Papers
-                          </td>
-                          <td className="py-3 px-4">
-                            Research-based, peer-reviewed studies providing
-                            detailed insights and findings.
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50 ">
-                          <td className="py-3 px-4">Formal</td>
-                          <td className="py-3 px-4">Workshops and Seminars</td>
-                          <td className="py-3 px-4">
-                            Interactive, focused training sessions on specific
-                            skills or knowledge areas.
-                          </td>
-                        </tr>
-                        <tr className="">
-                          <td className="py-3 px-4">Informal</td>
-                          <td className="py-3 px-4">Blogs and Articles</td>
-                          <td className="py-3 px-4">
-                            Personal insights, tips, and opinions on a wide
-                            range of topics.
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50 ">
-                          <td className="py-3 px-4">Informal</td>
-                          <td className="py-3 px-4">Podcasts and Videos</td>
-                          <td className="py-3 px-4">
-                            Accessible content, often presented in a
-                            conversational or narrative style, covering various
-                            subjects.
-                          </td>
-                        </tr>
-                        <tr className="">
-                          <td className="py-3 px-4">Informal</td>
-                          <td className="py-3 px-4">
-                            Forums and Discussion Boards
-                          </td>
-                          <td className="py-3 px-4">
-                            Community-driven knowledge exchange and
-                            problem-solving.
-                          </td>
-                        </tr>
-                        <tr className="bg-gray-50">
-                          <td className="py-3 px-4">Informal</td>
-                          <td className="py-3 px-4">Social Media</td>
-                          <td className="py-3 px-4">
-                            Quick insights, updates, and discussions on trending
-                            or specific topics.
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div className="w-full overflow-x-auto">
+                      <table className="bg-white text-sm">
+                        <thead className="bg-black text-white">
+                          <tr>
+                            <th className="py-3 px-4 text-left">Type</th>
+                            <th className="py-3 px-4 text-left">Resource</th>
+                            <th className="py-3 px-4 text-left">Main Focus</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="">
+                            <td className="py-3 px-4">Formal</td>
+                            <td className="py-3 px-4">Textbooks</td>
+                            <td className="py-3 px-4">
+                              Comprehensive, structured knowledge, often used in
+                              academic settings.
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50 ">
+                            <td className="py-3 px-4">Formal</td>
+                            <td className="py-3 px-4">
+                              Online Courses (MOOCs)
+                            </td>
+                            <td className="py-3 px-4">
+                              Organized learning with a defined curriculum,
+                              often leading to certificates.
+                            </td>
+                          </tr>
+                          <tr className="">
+                            <td className="py-3 px-4">Formal</td>
+                            <td className="py-3 px-4">
+                              Academic Journals and Papers
+                            </td>
+                            <td className="py-3 px-4">
+                              Research-based, peer-reviewed studies providing
+                              detailed insights and findings.
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50 ">
+                            <td className="py-3 px-4">Formal</td>
+                            <td className="py-3 px-4">
+                              Workshops and Seminars
+                            </td>
+                            <td className="py-3 px-4">
+                              Interactive, focused training sessions on specific
+                              skills or knowledge areas.
+                            </td>
+                          </tr>
+                          <tr className="">
+                            <td className="py-3 px-4">Informal</td>
+                            <td className="py-3 px-4">Blogs and Articles</td>
+                            <td className="py-3 px-4">
+                              Personal insights, tips, and opinions on a wide
+                              range of topics.
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50 ">
+                            <td className="py-3 px-4">Informal</td>
+                            <td className="py-3 px-4">Podcasts and Videos</td>
+                            <td className="py-3 px-4">
+                              Accessible content, often presented in a
+                              conversational or narrative style, covering
+                              various subjects.
+                            </td>
+                          </tr>
+                          <tr className="">
+                            <td className="py-3 px-4">Informal</td>
+                            <td className="py-3 px-4">
+                              Forums and Discussion Boards
+                            </td>
+                            <td className="py-3 px-4">
+                              Community-driven knowledge exchange and
+                              problem-solving.
+                            </td>
+                          </tr>
+                          <tr className="bg-gray-50">
+                            <td className="py-3 px-4">Informal</td>
+                            <td className="py-3 px-4">Social Media</td>
+                            <td className="py-3 px-4">
+                              Quick insights, updates, and discussions on
+                              trending or specific topics.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                     <span className="italic">
                       Table 1: Formal and Informal Resources
