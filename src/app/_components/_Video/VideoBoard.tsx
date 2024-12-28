@@ -43,7 +43,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
         <ParallaxSection backgroundImage={image}>
           <div className="flex flex-col items-center justify-center h-full w-full">
             <Link
-              href={`/playVideo/${videoId}`}  
+              href={`/playVideo/${videoId || ''}`} 
               className="flex w-36 h-36 items-center justify-center"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
