@@ -42,14 +42,14 @@ const PostPage = (props: any) => {
           </div>
 
           <div className="flex flex-col p-6 lg:px-60 text-justify ">
-            <div className="flex items-center justify-center title text-2xl lg:text-4xl">
+            <div className="flex items-center justify-center title text-2xl lg:text-6xl">
               <span className="text-center font-bold">{post.data.title}</span>
             </div>
             <div className="flex flex-col info text-center mt-10">
               <span className="text-lg lg:text-xl">
                 {post.data.author.name}
               </span>
-              <span className="lg:text-sm">{post.data.address}</span>
+              <span className="lg:text-sm mt-2">{post.data.address}</span>
             </div>
             <div className="abstract mt-10">
               {post.data.abstract && post.data.abstract.trim() && (
@@ -59,17 +59,20 @@ const PostPage = (props: any) => {
                 </p>
               )}
             </div>
-            <div className="flex items-start keywords mt-5 italic">
-              <p>
-                <span className="font-bold">Keywords: </span>
-                {keywords &&
-                  keywords.map((keyword, index) => (
-                    <span key={index} className="keyword-span">
-                      {keyword},{" "}
-                    </span>
-                  ))}
-              </p>
-            </div>
+            {keywords && (
+              <div className="flex items-start keywords mt-5 italic">
+                <p>
+                  <span className="font-bold">Keywords: </span>
+                  {keywords &&
+                    keywords.map((keyword, index) => (
+                      <span key={index} className="keyword-span">
+                        {keyword},{" "}
+                      </span>
+                    ))}
+                </p>
+              </div>
+            )}
+
             <article className="prose max-w-none">
               <MarkdownRenderer content={post.content} />
             </article>
