@@ -36,7 +36,7 @@ const TextLogo = () => {
     >
       <div className="flex flex-col items-center">
         <div
-          className={`distribute-text transition-all duration-1000 ${
+          className={`font-hefeng distribute-text transition-all duration-1000 ${
             isHovered ? "text-xxs" : "text-xl lg:text-2xl"
           } ${isHovered ? "text-white" : "text-black"}`}
         >

@@ -17,6 +17,7 @@ const config: Config = {
       fontFamily: {
         times: ['Times New Roman', 'Times', 'serif'],
         asriel: ['Asriel', 'Times New Roman', 'Times', 'serif'],
+        hefeng: ['HefengShudao', 'sans-serif'],
       },
     },
   },

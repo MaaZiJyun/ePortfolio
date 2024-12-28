@@ -41,32 +41,40 @@ html {
 }
 
 .hide-scrollbar {
-  overflow: hidden; /* Hide scrollbar */
+  overflow: hidden;
+  /* Hide scrollbar */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  width: 0.1em; /* Hide scrollbar for WebKit browsers */
+  width: 0.1em;
+  /* Hide scrollbar for WebKit browsers */
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
 }
 
 .show-scrollbar {
-  overflow: auto; /* Show scrollbar when needed */
+  overflow: auto;
+  /* Show scrollbar when needed */
 }
 
 .show-scrollbar::-webkit-scrollbar {
-  width: 0.1em; /* Custom scrollbar width */
+  width: 0.1em;
+  /* Custom scrollbar width */
 }
 
 .show-scrollbar::-webkit-scrollbar-thumb {
-  background: #888; /* Scrollbar thumb background */
+  background: #888;
+  /* Scrollbar thumb background */
 }
 
 .show-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Scrollbar thumb background on hover */
+  background: #555;
+  /* Scrollbar thumb background on hover */
 }
 
 /* Change the background color and text color of selected text */
@@ -136,12 +144,30 @@ footer {
   font-style: normal;
 }
 
-@font-face {
+.font-arial {
+  font-family: Arial, sans-serif;
+  /* Example font family */
+}
+
+/* @font-face {
   font-family: 'Asriel';
   src: url('/fonts/Asriel-Bold.woff2') format('woff2'),
     url('/fonts/Asriel-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: 'HefengShudao';
+  /* Custom name for the font */
+  src: url('/fonts/hefengshudaozhaohelongshencangjin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-hefeng {
+  font-family: 'HefengShudao', sans-serif;
+  /* Example font family */
 }
 
 /* Custom class */
@@ -247,23 +273,25 @@ footer {
   z-index: -1;
 }
 
-.bg-domukiphoto-study {
+.bg-domuki-shadow {
   position: relative;
   overflow: hidden;
 }
 
-.bg-domukiphoto-study::before {
+.bg-domuki-shadow::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/images/domukiphotostudy.png');
+  background-image: url('/images/domuki_shadow.png');
+  background-color: rgba(153, 27, 27, 0.8);
+  /* Blue color with 50% opacity */
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 1;
   z-index: -1;
 }
 
@@ -372,9 +400,4 @@ footer {
 
 .custom-syntax-pre:hover {
   background-color: #fdfdfd !important;
-}
-
-.font-arial {
-  font-family: Arial, sans-serif;
-  /* Example font family */
 }

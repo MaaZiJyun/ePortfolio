@@ -54,7 +54,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
                 }transition-all duration-500`}
               />
             </Link>
-            <div className="space-y-2">
+            <div className="space-y-2 w-64">
               <span className="distribute-text text-3xl lg:text-6xl">
                 {title}
               </span>

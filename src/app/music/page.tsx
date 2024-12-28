@@ -4,15 +4,21 @@ import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
 import VideoBoard from "../_components/_Video/VideoBoard";
-import { FirstWork, LatestWork, SecondWork, ThirdWork } from "../_controllers/MusicWorks";
+import {
+  FirstWork,
+  LatestWork,
+  SecondWork,
+  ThirdWork,
+} from "../_controllers/MusicWorks";
 import generateRandomColor from "../_controllers/generateRandomColor";
 
 const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="bg-domukiphoto">
-          <div className="flex flex-col items-center justify-center font-arial h-screen text-black">
+        {/* <div className="bg-blue-500"> */}
+        <div className="bg-domuki-shadow">
+          <div className="flex flex-col items-center justify-center font-hefeng h-screen text-black">
             {/* <div className="flex flex-col items-center justify-center h-screen">
             <span className="text-3xl lg:text-6xl text-center">
               童夢綺の音楽作品
@@ -21,39 +27,42 @@ const page = () => {
               Welcome to listen to Dōmuki's music works.
             </span>
           </div> */}
-            <AnimeHeroTitle
-              title={"童夢綺の音楽作品"}
-              description={"私の音楽作品をぜひ聴いてください！"}
-            />
+            <div className="w-2/3">
+              <AnimeHeroTitle
+                title={"童夢綺の音楽作品"}
+                description={"私の音楽作品をぜひ聴いてください！"}
+              />
+            </div>
           </div>
           {/* divider */}
           {/* <div className="lg:flex px-6 lg:px-12">
             <div className="w-full h-px bg-black"></div>
           </div> */}
-          <FadeInContainer>
-            <div className="lg:flex items-center justify-center">
-              <div className="flex flex-col lg:w-1/3 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-90">
-                <span className="text-center text-4xl lg:text-6xl">
-                  Latest Work
-                </span>
-                <div className="text-center space-x-5 mt-2">
-                  <span>最</span>
-                  <span>新</span>
-                  <span>作</span>
-                  <span>品</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-center lg:w-2/3 h-96">
-                <VideoBoard
-                  videoId={LatestWork.videoId}
-                  image={LatestWork.image}
-                  title={LatestWork.title}
-                  comment={LatestWork.comment}
-                />
+        </div>
+        <FadeInContainer>
+          <div className="lg:flex items-center justify-center">
+            <div className="flex flex-col lg:w-1/3 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-90">
+              <span className="text-center text-4xl lg:text-6xl">
+                Latest Work
+              </span>
+              <div className="text-center space-x-5 mt-2">
+                <span>最</span>
+                <span>新</span>
+                <span>作</span>
+                <span>品</span>
               </div>
             </div>
-          </FadeInContainer>
-        </div>
+            <div className="flex items-center justify-center lg:w-2/3 h-96">
+              <VideoBoard
+                videoId={LatestWork.videoId}
+                image={LatestWork.image}
+                title={LatestWork.title}
+                comment={LatestWork.comment}
+              />
+            </div>
+          </div>
+        </FadeInContainer>
+        {/* </div> */}
         <FadeInContainer>
           <QuotaBoard
             quota={
@@ -89,11 +98,11 @@ const page = () => {
         </FadeInContainer>
         <FadeInContainer>
           <div className="flex flex-col pt-32 lg:pb-32 lg:px-12">
-            <div className="lg:flex items-center lg:items-center justify-center lg:space-x-12 pb-32">
-              <span className="text-center text-3xl lg:text-6xl">
+            <div className="flex flex-col items-center lg:items-center justify-center pb-32">
+              <span className="font-hefeng text-center text-3xl lg:text-6xl">
                 代表作をご覧
               </span>
-              <span className="text-center text-xl lg:text-3xl uppercase">
+              <span className="text-center text-base lg:text-lg uppercase">
                 Check out representative works
               </span>
             </div>
@@ -144,10 +153,10 @@ const page = () => {
                 >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <VideoBoard
-                     videoId={ThirdWork.videoId}
-                     image={ThirdWork.image}
-                     title={ThirdWork.title}
-                     comment={ThirdWork.comment}
+                    videoId={ThirdWork.videoId}
+                    image={ThirdWork.image}
+                    title={ThirdWork.title}
+                    comment={ThirdWork.comment}
                   />
                 </div>
               </div>

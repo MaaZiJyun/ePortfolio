@@ -114,14 +114,14 @@ const Navbar = () => {
                   </div>
                 </a>
                 {item.subNav && showSubNav && (
-                  <div className="absolute bg-white bg-opacity-60 shadow-lg rounded-md">
+                  <div className="absolute bg-white bg-opacity-90 shadow-lg rounded-lg">
                     {item.subNav.map((subItem) => (
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="flex items-center justify-between text-black px-4 py-3 hover:bg-gray-100 hover:bg-opacity-80"
+                        className="flex items-center justify-between text-black px-4 py-3 hover:bg-white rounded-lg"
                       >
-                        <span className="text-sm px-2 text-left">
+                        <span className="uppercase text-sm px-2 text-left">
                           {subItem.name}{" "}
                         </span>
                         <span className="text-xxs px-2 text-right">

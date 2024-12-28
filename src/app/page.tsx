@@ -154,9 +154,9 @@ export default function Home() {
         <FadeInContainer>
           <QuotaBoard
             quota={
-              "The background of the world is like the darkness of the universe. And it is dark because humans cannot see it."
+              "世界的本質就像宇宙的黑暗，並非它本身如此，而是人眼無法感知它。"
             }
-            author={"《世界の底色》第1章"}
+            author={"《 暗光 · 盲 》"}
           />
         </FadeInContainer>
         <FadeInContainer>
@@ -169,7 +169,7 @@ export default function Home() {
                       Contact Me
                     </span>
                     <div className="distribute-text">
-                      {"童夢綺に連絡してください"
+                      {"連絡用メール"
                         .split("")
                         .map((char, index) => (
                           <span key={index}>{char}</span>

@@ -32,7 +32,7 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
         <div className="flex flex-col h-96 items-center justify-center">
           <div>
             <div
-              className={`distribute-text transition-all duration-1000 mb-4 ${
+              className={`distribute-text transition-all duration-1000 mb-4 font-bold${
                 isHovered ? "lg:text-lg" : "text-3xl lg:text-6xl"
               } `}
             >

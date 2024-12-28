@@ -8,7 +8,7 @@ const page = () => {
       <Container>
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full">
-            <div className="flex flex-col items-center justify-center font-arial bg-orange-700 mb-48 lg:mb-20 text-white">
+            <div className="flex flex-col items-center justify-center font-arial bg-yellow-500 mb-48 lg:mb-20 text-white">
               <AnimeHeroTitle title={"自習委員会"} description={"自分で楽しんでいるだけ (笑)"}/>
             </div>
             <div className="absolute bottom-0 w-full">
