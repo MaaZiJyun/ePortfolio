@@ -2,7 +2,7 @@ import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
-import VideoBoard from "../_components/VideoBoard";
+import VideoBoard from "../_components/_Video/VideoBoard";
 import generateRandomColor from "../_controllers/generateRandomColor";
 
 const page = () => {
@@ -39,7 +39,7 @@ const page = () => {
                 <VideoBoard
                   videoId={"vRf5UtbauGw"}
                   image={"/images/latest_album.png"}
-                  title={"Vast Remix"}
+                  title={"Luminous Remix"}
                   comment={"Epic Orchestral Original Mix"}
                 />
               </div>
