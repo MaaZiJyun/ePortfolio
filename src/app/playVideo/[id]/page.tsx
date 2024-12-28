@@ -1,23 +1,32 @@
-// /playVideo/[id]/PlayVideoPage.js  
-"use client";  
+// /playVideo/[id]/page.js  
 
-import { NextPage } from 'next';  
-import YouTubePreviewer from "@/app/_components/_Video/YouTubePreviewer";  
+export async function generateStaticParams() {  
+  // Define or fetch the possible video IDs  
+  const ids = ["video1", "video2", "video3"]; // Replace with actual video IDs  
 
-interface Params {  
-  id: string;  
+  // Return an array of objects with the id parameter  
+  return ids.map((id) => ({  
+    id,  
+  }));  
 }  
 
-const Page: NextPage<{ params: Params }> = ({ params }) => {  
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;  
+import YouTubePreviewer from "@/app/_components/_Video/YouTubePreviewer";  
+import { NextPage } from 'next'; // Import NextPage type
 
-  return (  
-    <div className="mt-28">  
-      <div className="h-screen">  
-        <YouTubePreviewer videoId={id} />  
-      </div>  
-    </div>  
-  );  
-};  
+interface Params {
+  id: string; // Define the expected structure of params
+}
 
-export default Page;
+const PlayVideoPage: NextPage<{ params: Params }> = ({ params }) => { // Specify the type for props
+  const { id } = params; // Extract the id from the params object
+
+  return (
+    <div className="mt-28">
+      <div className="h-screen">
+        <YouTubePreviewer videoId={id} />
+      </div>
+    </div>
+  );
+};
+
+export default PlayVideoPage;
