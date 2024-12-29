@@ -14,13 +14,12 @@ const QuickPreviewer = (props: PostMetadata) => {
         className="hover:underline"
       >
         <div>
-          <h2 className="text-lg lg:text-lg font-bold">{props.title}</h2>
+          <h2 className="text-lg lg:text-xl font-bold">{props.title}</h2>
+        </div>
+        <div className="italic">
+          <p>{props.date}</p>
         </div>
       </Link>
-      <div className="italic">
-        <p>{props.subtitle}</p>
-        <p>{props.date}</p>
-      </div>
     </div>
   );
 };

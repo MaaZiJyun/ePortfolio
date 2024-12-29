@@ -19,6 +19,7 @@ import getArticleMetadata from "./_controllers/getArticleMetadata";
 import QuickPreviewer from "./_components/_NoteList/QuickPreviewer";
 import NoteList from "./_components/_NoteList/NoteList";
 import { LatestWork } from "./_controllers/MusicWorks";
+import DynamicText from "./_components/DynamicText";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -33,6 +34,29 @@ export default function Home() {
     postMetadata,
     BTarticlesMetadata,
     AIarticlesMetadata,
+  ];
+
+  const textList = [
+    "天地有大美而不言，四时有明法而不争。————庄子",
+    "人心如镜，拂之则明，蒙之则昧。————韩愈",
+    "流水不争先，争的是滔滔不绝。————庄子",
+    "山高月小，水落石出，万物自有其时。————苏轼",
+    "志之所向，虽千万人吾往矣。————孟子",
+    "风起于青萍之末，浪成于微澜之间。————《汉书》",
+    "君子藏器于身，待时而动。————《周易》",
+    "大道至简，繁者惑人。————老子",
+    "生如朝露，逝若流星，唯有德行长存。————《礼记》",
+    "心静则明，志定则远。————诸葛亮",
+    "木秀于林，风必摧之；行高于众，人必非之。————《旧唐书》",
+    "知者不言，言者不知。————老子",
+    "欲速则不达，见小利则大事不成。————孔子",
+    "海纳百川，有容乃大；壁立千仞，无欲则刚。————林则徐",
+    "天行健，君子以自强不息。————《周易》",
+    "祸兮福之所倚，福兮祸之所伏。————老子",
+    "千里之行，始于足下。————老子",
+    "不积跬步，无以至千里；不积小流，无以成江海。————荀子",
+    "君子和而不同，小人同而不和。————孔子",
+    "工欲善其事，必先利其器。————孔子",
   ];
 
   return (
@@ -142,23 +166,22 @@ export default function Home() {
         </FadeInContainer>
 
         <FadeInContainer>
+          <div className="flex w-full items-center justify-center px-12 py-24 text-lg lg:text-3xl text-white bg-black text-center">
+            <DynamicText content={textList} />
+          </div>
+        </FadeInContainer>
+
+        <FadeInContainer>
           <div className="flex h-[34rem]">
             <VideoBoard
               videoId={LatestWork.videoId}
               image={LatestWork.image}
-              title={'Latest Work'}
+              title={"Latest Work"}
               comment={LatestWork.comment}
             />
           </div>
         </FadeInContainer>
-        <FadeInContainer>
-          <QuotaBoard
-            quota={
-              "世界的本質就像宇宙的黑暗，並非它本身如此，而是人眼無法感知它。"
-            }
-            author={"《 暗光 · 盲 》"}
-          />
-        </FadeInContainer>
+
         <FadeInContainer>
           <ParallaxSection backgroundImage={"/images/domukiphoto.png"}>
             <div className="flex w-full">
@@ -169,11 +192,9 @@ export default function Home() {
                       Contact Me
                     </span>
                     <div className="distribute-text">
-                      {"連絡用メール"
-                        .split("")
-                        .map((char, index) => (
-                          <span key={index}>{char}</span>
-                        ))}
+                      {"連絡用メール".split("").map((char, index) => (
+                        <span key={index}>{char}</span>
+                      ))}
                     </div>
                   </div>
                 </div>

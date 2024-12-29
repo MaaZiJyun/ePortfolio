@@ -7,11 +7,9 @@ import generateRandomColor from "../_controllers/generateRandomColor";
 export default function GreetingTitle() {
   const greets = [
     "やあ、童夢綺です",
-    "Hello, this is Dōmuki",
+    "Hello, this is Domuki",
     "哈喽，这里是童夢綺",
-    "哈囉，呢度係童夢綺",
-    "Halo, ini Dōmuki",
-    "مرحبًا، هذا دوموكي",
+    "Halo, ini Domuki",
   ];
   const [index, setIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -64,7 +62,7 @@ export default function GreetingTitle() {
   return (
     <h1 className="text-3xl lg:text-6xl">
       <span
-        className="bg-white shadow-lg px-3 py-2 rounded-xl font-arial"
+        className="bg-white shadow-lg px-3 py-2 rounded-xl font-pixel"
         style={{
           color: bgColor, // Set backgroundColor to bgColor
           transition: "color 0.5s ease",
