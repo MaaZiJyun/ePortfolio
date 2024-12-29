@@ -7,7 +7,7 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="text-white h-full">
+        <div className="font-arial text-white h-full">
           <DynamicTitleHero
             image={"/images/study.png"}
             title={"自習委員会"}

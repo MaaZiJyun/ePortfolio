@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <div className="flex w-full h-screen bg-sketch items-center justify-center">
+        <div className="flex w-full h-screen bg-sketch items-center justify-center font-arial">
           <div className="lg:flex lg:w-1/2 px-6">
             <div className="flex flex-col space-y-5">
               {/* <p className="text-3xl lg:text-6xl">Hi, this is Dōmuki</p> */}

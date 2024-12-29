@@ -39,7 +39,7 @@ const page = () => {
         <FadeInContainer>
           <div className="bg-black bg-opacity-40">
             <ParallaxSection backgroundImage={"/images/composing.png"}>
-              <div className="flex justify-center p-12 lg:py-32">
+              <div className="flex justify-center p-12 lg:py-32 font-pixel">
                 <div className="space-y-6 lg:w-1/2">
                   <p className="text-sm lg:text-base">
                     I'm Domuki, an independent musician, passionating about
