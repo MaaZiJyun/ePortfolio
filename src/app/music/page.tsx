@@ -53,7 +53,7 @@ const page = () => {
         </FadeInContainer>
         <FadeInContainer>
           <div className="lg:flex items-center justify-center">
-            <div className="flex items-center font-hefeng justify-center w-full h-96">
+            <div className="flex items-center font-hefeng justify-center w-full h-32 lg:h-96">
               <SmallVideoBoard
                 videoId={LatestWork.videoId}
                 image={LatestWork.image}

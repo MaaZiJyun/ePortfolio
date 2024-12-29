@@ -8,7 +8,7 @@ const page = () => {
       <Container>
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full">
-            <div className="flex flex-col items-center justify-center font-arial bg-yellow-500 mb-48 lg:mb-20 text-white">
+            <div className="flex flex-col items-center justify-center font-arial bg-yellow-500 mb-48 lg:mb-20 text-white py-12">
               <div className="w-full lg:w-2/3">
                 <AnimeHeroTitle
                   title={"自習委員会"}
@@ -18,10 +18,10 @@ const page = () => {
             </div>
             <div className="absolute bottom-0 w-full">
               <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center bg-white lg:w-1/2 rounded-xl shadow-xl py-6 px-10 text-justify h-1/2 lg:h-40">
+                <div className="flex items-center justify-center bg-white lg:w-1/2 rounded-xl shadow-xl py-6 px-10 text-justify h-1/2">
                   <p className="text-sm font-arial">
                     The Self-Study Committee
-                    <span className="italic">, "自習委員会",</span> is an
+                    <span className="text-yellow-500">, "自習委員会",</span> is an
                     organization dedicated to providing support for members in
                     their independent learning pursuits. Their goal is to help
                     members explore areas of interest or learn knowledge that
@@ -42,7 +42,7 @@ const page = () => {
               <p className="mb-12 text-base">Action Plan</p>
               <div className="lg:flex w-full items-stretch justify-center text-justify lg:space-x-10">
                 <div className="lg:flex w-full lg:w-1/3 items-center justify-center text-justify lg:space-x-10">
-                  <div className="flex flex-col w-full h-full rounded-xl shadow-xl items-center justify-center p-6">
+                  <div className="hidden lg:flex flex-col w-full h-full rounded-xl shadow-xl items-center justify-center p-6">
                     <h1 className="font-arial text-xl">30日間の出席記録</h1>
                     <p className="mb-6 text-sm">30-Day Check-in Record</p>
                     <table className="border-collapse rounded-full font-arial text-gray-300">
