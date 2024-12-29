@@ -30,51 +30,64 @@ const SmallVideoBoard: React.FC<SmallVideoBoardProps> = ({
   return (
     <div className="w-full h-full">
       <div
-        className={`flex lg:flex-row flex-col w-full h-full bg-black ${
-          isHovered ? "bg-opacity-60" : "bg-opacity-10"
-        } transition duration-500`}
+        className="h-full w-full"
+        style={{
+          position: "relative",
+          overflow: "hidden", // Ensures the zoomed image stays within the container
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          transition: "background-color 0.5s ease-in-out", // Smooth color transition
+        }}
       >
-        {/* <ParallaxSection backgroundImage={image}> */}
         <div
-          className="flex h-full w-full transition-all duration-1000"
           style={{
-            color: "white",
             backgroundImage: `url(${image})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: isHovered ? "200%" : "150%",
+            backgroundSize: "cover", // Default cover behavior
+            height: "100%",
+            width: "100%",
+            transform: isHovered ? "scale(1.5)" : "scale(1)", // Smooth zoom effect
+            transition: "transform 0.5s ease-in-out", // Smooth zoom transition
           }}
+        ></div>
+        <div
+          className="text-white w-full h-full"
+          style={{
+            position: "absolute",
+            zIndex: 1, // Ensures the text is above the background
+          }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <div
-            className="flex flex-col items-center justify-center h-full w-full transition-all duration-1000"
-            style={{
-              backgroundColor: isHovered
-                ? "rgba(0, 0, 0, 0.8)" // Darker overlay when hovered
-                : "rgba(0, 0, 0, 0.4)", // Lighter overlay by default
-            }}
+            className={`flex w-full h-full bg-black ${
+              isHovered ? "bg-opacity-70" : "bg-opacity-30"
+            } transition duration-500`}
           >
-            <Link
-              href={`/playVideo/${videoId || ""}`}
-              className="flex w-36 h-36 items-center justify-center"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="space-y-2">
-                <span className="distribute-text text-3xl lg:text-6xl">
-                  {title}
-                </span>
-                <div className="distribute-text">
-                  {comment.split("").map((char, index) => (
-                    <span key={index}>{char}</span>
-                  ))}
+            <div className="flex h-full w-full items-center justify-center">
+              <Link
+                href={`/playVideo/${videoId || ""}`}
+                className="flex flex-col w-full items-center justify-center"
+              >
+                <div>
+                  <span className="distribute-text text-3xl lg:text-6xl">
+                    {title}
+                  </span>
                 </div>
-              </div>
-            </Link>
+                <div className="space-y-2 w-72">
+                  <div className="distribute-text">
+                    {comment.split("").map((char, index) => (
+                      <span key={index}>{char}</span>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
-        {/* </ParallaxSection> */}
       </div>
-      {/* </a> */}
     </div>
   );
 };

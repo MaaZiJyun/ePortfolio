@@ -44,7 +44,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
           <div className="flex flex-col items-center justify-center h-full w-full">
             <Link
               href={`/playVideo/${videoId || ''}`} 
-              className="flex w-36 h-36 items-center justify-center"
+              className="flex items-center justify-center"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -54,7 +54,7 @@ const VideoBoard: React.FC<VideoBoardProps> = ({
                 }transition-all duration-500`}
               />
             </Link>
-            <div className="space-y-2 w-64">
+            <div className="space-y-2 w-96">
               <span className="distribute-text text-3xl lg:text-6xl">
                 {title}
               </span>

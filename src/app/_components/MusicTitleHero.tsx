@@ -1,50 +1,56 @@
 "use client";
 import React, { useState } from "react";
 import AnimeHeroTitle from "./AnimeHeroTitle";
+import Link from "next/link";
 
-const MusicTitleHero = () => {
+const ZoomInBackground = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   return (
-    <>
+    <div
+      className="h-96 lg:h-screen w-full"
+      style={{
+        position: "relative",
+        overflow: "hidden", // Ensures the zoomed image stays within the container
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: isHovered
+          ? "rgba(153, 27, 27, 0.6)" // Darker background color on hover
+          : "rgba(153, 27, 27, 0.8)", // Default background color
+        transition: "background-color 0.5s ease-in-out", // Smooth color transition
+      }}
+    >
       <div
-        className="transition-all duration-1000"
         style={{
           backgroundImage: "url('/images/domuki_shadow.png')",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: isHovered ? "150%" : "110%",
-          backgroundColor: isHovered
-            ? "rgba(153, 27, 27, 0.6)"
-            : "rgba(153, 27, 27, 0.8)",
+          backgroundSize: "cover", // Default cover behavior
+          height: "100%",
+          width: "100%",
+          transform: isHovered ? "scale(1.5)" : "scale(1)", // Smooth zoom effect
+          transition: "transform 0.5s ease-in-out", // Smooth zoom transition
         }}
+      ></div>
+      <div
+        className="text-black font-hefeng w-full"
+        style={{
+          position: "absolute",
+          zIndex: 1, // Ensures the text is above the background
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <div
-          className={`flex flex-col items-center justify-center font-hefeng h-screen text-black ${
-            isHovered ? "lg:text-xl" : "text-xxl"
-          } `}
-        >
-          <div
-            className="w-2/3"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <AnimeHeroTitle
-              title={"童夢綺の音楽作品"}
-              description={"私の音楽作品をぜひ聴いてください！"}
-            />
-          </div>
-        </div>
+        <Link href={`https://www.youtube.com/@domuki`}>
+          <AnimeHeroTitle
+            title={"童夢綺の音楽作品"}
+            description={"私の音楽作品をぜひ聴いてください！"}
+          />
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 
-export default MusicTitleHero;
+export default ZoomInBackground;

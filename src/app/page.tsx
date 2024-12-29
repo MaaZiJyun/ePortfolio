@@ -146,7 +146,7 @@ export default function Home() {
             <VideoBoard
               videoId={LatestWork.videoId}
               image={LatestWork.image}
-              title={LatestWork.title}
+              title={'Latest Work'}
               comment={LatestWork.comment}
             />
           </div>

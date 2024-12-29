@@ -16,7 +16,7 @@ const page = () => {
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full">
             <div className="flex flex-col items-center justify-center font-arial bg-green-700 mb-48 lg:mb-20 text-white">
-              <div className="w-2/3">
+              <div className="w-full lg:w-2/3">
                 <AnimeHeroTitle
                   title={"童夢綺の記事"}
                   description={"読んでくれてありがとう！"}

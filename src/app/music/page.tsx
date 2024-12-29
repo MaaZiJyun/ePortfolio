@@ -12,44 +12,18 @@ import {
   SecondWork,
   ThirdWork,
 } from "../_controllers/MusicWorks";
-import generateRandomColor from "../_controllers/generateRandomColor";
 
 const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        {/* <div className="bg-blue-500"> */}
         <MusicTitleHero />
-        <FadeInContainer>
-          <div className="lg:flex items-center justify-center">
-            <div className="flex flex-col lg:w-1/3 lg:h-96 items-center justify-center p-20 bg-white bg-opacity-90">
-              <span className="text-center text-4xl lg:text-6xl">
-                Latest Work
-              </span>
-              <div className="text-center space-x-5 mt-2">
-                <span>最</span>
-                <span>新</span>
-                <span>作</span>
-                <span>品</span>
-              </div>
-            </div>
-            <div className="flex items-center justify-center lg:w-2/3 h-96">
-              <VideoBoard
-                videoId={LatestWork.videoId}
-                image={LatestWork.image}
-                title={LatestWork.title}
-                comment={LatestWork.comment}
-              />
-            </div>
-          </div>
-        </FadeInContainer>
-        {/* </div> */}
         <FadeInContainer>
           <QuotaBoard
             quota={
-              "Here's Domuki, a novice composer of orchestral music with a passion for creating emotional orchestral music. "
+              "童夢綺は、「自然」と「心を鼓舞する」オーケストラ作品の創作に情熱を注ぐ新米の作曲学生です。"
             }
-            author={""}
+            author={"Doumuki is a novice composition student passionate about creating orchestral works that evoke 'nature' and are 'inspirational'."}
           />
         </FadeInContainer>
         <FadeInContainer>
@@ -78,6 +52,18 @@ const page = () => {
           </div>
         </FadeInContainer>
         <FadeInContainer>
+          <div className="lg:flex items-center justify-center">
+            <div className="flex items-center font-hefeng justify-center w-full h-96">
+              <SmallVideoBoard
+                videoId={LatestWork.videoId}
+                image={LatestWork.image}
+                title={"最  新  作  品:  「  景  」"}
+                comment={""}
+              />
+            </div>
+          </div>
+        </FadeInContainer>
+        <FadeInContainer>
           <div className="flex flex-col pt-32 lg:pb-32 lg:px-12">
             <div className="flex flex-col items-center lg:items-center justify-center pb-32">
               <span className="font-hefeng text-center text-3xl lg:text-6xl">
@@ -88,11 +74,11 @@ const page = () => {
               </span>
             </div>
 
-            <div className="lg:h-screen">
-              <div className="lg:flex lg:h-1/2">
+            <div className="h-screen">
+              <div className="lg:flex h-1/2">
                 <div
                   // style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:w-1/3 m-1"
+                  className="flex w-full h-1/2 lg:h-full lg:w-1/3 p-1"
                 >
                   {/* <YouTubePreviewer videoId="hT3ABJKcMSE" /> */}
                   <SmallVideoBoard
@@ -104,7 +90,7 @@ const page = () => {
                 </div>
                 <div
                   // style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:w-2/3 m-1"
+                  className="flex w-full h-1/2 lg:h-full lg:w-2/3 p-1"
                 >
                   {/* <YouTubePreviewer videoId="acd6s_GiRTM" /> */}
                   <SmallVideoBoard
@@ -118,7 +104,7 @@ const page = () => {
               <div className="lg:flex h-1/2">
                 <div
                   // style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:w-2/3 m-1"
+                  className="flex w-full h-1/2 lg:h-full lg:w-2/3 p-1"
                 >
                   {/* <YouTubePreviewer videoId="KWmC_xZwuDY" /> */}
                   <SmallVideoBoard
@@ -130,7 +116,7 @@ const page = () => {
                 </div>
                 <div
                   // style={{ backgroundColor: generateRandomColor() }}
-                  className="flex lg:w-1/3 m-1"
+                  className="flex w-full h-1/2 lg:h-full lg:w-1/3 p-1"
                 >
                   {/* <YouTubePreviewer videoId="8aoMvZz-FI4" /> */}
                   <SmallVideoBoard
