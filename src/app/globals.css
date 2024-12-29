@@ -170,6 +170,65 @@ footer {
   /* Example font family */
 }
 
+/* 日文字體 */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-ja.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+3000-303F, U+3040-309F, U+30A0-30FF, U+FF00-FFEF; /* 日文字符範圍 */  
+}  
+
+/* 韓文字體 */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-ko.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF; /* 韓文字符範圍 */  
+}  
+
+/* 拉丁字母字體 */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-latin.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+0000-007F; /* 基本拉丁字符範圍 */  
+}  
+
+/* 簡體中文字體 */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-zh_cn.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+4E00-9FFF; /* 常用漢字字符範圍 */  
+}  
+
+/* 繁體中文字體 (香港) */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-zh_hk.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+4E00-9FFF; /* 常用漢字字符範圍 */  
+}  
+
+/* 繁體中文字體 (台灣) */  
+@font-face {  
+  font-family: 'Ark Pixel';  
+  src: url('/fonts/ark-pixel-12px-monospaced-zh_tw.ttf') format('truetype');  
+  font-weight: normal;  
+  font-style: normal;  
+  unicode-range: U+4E00-9FFF; /* 常用漢字字符範圍 */  
+}
+
+.font-pixel {
+  font-family: 'Ark Pixel', monospace; 
+  /* Example font family */
+}
+
 /* Custom class */
 .distribute-text {
   display: flex;
@@ -405,4 +464,19 @@ footer {
 
 .custom-syntax-pre:hover {
   background-color: #fdfdfd !important;
+}
+
+
+@keyframes marquee {  
+  0% {  
+    transform: translateX(100%); /* 从屏幕最右边开始 */  
+  }  
+  100% {  
+    transform: translateX(-100%); /* 滚动到屏幕最左边 */  
+  }  
+}  
+
+.animate-marquee {  
+  display: inline-flex;  
+  animation: marquee linear infinite; /* 平滑无限滚动 */  
 }

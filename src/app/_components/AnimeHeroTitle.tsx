@@ -6,11 +6,13 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 interface AnimeHeroTitleProps {
   title: string;
   description: string;
+  color?: string;
 }
 
 const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
   title,
   description,
+  color = "black",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -30,7 +32,7 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
         onMouseLeave={handleMouseLeave}
       >
         <div className="flex flex-col h-96 items-center justify-center">
-          <div>
+          <div style={{ color: color }}>
             <div
               className={`distribute-text transition-all duration-1000 mb-4 ${
                 isHovered ? "text-sm lg:text-xl" : "text-xxl"
@@ -40,7 +42,7 @@ const AnimeHeroTitle: React.FC<AnimeHeroTitleProps> = ({
             </div>
             <div
               className={`distribute-text transition-all duration-1000 ${
-                isHovered ?  "text-xl lg:text-6xl":"text-base lg:text-2xl" 
+                isHovered ? "text-xl lg:text-6xl" : "text-base lg:text-2xl"
               } `}
             >
               {description.split("").map((char, index) => (

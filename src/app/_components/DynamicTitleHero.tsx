@@ -3,7 +3,21 @@ import React, { useState } from "react";
 import AnimeHeroTitle from "./AnimeHeroTitle";
 import Link from "next/link";
 
-const ZoomInBackground = () => {
+interface StudyTitleHeroProps {
+  image: string;
+  bgColor: string;
+  color?: string;
+  title: string;
+  description: string;
+}
+
+const DynamicTitleHero: React.FC<StudyTitleHeroProps> = ({
+  image,
+  bgColor,
+  color = "black",
+  title,
+  description,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -23,7 +37,7 @@ const ZoomInBackground = () => {
     >
       <div
         style={{
-          backgroundImage: "url('/images/domuki_shadow.png')",
+          backgroundImage: `url(${image})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover", // Default cover behavior
@@ -34,23 +48,31 @@ const ZoomInBackground = () => {
         }}
       ></div>
       <div
-        className="text-black font-hefeng w-full"
+        className="h-full w-full"
         style={{
+          backgroundColor: `${bgColor}`,
           position: "absolute",
           zIndex: 1, // Ensures the text is above the background
         }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
-        <Link href={`https://www.youtube.com/@domuki`}>
-          <AnimeHeroTitle
-            title={"童夢綺の音楽作品"}
-            description={"私の音楽作品をぜひ聴いてください！"}
-          />
-        </Link>
+        {/* <Link href={`https://www.youtube.com/@domuki`}> */}
+        <div className="flex items-center justify-center w-full h-full">
+          <div
+            className="w-full"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <AnimeHeroTitle
+              title={title}
+              description={description}
+              color={color}
+            />
+          </div>
+        </div>
+        {/* </Link> */}
       </div>
     </div>
   );
 };
 
-export default ZoomInBackground;
+export default DynamicTitleHero;

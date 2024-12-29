@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import ParallaxSection from "../ParallaxSection";
-import { PlayIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 interface SmallVideoBoardProps {

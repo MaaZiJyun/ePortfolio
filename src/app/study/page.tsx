@@ -1,41 +1,22 @@
 import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import Container from "../_components/Container";
 import StudyNavBoard from "../_components/StudyNavBoard";
+import DynamicTitleHero from "../_components/DynamicTitleHero";
 
 const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
+        <div className="text-white h-full">
+          <DynamicTitleHero
+            image={"/images/study.png"}
+            title={"自習委員会"}
+            description={"自分で楽しんでいるだけ (笑)"}
+            bgColor={"rgba(0, 0, 0, 0.2)"}
+            color="white"
+          />
+        </div>
         <div className="flex flex-col items-center justify-between">
-          <div className="relative w-full">
-            <div className="flex flex-col items-center justify-center font-arial bg-yellow-500 mb-48 lg:mb-20 text-white py-12">
-              <div className="w-full lg:w-2/3">
-                <AnimeHeroTitle
-                  title={"自習委員会"}
-                  description={"自分で楽しんでいるだけ (笑)"}
-                />
-              </div>
-            </div>
-            <div className="absolute bottom-0 w-full">
-              <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center bg-white lg:w-1/2 rounded-xl shadow-xl py-6 px-10 text-justify h-1/2">
-                  <p className="text-sm font-arial">
-                    The Self-Study Committee
-                    <span className="text-yellow-500">, "自習委員会",</span> is an
-                    organization dedicated to providing support for members in
-                    their independent learning pursuits. Their goal is to help
-                    members explore areas of interest or learn knowledge that
-                    are not able to access in courses easily. They encourage
-                    members to pursue personal interests and develop new skills,
-                    with the ultimate aim of applying their knowledge and ideas
-                    to real-world problems. It is not focused on exam
-                    preparation but rather on fostering a passion for learning
-                    and practical application.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="flex flex-col w-full px-6 lg:px-32">
             <div className="flex flex-col w-full items-center justify-center text-justify my-24">
               <h1 className="text-4xl my-3">行動計画</h1>
@@ -257,9 +238,6 @@ const page = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-full px-12 lg:px-32">
-            <div className="w-full h-1 bg-red-500"></div>
           </div>
           <div className="flex flex-col w-full px-6 lg:px-32">
             <div className="flex flex-col w-full items-center justify-center text-justify my-24">

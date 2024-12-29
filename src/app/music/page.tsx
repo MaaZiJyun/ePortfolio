@@ -1,9 +1,9 @@
 import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import Container from "../_components/Container";
 import FadeInContainer from "../_components/FadeInContainer";
-import MusicTitleHero from "../_components/MusicTitleHero";
 import ParallaxSection from "../_components/ParallaxSection";
 import QuotaBoard from "../_components/QuotaBoard";
+import DynamicTitleHero from "../_components/DynamicTitleHero";
 import SmallVideoBoard from "../_components/_Video/SmallVideoBoard";
 import VideoBoard from "../_components/_Video/VideoBoard";
 import {
@@ -17,13 +17,23 @@ const page = () => {
   return (
     <main className="flex flex-col items-center justify-between">
       <Container>
-        <MusicTitleHero />
+        {/* <MusicTitleHero /> */}
+        <div className="font-hefeng h-full">
+          <DynamicTitleHero
+            image={"/images/domuki_shadow.png"}
+            title={"童夢綺の音楽作品"}
+            description={"私の音楽作品をぜひ聴いてください！"}
+            bgColor={"rgba(0, 0, 0, 0.2)"}
+          />
+        </div>
         <FadeInContainer>
           <QuotaBoard
             quota={
               "童夢綺は、「自然」と「心を鼓舞する」オーケストラ作品の創作に情熱を注ぐ新米の作曲学生です。"
             }
-            author={"Doumuki is a novice composition student passionate about creating orchestral works that evoke 'nature' and are 'inspirational'."}
+            author={
+              "Doumuki is a novice composition student passionate about creating orchestral works that evoke 'nature' and are 'inspirational'."
+            }
           />
         </FadeInContainer>
         <FadeInContainer>

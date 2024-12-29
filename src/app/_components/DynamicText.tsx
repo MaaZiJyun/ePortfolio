@@ -50,7 +50,9 @@ const DynamicText: React.FC<DynamicTextProps> = ({ content }) => {
         setIsTyping(true);
         setTypingIndex(0);
         setBgColor(generateRandomColor());
-        setIndex((prevIndex) => (prevIndex + 1) % textList.length);
+        // setIndex((prevIndex) => (prevIndex + 1) % textList.length);
+        const randomIndex = Math.floor(Math.random() * textList.length);
+        setIndex(randomIndex);
       }
     }
   }, [typingIndex, displayedText, isTyping, index, textList]);

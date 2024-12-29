@@ -5,6 +5,7 @@ import fs from "fs";
 import AnimeHeroTitle from "../_components/AnimeHeroTitle";
 import DynamicText from "../_components/DynamicText";
 import matter from "gray-matter";
+import ScrollingText from "../_components/ScrollingText";
 
 const getPostContent = (slug: string) => {
   const folder = `posts/`;
@@ -47,23 +48,35 @@ const page = () => {
       <Container>
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full">
-            <div className="flex flex-col items-center justify-center font-arial text-black py-12">
+            <div
+              className="flex flex-col items-center justify-center font-pixel h-screen"
+              style={{ backgroundColor: "#001a00" }}
+            >
               <div className="w-full lg:w-2/3">
                 <AnimeHeroTitle
                   title={"童夢綺の記事"}
                   description={"読んでくれてありがとう！"}
+                  color="#00ff00"
+                />
+              </div>
+              <div className="h-18">
+                <ScrollingText
+                  text={"システムは深夜12時にメンテナンスを実施します。"}
+                  color="#ff0000"
+                  bgColor="#1a0000"
+                  className="font-pixel uppercase text-xl"
                 />
               </div>
             </div>
-            <div className="flex items-center justify-center bg-black py-6 px-10 text-justify text-white">
+            {/* <div className="flex items-center justify-center bg-black py-6 px-10 text-justify text-white">
               <div className="flex items-center justify-center w-full lg:w-3/4">
-                <p className="text-sm lg:text-xl font-arial text-center">
+                <p className="text-sm lg:text-xl font-pixel text-center">
                   <DynamicText content={contents} />
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="flex flex-col w-full px-6 lg:px-32">
+          <div className="flex flex-col w-full px-6 lg:px-12">
             <div className="flex flex-col w-full py-12 space-y-4">
               {postPreviews}
             </div>

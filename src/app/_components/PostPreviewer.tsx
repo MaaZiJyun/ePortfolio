@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { PostMetadata } from "../_controllers/PostMetadata";
 import generateRandomColor from "../_controllers/generateRandomColor";
+import hexToRgb from "../_controllers/hexToRgb";
 
 const PostPreviewer = (props: PostMetadata) => {
   const [bgColor, setBgColor] = useState<string>("unset"); // Explicitly type as string
@@ -21,8 +22,10 @@ const PostPreviewer = (props: PostMetadata) => {
   return (
     <Link href={`/posts/${props.slug}`}>
       <div
-        className="py-3 rounded-xl hover:underline"
+        className="py-3 px-5 font-pixel"
         style={{
+          border: `4px solid ${isHovered ? bgColor : "transparent"}`, 
+          backgroundColor: isHovered ? `rgba(${hexToRgb(bgColor)}, 0.1)` : "transparent", 
           color: isHovered ? bgColor : "black",
           transition: "background-color color 0.3s ease",
         }}
@@ -30,10 +33,10 @@ const PostPreviewer = (props: PostMetadata) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="flex justify-between">
-          <h2 className="text-lg lg:text-2xl font-bold uppercase">
+          <h2 className="text-lg lg:text-3xl font-bold uppercase">
             {props.title}
           </h2>
-          <p>{props.date}</p>
+          <p className="text-base">{props.date}</p>
         </div>
         <div className="flex text-sm lg:text-base mt-2">
           <div>
