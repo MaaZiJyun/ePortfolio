@@ -38,19 +38,19 @@ const VerificationPage = () => {
 
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-sketch">
+      <div className="flex flex-col font-pixel items-center justify-center min-h-screen bg-sketch">
         <form
           onSubmit={handleSubmit}
-          className="bg-white bg-opacity-90 rounded-lg shadow-md lg:w-1/4"
+          className="bg-white lg:w-1/4"
         >
           {error && (
-            <div className="flex items-center justify-center rounded-tl-lg rounded-tr-lg text-white bg-red-500 text-xs font-arial p-1">
+            <div className="flex items-center justify-center text-white bg-red-500 text-sm p-1">
               <span>{error}</span>
             </div>
           )}
           <div className="p-8">
-            <h2 className="text-xl font-arial">招待コードを入力してください</h2>
-            <h2 className="text-xs mb-5 font-arial">
+            <h2 className="text-xl">招待コードを入力してください</h2>
+            <h2 className="text-xs mb-5">
               Please enter the invitation code.
             </h2>
 
@@ -59,12 +59,12 @@ const VerificationPage = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="招待コード"
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-black"
+              className="w-full p-2 border border-gray-300 focus:outline-none focus:border-black"
             />
 
             <button
               type="submit"
-              className="w-full mt-4 border border-black font-arial bg-white text-black p-2 rounded hover:bg-black hover:text-white"
+              className="w-full mt-4 border border-black bg-white text-black p-2 hover:bg-black hover:text-white"
             >
               Verify
             </button>

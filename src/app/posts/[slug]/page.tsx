@@ -32,7 +32,7 @@ const PostPage = (props: any) => {
   const keywords = post.data.keywords as string[];
   const toc = generateToc(post.content);
   return (
-    <div className="my-32">
+    <div className="my-32 font-pixel">
       <ToC toc={toc} />
       <main className="flex flex-col items-center justify-between">
         <Container>

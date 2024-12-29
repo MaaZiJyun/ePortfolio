@@ -59,7 +59,7 @@ const page = () => {
                   color="#00ff00"
                 />
               </div>
-              <div className="h-18">
+              <div className="w-full h-18">
                 <ScrollingText
                   text={"システムは深夜12時にメンテナンスを実施します。"}
                   color="#ff0000"

@@ -7,6 +7,7 @@ import DirectoryBar from "./DirectoryBar";
 import Section from "./Section";
 import FadeInContainer from "./FadeInContainer";
 import { LockClosedIcon, LockOpenIcon } from "@heroicons/react/24/outline";
+import DynamicTitleHero from "./DynamicTitleHero";
 
 const ResumePage: React.FC = () => {
   const router = useRouter();
@@ -40,56 +41,18 @@ const ResumePage: React.FC = () => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-between my-24">
+    <main className="flex flex-col items-center justify-between">
       {isVerified ? (
         <Container>
-          <div className="flex w-full p-6 lg:px-32 justify-between ">
-            <DirectoryBar />
-            <div className="relatice">
-              <button
-                onClick={handleRemoveVerification}
-                className="bg-green-500 text-white p-2 rounded hover:bg-red-500 transition-all duration-500"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                {isHovered ? (
-                  <LockClosedIcon className="h-6 w-6" />
-                ) : (
-                  <LockOpenIcon className="h-6 w-6" />
-                )}
-              </button>
-              {visible && (
-                <div className="absolute bg-black bg-opacity-30 rounded-md p-2">
-                  <span className="text-xs text-white font-arial">
-                    Hide My Resume
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="flex flex-col w-full px-6 lg:px-32">
-            <Section
-              title={"履歴"}
-              description={
-                "This is a brief introduction about myself and my resume."
-              }
+          <div className="font-hefeng">
+            <DynamicTitleHero
+              image={"/images/domukiphoto002.png"}
+              bgColor={"rgba(255, 255, 255, 0.8)"}
+              title={"童夢綺の履歴"}
+              description={"これは私自身と履歴書についての簡単な紹介です。"}
             />
-            <FadeInContainer>
-              <div className="flex flex-col items-center justify-center py-12">
-                <div className="flex flex-col items-start justify-center">
-                  <p className="text-justify">
-                    Hi, I&apos;m Maa or <span className="">Dōmuki</span>{" "}
-                    (Nickname). I am 24 years old. I graduated from UPM with a
-                    bachelor's degree in Software Engineering and am currently
-                    pursuing a master's degree at the University of Technology.
-                    I speak fluent English and am a native Chinese speaker. My
-                    study interests are Web3, IoT, Artificial Intelligence, and
-                    Blockchain.
-                  </p>
-                </div>
-              </div>
-            </FadeInContainer>
+          </div>
+          <div className="flex flex-col w-full px-6 lg:px-32 my-24">
             <FadeInContainer>
               <div className="pt-10">
                 <div className="title ">
@@ -594,9 +557,7 @@ const ResumePage: React.FC = () => {
           </div>
         </Container>
       ) : (
-        <div className="flex w-full h-screen items-center justify-center">
-          
-        </div>
+        <div className="flex w-full h-screen items-center justify-center"></div>
       )}
     </main>
   );
