@@ -22,11 +22,11 @@ const PostPreviewer = (props: PostMetadata) => {
   return (
     <Link href={`/posts/${props.slug}`}>
       <div
-        className="py-3 px-5 font-pixel"
+        className="py-4 lg:py-8 px-12 lg:px-24 font-pixel"
         style={{
-          border: `4px solid ${isHovered ? bgColor : "transparent"}`, 
+          // border: `4px solid ${isHovered ? bgColor : "transparent"}`, 
           backgroundColor: isHovered ? `rgba(${hexToRgb(bgColor)}, 0.1)` : "transparent", 
-          color: isHovered ? bgColor : "black",
+          color: isHovered ? bgColor : "#2b2b2b",
           transition: "background-color color 0.3s ease",
         }}
         onMouseEnter={handleMouseEnter}

@@ -76,8 +76,8 @@ const page = () => {
               </div>
             </div> */}
           </div>
-          <div className="flex flex-col w-full px-6 lg:px-12">
-            <div className="flex flex-col w-full py-12 space-y-4">
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full">
               {postPreviews}
             </div>
           </div>

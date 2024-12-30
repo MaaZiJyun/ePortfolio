@@ -37,6 +37,18 @@ const page = () => {
           />
         </FadeInContainer>
         <FadeInContainer>
+          <div className="lg:flex items-center justify-center">
+            <div className="flex items-center font-hefeng justify-center w-full h-32 lg:h-96">
+              <SmallVideoBoard
+                videoId={LatestWork.videoId}
+                image={LatestWork.image}
+                title={"最  新  作  品:  「  景  」"}
+                comment={""}
+              />
+            </div>
+          </div>
+        </FadeInContainer>
+        <FadeInContainer>
           <div className="bg-black bg-opacity-40">
             <ParallaxSection backgroundImage={"/images/composing.png"}>
               <div className="flex justify-center p-12 lg:py-32">
@@ -61,18 +73,7 @@ const page = () => {
             </ParallaxSection>
           </div>
         </FadeInContainer>
-        <FadeInContainer>
-          <div className="lg:flex items-center justify-center">
-            <div className="flex items-center font-hefeng justify-center w-full h-32 lg:h-96">
-              <SmallVideoBoard
-                videoId={LatestWork.videoId}
-                image={LatestWork.image}
-                title={"最  新  作  品:  「  景  」"}
-                comment={""}
-              />
-            </div>
-          </div>
-        </FadeInContainer>
+
         <FadeInContainer>
           <div className="flex flex-col pt-32 lg:pb-32 lg:px-12">
             <div className="flex flex-col items-center lg:items-center justify-center pb-32">

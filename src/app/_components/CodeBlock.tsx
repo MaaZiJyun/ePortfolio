@@ -12,6 +12,8 @@ import { githubGist } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const cssStyles = `
 .custom-syntax-pre span {
   color: #252a34 !important;
+  padding-left: 12px;  
+  padding-right: 12px;  
 }
 .custom-syntax-pre span.token.keyword {
   color: #ff2e63 !important;

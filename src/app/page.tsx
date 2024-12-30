@@ -64,21 +64,19 @@ export default function Home() {
       <Container>
         <div className="flex w-full h-screen bg-sketch items-center justify-center font-arial">
           <div className="lg:flex lg:w-1/2 px-6">
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col text-justify">
               {/* <p className="text-3xl lg:text-6xl">Hi, this is Dōmuki</p> */}
               <GreetingTitle />
-              <p className="text-justify">
+              <p className="mt-5">
                 I'm passionate about music and writing, with a degree in
                 software engineering. I can speak English and native Mandarin.
                 Currently, I'm pursuing advanced studies in my field and love
                 exploring new creative endeavors.
               </p>
-              <p className="lg:text-lg">
+              <p className="lg:text-lg mt-2">
                 <span>
-                  Looking forward to connecting and sharing ideas with
-                  like-minded individuals!
+                  Looking for like-minded friends to grow and improve together! Feel free to contact with me:
                 </span>
-                <span>Feel free to contact with me: </span>
                 <span className="underline">DOMUKINO@GMAIL.COM</span>
               </p>
             </div>
